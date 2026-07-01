@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Wine Pairing Agent" width="100%">
+</p>
+
 # Wine Pairing Agent
 
 Describe your meal — *"grilled ribeye with peppercorn sauce"*, *"spicy Thai green
@@ -18,11 +22,11 @@ strategy, uses retrieval as a **tool**, and then checks whether the result is
 actually any good.
 
 ## The graph
-```
-parse ─▶ strategize ─▶ retrieve ─▶ recommend ─▶ critique ─┬─ clean ─▶ END
-              ▲          (RAG tool)                       │
-              └───────────────── issues & budget ─────────┘
-```
+
+<p align="center">
+  <img src="assets/architecture.png" alt="Wine Pairing Agent architecture" width="760">
+</p>
+
 | Node | What it does |
 |---|---|
 | **parse** | Turns the free-text meal into structured features (main, body, sauce, cuisine, flavours) |

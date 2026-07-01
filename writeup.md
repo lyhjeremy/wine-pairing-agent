@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Wine Pairing Agent" width="100%">
+</p>
+
 # Wine Pairing as an Agent, Not Just a Search
 
 *Giving retrieval a brain: an agent that reasons about the dish, uses wine search
@@ -16,11 +20,9 @@ reasoning-and-checking loop built with LangGraph.
 
 ## The graph
 
-```
-parse ─▶ strategize ─▶ retrieve ─▶ recommend ─▶ critique ─┬─ clean ─▶ END
-              ▲          (RAG tool)                       │
-              └───────────────── issues & budget ─────────┘
-```
+<p align="center">
+  <img src="assets/architecture.png" alt="Wine Pairing Agent architecture" width="760">
+</p>
 
 - **parse** turns *"grilled ribeye with peppercorn sauce"* into structured
   features: main protein, body, sauce, cuisine, key flavours, cooking method.
