@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wine Pairing Agent — reasons, retrieves, and checks its own pairing</title>
+<meta name="description" content="A LangGraph agent that reasons from sommelier pairing principles to the right wine style, searches 130k real reviews for matching bottles, recommends with citations, and critiques its own pick — retrying if the pairing is weak." />
+<style>
+  :root{--ink:#2a1520;--paper:#FBF6F2;--rule:#E7D8CE;--soft:#7a6b6f;--accent:#B8873B;--wine:#7B2233;--plum:#5B2A4A}
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.7;font-size:18px}
+  .hero{width:100%;background:#2a0e18;overflow:hidden}.hero svg{width:100%;height:250px;display:block}
+  .container{max-width:820px;margin:0 auto;padding:38px 24px 80px}
+  .kicker{text-transform:uppercase;letter-spacing:.16em;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--plum);font-weight:700;text-align:center;margin-bottom:12px}
+  h1{font-size:40px;line-height:1.16;text-align:center;margin:0 0 14px}
+  .lede{font-size:20px;color:#43323a;text-align:center;margin:0 auto 6px;max-width:680px}
+  .byline{color:var(--soft);font-style:italic;text-align:center;margin:18px 0 30px}
+  h2{font-size:26px;margin:50px 0 14px;border-bottom:1px solid var(--rule);padding-bottom:8px}
+  p{margin:0 0 16px} a{color:var(--wine)}
+  .flow{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:20px;margin:26px 0;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:13px;color:#3a2630;overflow-x:auto;white-space:pre;line-height:1.5}
+  .trace{background:#2a0e18;border-radius:14px;padding:18px 20px;margin:26px 0;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:13px;color:#f0dfe4;line-height:1.7}
+  .trace .n{color:#e0b3bf}.trace .ok{color:#8fd18b}.trace .warn{color:#e8b45f}
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:26px 0}
+  .card{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:20px;font-family:'Helvetica Neue',Arial,sans-serif}
+  .card .ico{font-size:24px}.card h3{margin:8px 0 6px;font-size:18px}.card p{font-size:15px;color:#444;margin:0;line-height:1.6}
+  .steps{counter-reset:step;list-style:none;padding:0;margin:24px 0}
+  .steps li{position:relative;padding:12px 0 12px 54px;border-bottom:1px dashed var(--rule);font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;width:34px;height:34px;border-radius:50%;background:var(--wine);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .note{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--wine);border-radius:8px;padding:14px 20px;font-size:14.5px;color:#444;font-family:'Helvetica Neue',Arial,sans-serif;margin:24px 0}
+  .btnrow{text-align:center;margin:40px 0 8px}
+  .btn{display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:600;text-decoration:none;padding:13px 24px;border-radius:8px;margin:6px}
+  .btn-solid{background:var(--wine);color:#fff}.btn-ghost{border:1px solid var(--wine);color:var(--wine)}
+  .footer{text-align:center;color:var(--soft);font-size:14px;margin-top:54px;font-family:'Helvetica Neue',Arial,sans-serif}
+  @media(max-width:600px){h1{font-size:30px}.features{grid-template-columns:1fr}.hero svg{height:200px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <svg viewBox="0 0 820 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An agent graph pairing a plate with a wine glass">
+    <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#360f1c"/><stop offset="1" stop-color="#22090f"/></linearGradient>
+      <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 z" fill="#c98a99"/></marker></defs>
+    <rect width="820" height="250" fill="url(#bg)"/>
+    <!-- plate -->
+    <g transform="translate(120,125)"><circle r="52" fill="none" stroke="#E7D8CE" stroke-width="4"/><circle r="34" fill="none" stroke="#B8873B" stroke-width="3"/></g>
+    <!-- glass -->
+    <g transform="translate(690,78)"><path d="M-34 0 h68 a34 34 0 0 1 -34 50 a34 34 0 0 1 -34 -50 z" fill="none" stroke="#E7D8CE" stroke-width="4"/><path d="M-26 5 h52 a26 26 0 0 1 -26 34 a26 26 0 0 1 -26 -34 z" fill="#7B2233"/><line x1="0" y1="50" x2="0" y2="98" stroke="#E7D8CE" stroke-width="4"/><line x1="-24" y1="98" x2="24" y2="98" stroke="#E7D8CE" stroke-width="4"/></g>
+    <!-- agent nodes between -->
+    <g font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">
+      <g><rect x="228" y="70" width="92" height="34" rx="9" fill="#5B2A4A"/><text x="274" y="92" fill="#fff">strategize</text></g>
+      <g><rect x="360" y="70" width="86" height="34" rx="9" fill="#7B2233"/><text x="403" y="92" fill="#fff">retrieve</text></g>
+      <g><rect x="486" y="70" width="98" height="34" rx="9" fill="#5B2A4A"/><text x="535" y="92" fill="#fff">recommend</text></g>
+      <g><rect x="360" y="150" width="90" height="34" rx="9" fill="#B8873B"/><text x="405" y="172" fill="#fff">critique</text></g>
+    </g>
+    <g stroke="#c98a99" stroke-width="2.5" fill="none">
+      <line x1="320" y1="87" x2="356" y2="87" marker-end="url(#ar)"/>
+      <line x1="446" y1="87" x2="482" y2="87" marker-end="url(#ar)"/>
+      <path d="M535 104 C535 135, 452 140, 430 148" marker-end="url(#ar)"/>
+      <!-- critique loops back to strategize -->
+      <path d="M360 167 C250 167, 250 120, 262 106" stroke-dasharray="5 6" marker-end="url(#ar)"/>
+    </g>
+    <text x="300" y="200" fill="#e8b45f" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" text-anchor="middle">weak pairing → re-strategize</text>
+  </svg>
+</div>
+<div class="container">
+  <p class="kicker">A retrieval-tool-using LangGraph agent</p>
+  <h1>Wine Pairing Agent</h1>
+  <p class="lede">Describe your meal. The agent reasons from pairing principles to the right wine <em>style</em>, searches <strong>130k real reviews</strong> for matching bottles, recommends with citations — and <strong>critiques its own pick</strong>, retrying if it's weak.</p>
+  <p class="byline">By Jeremy Lee · WSET Level 3 · built with LangGraph + Claude</p>
+
+  <h2>RAG as a tool inside an agent</h2>
+  <p>My <a href="https://github.com/lyhjeremy/wine-sommelier-rag">Wine Sommelier RAG</a> answers "find me a wine like X." This project puts that retrieval <strong>inside an agent</strong> that first has to work out <em>what to search for</em>. It reasons about the dish — body, fat, acidity, spice — forms a pairing strategy, calls retrieval as a <strong>tool</strong>, then checks whether the result is actually good before serving it.</p>
+
+  <div class="trace"><span class="n">• parse</span> → ribeye (rich body), peppercorn sauce
+<span class="n">• strategize</span> → bold tannic red · query: "structured Cabernet, firm tannins, black fruit"
+<span class="n">• retrieve</span> → 6 candidate wines from the review index
+<span class="n">• recommend</span> → drafted pairing with citations
+<span class="ok">• critique</span> → sound ✔ tannin + body match the fatty steak</div>
+
+  <div class="features">
+    <div class="card"><div class="ico">🧠</div><h3>Reasons, then searches</h3><p>Works out the ideal wine style from pairing principles before it retrieves — not just keyword matching.</p></div>
+    <div class="card"><div class="ico">🔧</div><h3>Retrieval as a tool</h3><p>Calls semantic search over 130k real reviews, with your budget as a filter — real bottles, real scores, real prices.</p></div>
+    <div class="card"><div class="ico">🔁</div><h3>Checks its own pairing</h3><p>A critique node judges coherence and budget fit, and re-strategizes with feedback if the first idea is weak.</p></div>
+    <div class="card"><div class="ico">🍽️</div><h3>Every pick cited</h3><p>Recommendations cite the exact review, with the tannin/acid/body logic spelled out.</p></div>
+  </div>
+
+  <h2>The graph</h2>
+  <div class="flow">parse ─▶ strategize ─▶ retrieve ─▶ recommend ─▶ critique ─┬─ clean ─▶ END
+              ▲          (RAG tool)                       │
+              └───────────────── issues &amp; budget ─────────┘</div>
+
+  <h2>How to use it</h2>
+  <ol class="steps">
+    <li>Tell it the dish and (optionally) a per-bottle budget and colour preference.</li>
+    <li>It parses the dish, picks a target style, and searches real reviews for it.</li>
+    <li>It recommends 1–2 bottles with the pairing logic, then critiques the choice.</li>
+    <li>If the pairing is weak, it re-strategizes and tries again — you see the whole trace.</li>
+  </ol>
+
+  <div class="note"><strong>Under the hood:</strong> built with LangGraph; retrieval is local &amp; free (sentence-transformers + Chroma); generation runs on the Claude CLI by default (your Claude subscription, no per-token cost) or the Anthropic API.</div>
+
+  <div class="btnrow">
+    <a class="btn btn-solid" href="https://github.com/lyhjeremy/wine-pairing-agent">Get it on GitHub</a>
+    <a class="btn btn-ghost" href="https://github.com/lyhjeremy/wine-pairing-agent#quick-start">Read the setup guide</a>
+  </div>
+
+  <p class="footer">Built with Python · LangGraph · sentence-transformers · Chroma · Claude · © 2026 Jeremy Lee · MIT License</p>
+</div>
+</body>
+</html>
