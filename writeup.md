@@ -65,6 +65,20 @@ was coherent. The full run is in [`examples/sample_run.md`](examples/sample_run.
 - **Generation** runs on the Claude CLI (my Claude subscription — no per-token
   cost) or the Anthropic API; retrieval is always local and free.
 
+## Retrieval as a real tool — and watching the agent think
+
+The `retrieve` step isn't a hard-coded function call; it's a LangChain
+**`StructuredTool`** (`src/tools.py`) with a name, description and typed schema,
+invoked as `search_wines.invoke({...})`. That's the same abstraction an LLM uses
+to call a tool — so retrieval becomes a first-class, introspectable component that
+appears in a trace as a *tool call* rather than an opaque step.
+
+And because an agent's value is in *how* it reaches an answer, every run can be
+traced: `--trace` times each node, prints a trace tree, and saves the run as JSON
+— a self-contained, LangSmith-style record, no account needed. When critique loops
+back to re-strategize, that retry shows up right there in the trace. It turns "the
+agent self-corrects" from a claim into something you can see and time.
+
 ## Limitations & next steps
 
 - The pairing principles are a compact canon, not an exhaustive sommelier's

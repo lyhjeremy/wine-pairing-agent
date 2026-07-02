@@ -20,7 +20,7 @@ from langgraph.graph import END, StateGraph
 
 from .llm import LLM
 from .pairing import PAIRING_PRINCIPLES
-from .retriever import Retriever
+from .tools import wine_search_tool
 from .util import json_complete
 
 
@@ -37,7 +37,6 @@ class PairState(TypedDict, total=False):
 
 
 _LLM: LLM | None = None
-_RET: Retriever | None = None
 
 
 def _llm() -> LLM:
@@ -45,13 +44,6 @@ def _llm() -> LLM:
     if _LLM is None:
         _LLM = LLM()
     return _LLM
-
-
-def _retriever() -> Retriever:
-    global _RET
-    if _RET is None:
-        _RET = Retriever()
-    return _RET
 
 
 # --------------------------------------------------------------------------- #
@@ -104,12 +96,14 @@ def strategize(state: PairState) -> PairState:
 def retrieve(state: PairState) -> PairState:
     """The retrieval TOOL: semantic search over 130k real wine reviews."""
     req = state["request"]
-    hits = _retriever().search(
-        state["strategy"]["search_query"],
-        k=6,
-        max_price=req.get("budget"),
-    )
-    log = state.get("log", []) + [f"retrieve → {len(hits)} candidate wines from the review index"]
+    # Invoke the retrieval as a named LangChain tool (see src/tools.py) rather
+    # than calling the function directly — same abstraction the LLM would use.
+    hits = wine_search_tool.invoke({
+        "query": state["strategy"]["search_query"],
+        "max_price": req.get("budget"),
+        "k": 6,
+    })
+    log = state.get("log", []) + [f"retrieve → {len(hits)} candidate wines (tool: search_wines)"]
     return {"candidates": hits, "log": log}
 
 

@@ -1,7 +1,12 @@
 # LangGraph agent + local RAG retrieval tool. All local, no API key required.
 langgraph>=1.0
+langchain-core>=0.3            # the retrieval StructuredTool (src/tools.py)
 pandas>=2.0
 sentence-transformers>=3.0
 chromadb>=0.5
+
+# Trace-timeline figure (assets/make_trace_figure.py).
+matplotlib>=3.7
+
 # Optional: only needed if you run the API backend instead of the Claude CLI.
 anthropic>=0.40

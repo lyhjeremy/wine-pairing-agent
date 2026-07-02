@@ -10,8 +10,14 @@ Build the wine index first:  python fetch_data.py && python -m src.ingest
 from __future__ import annotations
 
 import argparse
+import sys
 
 from .graph import build_agent
+
+# Windows consoles/pipes default to cp1252, which can't encode the → and emoji in
+# our output; force UTF-8 so the CLI prints cleanly on every platform.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
 def _print(result: dict) -> None:
@@ -43,6 +49,8 @@ def main() -> None:
     ap.add_argument("--budget", type=float, default=None, help="max $ per bottle")
     ap.add_argument("--color", default=None, help="red | white | rosé | sparkling (optional)")
     ap.add_argument("--max-attempts", type=int, default=2)
+    ap.add_argument("--trace", action="store_true",
+                    help="print a timed node-by-node trace and save it to traces/")
     args = ap.parse_args()
 
     meal = args.meal or input("What are you eating? ").strip()
@@ -54,11 +62,17 @@ def main() -> None:
     request = {"meal": meal, "budget": budget, "color_pref": args.color}
     agent = build_agent()
     print("\n…running agent (parse → strategize → retrieve → recommend → critique)…")
-    result = agent.invoke(
-        {"request": request, "max_attempts": args.max_attempts},
-        {"recursion_limit": 50},
-    )
-    _print(result)
+    inputs = {"request": request, "max_attempts": args.max_attempts}
+    if args.trace:
+        from .trace import run_traced
+
+        result, trace = run_traced(agent, inputs)
+        _print(result)
+        print(trace.render())
+        print(f"\n(trace saved to {trace.save(name='last_run')})")
+    else:
+        result = agent.invoke(inputs, {"recursion_limit": 50})
+        _print(result)
 
 
 if __name__ == "__main__":
