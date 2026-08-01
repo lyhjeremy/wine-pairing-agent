@@ -12,6 +12,7 @@ retrying with a different strategy if the pairing is weak or nothing fits your
 budget.
 
 > 🌐 **Overview:** https://lyhjeremy.github.io/wine-pairing-agent/
+> 📖 **Product overview:** https://lyhjeremy.github.io/wine-pairing-agent/overview/
 
 ## The idea: RAG as a tool inside an agent
 My [Wine Sommelier RAG](https://github.com/lyhjeremy/wine-sommelier-rag) answers
