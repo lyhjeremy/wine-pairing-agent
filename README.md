@@ -1,24 +1,27 @@
+<!-- ledger-allow: emoji, checkmark (verbatim captured program output; changing it would misreport what ran) -->
 <p align="center">
   <img src="assets/banner.png" alt="Wine Pairing Agent" width="100%">
 </p>
 
 # Wine Pairing Agent
 
-Describe your meal — *"grilled ribeye with peppercorn sauce"*, *"spicy Thai green
-curry"* — and a **LangGraph agent** reasons from sommelier pairing principles to
+Design and copy follow [these standards](https://github.com/lyhjeremy/lyhjeremy/blob/main/DESIGN_STANDARDS.md).
+
+Describe your meal: *"grilled ribeye with peppercorn sauce"*, *"spicy Thai green
+curry"*, and a **LangGraph agent** reasons from sommelier pairing principles to
 the right wine *style*, searches a database of **130,000 real wine reviews** for
-matching bottles, recommends with citations, and **critiques its own pick** —
-retrying with a different strategy if the pairing is weak or nothing fits your
+matching bottles, recommends with citations, and **critiques its own pick**.
+Retrying with a different strategy if the pairing is weak or nothing fits your
 budget.
 
-> 🌐 **Overview:** https://lyhjeremy.github.io/wine-pairing-agent/
-> 📖 **Product overview:** https://lyhjeremy.github.io/wine-pairing-agent/overview/
+> **Overview:** https://lyhjeremy.github.io/wine-pairing-agent/
+> **Product overview:** https://lyhjeremy.github.io/wine-pairing-agent/overview/
 
 ## The idea: RAG as a tool inside an agent
 My [Wine Sommelier RAG](https://github.com/lyhjeremy/wine-sommelier-rag) answers
 "find me a wine like X." This project puts that retrieval **inside an agent** that
 first has to *figure out what style to even search for*. The agent doesn't just
-retrieve — it reasons about the dish (body, fat, acid, spice), forms a pairing
+retrieve. It reasons about the dish (body, fat, acid, spice), forms a pairing
 strategy, uses retrieval as a **tool**, and then checks whether the result is
 actually any good.
 
@@ -34,7 +37,7 @@ actually any good.
 | **strategize** | Reasons from pairing principles → a target wine style + a search query |
 | **retrieve** | **Tool call:** semantic search over 130k real reviews (with a budget filter) |
 | **recommend** | Picks 1–2 bottles and explains the pairing logic, cited `[n]` |
-| **critique** | Checks candidate count, budget, and pairing coherence — loops back to `strategize` with feedback if weak |
+| **critique** | Checks candidate count, budget, and pairing coherence, loops back to `strategize` with feedback if weak |
 
 If the first strategy retrieves too few wines or the critique judges the pairing
 off, the agent **re-strategizes** (a different style or broader query) and tries
@@ -73,7 +76,7 @@ AGENT TRACE  (node · time · detail)
 ```
 `python assets/make_trace_figure.py traces/last_run.json` renders it as a timeline
 figure. When critique loops back to re-strategize, the extra pass shows up in the
-trace — self-correction, made visible and measurable.
+trace: self-correction, made visible and measurable.
 
 ## Files
 | Path | What it is |
@@ -81,15 +84,15 @@ trace — self-correction, made visible and measurable.
 | `src/graph.py` | The LangGraph agent: parse → strategize → retrieve → recommend → critique loop |
 | `src/pairing.py` | The sommelier pairing principles the agent reasons with |
 | `src/tools.py` | Wraps retrieval as a LangChain **StructuredTool** the agent invokes |
-| `src/trace.py` | Lightweight run tracer — times each node, renders a tree, saves JSON (`--trace`) |
+| `src/trace.py` | Lightweight run tracer: times each node, renders a tree, saves JSON (`--trace`) |
 | `src/retriever.py` | Semantic search over the 130k-review index |
 | `src/ingest.py` | Build the wine index (embeddings → Chroma) |
 | `src/embedder.py` | Local sentence-transformers embedder (free, offline) |
-| `src/llm.py` | LLM wrapper — Claude CLI (default) or Anthropic API |
+| `src/llm.py` | LLM wrapper, Claude CLI (default) or Anthropic API |
 | `src/cli.py` | Collect the meal, run the agent, print the pairing + agent trace |
 
 ## Notes
-Ships **code only** — the dataset and index are built locally and git-ignored.
+Ships **code only.** The dataset and index are built locally and git-ignored.
 Every run prints an **agent trace** so you can watch it reason, retrieve and
 self-check. Recommendations come from professional reviews, for personal use.
 
