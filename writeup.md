@@ -16,7 +16,7 @@ parse -> strategize -> retrieve -> recommend -> critique --+-- sound --> END
               +----------- issues, as feedback ------------+
 ```
 
-- **parse** turns "grilled ribeye with peppercorn sauce" into structured features: main ingredient, body, sauce, cuisine, key flavors, cooking method.
+- **parse** turns "grilled ribeye with peppercorn sauce" into structured features: main ingredient, body, sauce, cuisine, flavors, cooking method.
 - **strategize** reasons from classic pairing principles (acid cuts fat, tannin binds protein, match weight, sweetness tames heat, what grows together goes together) to a target wine style and a natural-language search query.
 - **retrieve** is the tool call: semantic search over the local Wine Enthusiast index with the guest's budget as a filter.
 - **recommend** picks one or two bottles from what was retrieved and explains the pairing, citing each `[n]`.
