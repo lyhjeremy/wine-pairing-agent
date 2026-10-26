@@ -3,55 +3,57 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Wine Pairing Agent: RAG as a tool inside an agent that checks its own pick</title>
-<meta name="description" content="Describe a meal and a LangGraph agent reasons from pairing principles to a wine style, searches 130,000 real reviews as a tool call, recommends with citations, and critiques itself. Re-strategizing if the pairing is weak." />
-<meta name="theme-color" content="#EDEDE7" />
+<title>Wine Pairing Agent: a LangGraph agent that picks a wine style, searches real reviews as a tool, and critiques its own pairing</title>
+<meta name="description" content="Describe a dish and a five-node LangGraph agent reasons from pairing principles to a wine style, calls review search as a LangChain StructuredTool with your budget as a filter, recommends with citations, and retries when its own critique finds a problem." />
+<meta name="theme-color" content="#F1ECE3" />
 <meta property="og:title" content="Wine Pairing Agent" />
-<meta property="og:description" content="The difference between retrieval and an agent: this one has to work out what to search for first." />
+<meta property="og:description" content="Retrieval answers 'find me a wine like X'. This agent has to work out X from the dish first." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyhjeremy.github.io/wine-pairing-agent/overview/" />
+<link href="" rel="stylesheet" />
 <style>
-@font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-400.woff2")format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-600.woff2")format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-400.woff2")format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-600.woff2")format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"IBM Plex Mono";src:url("../fonts/IBMPlexMono-400.woff2")format("woff2");font-weight:400;font-display:swap}
-
   :root {
-    --paper: #EDEDE7;
-    --card: #F5F5F0;
-    --plate: #F5F5F0;
-    --ink: #1C1E1B;
-    --ink2: #3d3d55;
-    --muted: #52564E;
-    --rule: #C6C7BF;
-    --accent: #2C5852;
-    --accent2: #2C5852;
-    --link: #8C3A1E;
-    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-    --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
-    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
-    --shadow: 0 1px 2px rgba(26,26,46,.05), 0 10px 34px rgba(26,26,46,.07);
+    --paper: #F1ECE3;
+    --card: #F7F3EC;
+    --plate: #F7F3EC;
+    --ink: #24191B;
+    --ink2: #5C4C4E;
+    --muted: #5C4C4E;
+    --rule: #D3C8BC;
+    --accent: #7A2335;
+    --accent2: #6A5A1E;
+    --link: #7A2335;
+    --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+    --display: "Cormorant Garamond", Garamond, "Iowan Old Style", serif;
+    --edge: #7E7070;
     --spine:  92px;
     --col:    min(100% - 2.6rem, 62rem);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #14141f;
-      --card: #1c1c2a;
-      --plate: #f7f4ec;
-      --ink: #F2EFE6;
-      --ink2: #C9C4B6;
-      --muted: #918B7D;
-      --rule: #33313f;
-      --accent: #A78BFA;
-      --accent2: #E0899A;
-      --link: #22D3EE;
-      --shadow: 0 1px 2px rgba(0,0,0,.32), 0 10px 34px rgba(0,0,0,.4);
+      --paper: #1C1517;
+      --card: #261D20;
+      --plate: #261D20;
+      --ink: #EDE3DD;
+      --ink2: #B6A6A3;
+      --muted: #B6A6A3;
+      --rule: #413337;
+      --accent: #E08A99;
+      --accent2: #C9B46A;
+      --link: #E08A99;
+      --edge: #7A6A6C;
     }
   }
 
-  * { box-sizing: border-box; }
+  @font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Source Serif 4";src:url("../fonts/SourceSerif4-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("../fonts/IBMPlexSans-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Mono";src:url("../fonts/IBMPlexMono-400.woff2")format("woff2");font-weight:400;font-display:swap}
+
+  * { box-sizing: border-box; border-radius: 0; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--paper); color: var(--ink);
@@ -210,60 +212,106 @@
     html { scroll-behavior: auto; }
     .btn { }
   }
+  @font-face{font-family:"Cormorant Garamond";src:url("../fonts/CormorantGaramond-600.woff2")format("woff2");font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:"Cormorant Garamond";src:url("../fonts/CormorantGaramond-500i.woff2")format("woff2");font-weight:500;font-style:italic;font-display:swap}
 
+  .btn:hover { transform: none; background: var(--accent); border-color: var(--accent); color: var(--paper); }
+  .pull { border: 1px solid var(--edge); border-left: 1px solid var(--edge); background: transparent; }
+  .term { background: var(--card); color: var(--ink); border: 1px solid var(--rule); }
+  .term .c { color: var(--muted); } .term .g { color: var(--accent2); } .term .y { color: var(--accent); }
+  .logo, .hero h1, h2, .claim .n, .bignum { font-family: var(--display); }
+
+  /* Cellar: a printed wine list. Centered serif masthead, italic notes, dotted leaders. */
+  :root { --col: min(100% - 2.6rem, 50rem); }
+  .masthead { justify-content: center; text-align: center; border-bottom: 1px solid var(--rule); padding-bottom: 18px; }
+  .logo { font-weight: 600; font-size: 25px; letter-spacing: .01em; }
+  .tagline { font-family: var(--display); font-style: italic; font-size: 18px; }
+  .hero { text-align: center; }
+  .hero h1, .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero h1 { font-weight: 600; font-size: clamp(44px, 7vw, 84px); letter-spacing: -.01em; line-height: 1; max-width: 16ch; }
+  .kicker { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(21px, 2.4vw, 26px); }
+  .cta-row { justify-content: center; }
+  .claims { text-align: left; }
+  .claim, .claim:first-child, .claim:nth-child(2) { border-top: 0; border-bottom: 1px dotted var(--edge); }
+  .claim .n { font-weight: 600; font-size: 46px; letter-spacing: 0; }
+  h2 { font-weight: 600; font-size: clamp(32px, 4.4vw, 46px); letter-spacing: -.005em; line-height: 1.05; }
+  .eyebrow { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 19px;
+             letter-spacing: 0; text-transform: none; color: var(--accent); }
+  :root { --spine: 0px; }
+  .route::before, .stop::before { display: none; }
+  .stop { padding-left: 0; }
+  .stop + .stop { border-top: 1px solid var(--rule); padding-top: 56px; }
+  .bignum { font-weight: 600; letter-spacing: -.01em; }
+
+
+  .bignum { line-height: 1.02; margin-bottom: 14px; }
+  /* Signature: the recorded ribeye run, set as a printed pairing menu. */
+  .menu { margin: 30px auto 0; max-width: 40rem; border: 1px solid var(--edge); background: var(--card); padding: 26px 28px 22px; }
+  .menu .course { text-align: center; margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1px dotted var(--edge); }
+  .menu .lbl { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 18px; color: var(--ink2); margin: 0; }
+  .menu .dish { font-family: var(--display); font-weight: 600; font-size: 28px; line-height: 1.15; margin: 4px 0 4px; }
+  .menu .budget { font-family: var(--mono); font-size: 13px; color: var(--ink2); margin: 0; }
+  .menu .row { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; }
+  .menu .row .w { font-family: var(--serif); font-size: 16.5px; color: var(--ink2); flex: 0 1 auto; }
+  .menu .row .lead { flex: 1 1 24px; border-bottom: 2px dotted var(--edge); transform: translateY(-5px); min-width: 18px; }
+  .menu .row .v { font-family: var(--display); font-weight: 600; font-size: 19px; color: var(--ink2); flex: none; white-space: nowrap; }
+  .menu .row.chosen .w { color: var(--ink); font-weight: 600; }
+  .menu .row.chosen .v { color: var(--accent); }
+  .menu .note { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 18px; color: var(--ink2); margin: 2px 0 10px 1.2rem; }
+  .menu p { max-width: none; }
+  .menu .foot { font-family: var(--sans); font-size: 14px; color: var(--ink2); margin: 14px 0 0; padding-top: 10px; border-top: 1px dotted var(--edge); }
+  .graph { margin: 26px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--edge); }
+  .graph li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px dotted var(--edge); font-family: var(--sans); font-size: 15.5px; color: var(--ink2); }
+  .graph li b { font-family: var(--mono); font-weight: 400; color: var(--accent); }
+  @media (max-width: 560px) { .menu { padding: 18px 14px; } .menu .dish { font-size: 23px; } .menu .row { flex-wrap: wrap; } .menu .row .lead { display: none; } .graph li { grid-template-columns: 1fr; gap: 2px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="masthead">
     <div class="logo"><span class="dot" aria-hidden="true"></span>Wine Pairing Agent</div>
-    <div class="tagline">reasons first, then retrieves</div>
+    <div class="tagline">Reasons about the dish, then retrieves</div>
   </header>
 
   <section class="hero">
-    <p class="kicker">Retrieval answers "find me a wine like X."</p>
-    <h1>This has to work out what X should even be.</h1>
+    <p class="kicker">A LangGraph agent with retrieval as a tool</p>
+    <h1>Name a dish. It works out the wine style, then finds real bottles.</h1>
 
     <p class="hero-sub">
-      Describe a meal: <em>"grilled ribeye with peppercorn sauce"</em>,
-      <em>"spicy Thai green curry"</em>, and a <strong>LangGraph agent</strong>
-      reasons from sommelier pairing principles to a target wine
-      <em>style</em>, then uses semantic search over
-      <strong>130,000 real reviews</strong> as a <strong>tool</strong>, recommends
-      with citations, and <strong>critiques its own pick</strong>. Retrying with a
-      different strategy if the pairing is weak or nothing fits your budget.
+      Given "grilled ribeye steak with a peppercorn cream sauce" and a $45
+      budget, the agent reasoned to a full-bodied, tannic Cabernet, searched
+      the Wine Enthusiast review index through a LangChain
+      <code>StructuredTool</code>, got six Cabernets back, all inside the budget,
+      and recommended two with citations. A critique node then checked the
+      pairing and would have sent it back to re-strategize if it had found a
+      problem.
     </p>
 
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/wine-pairing-agent/blob/main/writeup.md">Read the writeup</a>
-      <a class="textlink" href="https://github.com/lyhjeremy/wine-pairing-agent">or the code</a>
+      <a class="textlink" href="https://github.com/lyhjeremy/wine-pairing-agent">Code on GitHub</a>
     </div>
-
-    <figure style="margin-top:38px">
-      <img class="shot" src="../assets/banner.png"
-        alt="Wine Pairing Agent banner artwork." />
-    </figure>
 
     <div class="claims">
       <div class="claim">
         <div class="n">5 nodes</div>
-        <p>parse → strategize → retrieve → recommend → critique, with critique
-           looping back to strategize when the pairing is weak.</p>
+        <p>parse, strategize, retrieve, recommend, critique, with a conditional
+           edge from critique back to strategize.</p>
       </div>
       <div class="claim">
-        <div class="n">130k</div>
-        <p>real reviews searched as a genuine LangChain
-           <code>StructuredTool</code>, invoked by name.</p>
+        <div class="n">6 of 6</div>
+        <p>candidates inside the $45 budget in the recorded run, because the
+           budget is a filter on retrieval.</p>
       </div>
       <div class="claim">
-        <div class="n">9.0s</div>
-        <p>a full traced run end to end, with every node's time recorded and
-           saved as JSON.</p>
+        <div class="n">0.3 s</div>
+        <p>for the local retrieval step in a traced run, against 1.2 to 3.0
+           seconds for each LLM node.</p>
       </div>
       <div class="claim">
-        <div class="n">Every pick</div>
-        <p>carries a <code>[n]</code> citation into a real review, and the
-           candidate list is printed alongside the recommendation.</p>
+        <div class="n">[n]</div>
+        <p>on every recommended bottle, pointing at a retrieved review. The full
+           candidate list prints with the answer.</p>
       </div>
     </div>
   </section>
@@ -273,131 +321,113 @@
 <div class="route">
 
   <section class="stop">
-    <p class="eyebrow">Start · the distinction</p>
-    <h2>Retrieval is a step; this is a decision</h2>
+    <p class="eyebrow">The problem</p>
+    <h2>A dish is not a search query</h2>
     <p>
-      My <a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine Sommelier RAG</a>
-      answers a question that already contains its own search terms. "A bold red
-      under $25" is close to a query. A <em>meal</em> is not: nothing in "grilled
-      ribeye with peppercorn sauce" tells a retriever to look for firm tannin and
-      dark fruit.
+      The sibling project, <a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine
+      Sommelier RAG</a>, answers requests that already contain their search
+      terms: "a bold red under $25" is close to a query. "Grilled ribeye with
+      peppercorn sauce" says nothing about tannin or dark fruit, so a retriever
+      has nothing to match on.
     </p>
     <p>
-      So the agent reasons about the dish first, body, fat, acid, spice, forms a
-      pairing strategy, and only then turns that strategy into a query. Retrieval
-      is a tool it decides to use, not the pipeline it lives in. And afterwards it
-      asks whether the result is actually any good.
+      This agent reasons about the dish first (body, fat, sauce, cuisine,
+      cooking method), picks a target wine style from a short list of pairing
+      principles in <code>src/pairing.py</code>, writes a search query for that
+      style, and only then calls retrieval. Afterwards it checks its own answer.
     </p>
-    <figure>
-      <div class="plate">
-        <img src="../assets/architecture.png" loading="lazy"
-          alt="LangGraph diagram for the wine pairing agent showing parse, strategize, retrieve, recommend and critique nodes, with a loop from critique back to strategize." />
-      </div>
-      <figcaption>Five nodes, and a loop back to strategize when the critique is unhappy.</figcaption>
-    </figure>
+    <ol class="graph">
+      <li><b>parse</b><span>Turns the free-text meal into JSON features: main ingredient, body, sauce, cuisine, flavors, cooking method.</span></li>
+      <li><b>strategize</b><span>Reasons from the principles (acid cuts fat, tannin binds protein, match weight, sweetness tames heat, regional dishes with regional wines) to a target style and a search query.</span></li>
+      <li><b>retrieve</b><span>Calls the <code>search_wines</code> StructuredTool: dense search over the local Chroma index with the budget as a price filter, 40 candidates re-ordered by 0.8 × similarity + 0.2 × rating, top six kept.</span></li>
+      <li><b>recommend</b><span>Claude picks one or two of the retrieved wines, cites each as <code>[n]</code>, and explains the pairing logic.</span></li>
+      <li><b>critique</b><span>Deterministic checks (at least two candidates, at least one within budget) plus an LLM coherence check. Any issue routes back to strategize with the feedback, up to <code>--max-attempts</code> (default 2).</span></li>
+    </ol>
   </section>
 
   <section class="stop stop--key">
-    <p class="eyebrow">↓ a real run</p>
-    <h2>Ribeye in, Napa Cabernet out, with receipts</h2>
+    <p class="eyebrow">A recorded run</p>
+    <h2>Ribeye in, two Cabernets out</h2>
     <p>
-      Verbatim from <code>examples/sample_run.md</code>. Note that the candidate
-      list is printed too, so you can see what it chose <em>from</em> rather than
-      only what it chose.
+      From <code>examples/sample_run.md</code>. The agent printed the six
+      candidates it chose from as well as its two picks, so the choice can be
+      checked against the alternatives.
     </p>
-    <div class="term">
-<pre>$ python -m src.cli "grilled ribeye steak with a peppercorn cream sauce" --budget 45
 
-<span class="c">================================================================</span>
-PAIRING
-<span class="c">================================================================</span>
-For a rich, char-grilled ribeye with peppery cream sauce, you want bold
-tannin to cut the savory fat and dark fruit to echo the char.
-
-<span class="g">Vinifera 2006 Cabernet Sauvignon, Napa Valley: 95 pts, $40 [3]</span>
-This full-bodied, 100% Cab wraps blackberry and black currant around silky
-tannins with graphite and vanilla-sandalwood oak. The structure scours the
-cream and fat while the oak mirrors the grilled char. My top pick.
-
-<span class="g">Textbook 2005 Mise en Place Cabernet Sauvignon, Oakville: 94 pts, $44 [5]</span>
-Firmly tannic with a dry astringency and ripe blackberry-currant depth; that
-grippy structure is exactly what a fatty ribeye needs.
-
-<span class="c">Candidate wines (retrieved from 130k reviews)</span>
-  [1] Stark-Condé 2011 Cabernet Sauvignon (Stellenbosch) · 92 pts · $27
-  [2] JD 2007 Cabernet Sauvignon (Diamond Mountain District) · 94 pts · $40
-  [3] Vinifera 2006 Cabernet Sauvignon (Napa Valley) · 95 pts · $40
-  [4] Foley Johnson 2013 Cabernet Sauvignon (Rutherford) · 92 pts · $45
-  [5] Textbook 2005 Mise en Place Cabernet Sauvignon (Oakville) · 94 pts · $44
-  [6] Las Vertientes 2014 Reserva Cabernet Sauvignon (Mendoza) · 92 pts · $40</pre>
+    <div class="menu" role="group" aria-label="The recorded ribeye pairing: the dish, the two recommended wines, and the six retrieved candidates">
+      <div class="course">
+        <p class="lbl">The dish</p>
+        <p class="dish">Grilled ribeye steak with a peppercorn cream sauce</p>
+        <p class="budget">--budget 45</p>
+      </div>
+      <p class="lbl">Retrieved, in index order</p>
+      <div class="row"><span class="w">[1] Stark-Condé 2011 Cabernet Sauvignon, Stellenbosch</span><span class="lead" aria-hidden="true"></span><span class="v">92 · $27</span></div>
+      <div class="row"><span class="w">[2] JD 2007 Cabernet Sauvignon, Diamond Mountain District</span><span class="lead" aria-hidden="true"></span><span class="v">94 · $40</span></div>
+      <div class="row chosen"><span class="w">[3] Vinifera 2006 Cabernet Sauvignon, Napa Valley</span><span class="lead" aria-hidden="true"></span><span class="v">95 · $40</span></div>
+      <p class="note">Top pick: "The structure scours the cream and fat while the oak mirrors the grilled char."</p>
+      <div class="row"><span class="w">[4] Foley Johnson 2013 Cabernet Sauvignon, Rutherford</span><span class="lead" aria-hidden="true"></span><span class="v">92 · $45</span></div>
+      <div class="row chosen"><span class="w">[5] Textbook 2005 Mise en Place Cabernet Sauvignon, Oakville</span><span class="lead" aria-hidden="true"></span><span class="v">94 · $44</span></div>
+      <p class="note">Second pick: "that grippy structure is exactly what a fatty ribeye needs."</p>
+      <div class="row"><span class="w">[6] Las Vertientes 2014 Reserva Cabernet Sauvignon, Mendoza</span><span class="lead" aria-hidden="true"></span><span class="v">92 · $40</span></div>
+      <p class="foot">Critique: sound. The agent framed the two picks by style, [3] "elegant and polished" and [5] "bold and grippy", instead of only ranking them.</p>
     </div>
-    <p style="margin-top:22px">
-      Every candidate is inside the $45 budget, because the budget is a filter on
-      retrieval rather than a request in the prompt. And the two picks are
-      differentiated on <em>style</em>, one elegant, one grippy, instead of just
-      ranked.
-    </p>
   </section>
 
   <section class="stop">
-    <p class="eyebrow">↓ observability</p>
-    <h2>Every run is traceable and timed</h2>
+    <p class="eyebrow">Observability</p>
+    <h2>Every run can be traced and timed</h2>
     <p>
-      <code>retrieve</code> is a real LangChain <code>StructuredTool</code> the
-      agent invokes by name, which makes runs introspectable rather than a black
-      box. Add <code>--trace</code> and each node is timed, rendered as a tree, and
-      saved to <code>traces/</code> as JSON.
+      Because <code>retrieve</code> is a named LangChain tool, it shows up in a
+      trace as a tool call. <code>--trace</code> times each node, prints a trace
+      tree, and saves the run as JSON under <code>traces/</code>. A traced
+      ribeye run with a $45 budget, as recorded in the README (bullet glyphs dropped):
     </p>
     <div class="term">
 <pre>AGENT TRACE  (node · time · detail)
-<span class="c">────────────────────────────────────────────────────</span>
-  ● parse         1.2s   ribeye · rich body
-  ● strategize    2.3s   style → full-bodied tannic red
-  ● retrieve      0.3s   6 candidate wines (tool: search_wines)
-  ● recommend     3.0s   drafted pairing with citations
-  ● critique      2.2s   sound <span class="g"></span>
-<span class="c">────────────────────────────────────────────────────</span></pre>
+  parse         1.2s   ribeye · rich body
+  strategize    2.3s   style → full-bodied tannic red
+  retrieve      0.3s   6 candidate wines (tool: search_wines)
+  recommend     3.0s   drafted pairing with citations
+  critique      2.2s   sound</pre>
     </div>
     <p style="margin-top:22px">
-      Retrieval at <strong>0.3 seconds</strong> against 2–3 seconds per LLM node is
-      the useful detail: the local vector search is nearly free, and essentially
-      all the latency is reasoning. When critique loops back to re-strategize, the
-      extra pass shows up here: <strong>self-correction, made visible and
-      measurable</strong>.
+      The run took about nine seconds, and the local vector search was 0.3 of
+      them; nearly all the latency is the four LLM calls. When critique sends
+      the agent back to strategize, the second pass appears in the same trace.
     </p>
   </section>
 
   <section class="stop stop--warn">
-    <p class="eyebrow">↓ the gap, reported not hidden</p>
-    <h2>No live trace figure, and no scored evaluation</h2>
+    <p class="eyebrow">Limitations</p>
+    <h2>A working agent, not a measured one</h2>
     <p>
-      <code>assets/make_trace_figure.py</code> renders a saved trace as a timeline
-      figure. <strong>That figure has not been captured</strong> from a live run.
-      The script is written and runnable, but CLI throttling during the build meant
-      the render was never completed. The trace tree above is the real recorded
-      output; the timeline visualisation is not yet in the repository.
+      There is no scored evaluation of pairing quality here, unlike the
+      retrieval benchmark in the sommelier project. Pairing has few single right
+      answers, which makes it harder to score, and that leaves the gap open.
+      This page shows a traced agent that checks itself; it does not show that
+      its pairings beat a human's or a simpler baseline.
     </p>
     <p>
-      There is also <strong>no quantitative evaluation</strong> of pairing quality
-      here, unlike the retrieval benchmark in the sommelier RAG. Pairing quality is
-      genuinely harder to score, there is rarely one right answer, but that is an
-      explanation for the gap, not a substitute for it. What this page shows is a
-      working, traced, self-checking agent, not a measured claim that its pairings
-      are good.
+      <code>assets/make_trace_figure.py</code> can draw a saved trace as a
+      timeline, but no rendered timeline from a live run is in the repository.
+      The pairing principles are a short list, so fortified wines, very hot
+      food and dessert courses get thinner treatment. Retrieval filters on price
+      only; a color preference reaches the agent through the query and the
+      critique, not as a hard filter. The index holds the 30,000
+      highest-scored reviews by default.
     </p>
   </section>
 
   <section class="stop stop--end">
-    <p class="eyebrow">Finish · what it is built on</p>
-    <h2>Where the numbers come from</h2>
+    <p class="eyebrow">How it was built</p>
+    <h2>Stack</h2>
     <dl class="specs">
-      <div class="spec"><dt>Framework</dt><dd>LangGraph, with a real cycle from critique back to strategize</dd></div>
-      <div class="spec"><dt>Tool</dt><dd><code>src/tools.py</code> wraps retrieval as a LangChain <code>StructuredTool</code> the agent calls by name</dd></div>
-      <div class="spec"><dt>Index</dt><dd>~130,000 real reviews, embedded locally and stored in Chroma; built by <code>src/ingest.py</code></dd></div>
-      <div class="spec"><dt>Pairing logic</dt><dd><code>src/pairing.py</code>, the sommelier principles the strategize node reasons from</dd></div>
-      <div class="spec"><dt>Tracing</dt><dd><code>src/trace.py</code> times each node, renders a tree, saves JSON</dd></div>
-      <div class="spec"><dt>Generation</dt><dd>Claude CLI by default; retrieval is local and free</dd></div>
-      <div class="spec"><dt>Siblings</dt><dd><a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine Sommelier RAG</a> supplies the retrieval; the <a href="https://lyhjeremy.github.io/marathon-training-agent/">Training Plan Agent</a> shares the critique-loop pattern</dd></div>
+      <div class="spec"><dt>Agent</dt><dd>LangGraph <code>StateGraph</code> with five nodes and a conditional retry edge (<code>src/graph.py</code>)</dd></div>
+      <div class="spec"><dt>Tool</dt><dd><code>src/tools.py</code> wraps retrieval as a LangChain <code>StructuredTool</code> with a typed schema</dd></div>
+      <div class="spec"><dt>Index</dt><dd>Wine Enthusiast reviews embedded with sentence-transformers and stored in Chroma; 30,000 by default, <code>--all</code> for the full 129,971</dd></div>
+      <div class="spec"><dt>Generation</dt><dd>Claude through the Claude CLI by default; <code>ANTHROPIC_API_KEY</code> switches to the API</dd></div>
+      <div class="spec"><dt>Tracing</dt><dd><code>src/trace.py</code>: per-node timing, a tree view, JSON output</dd></div>
+      <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine Sommelier RAG</a> supplies the retrieval; the <a href="https://lyhjeremy.github.io/marathon-training-agent/">Training Plan Agent</a> uses the same critique loop</dd></div>
     </dl>
   </section>
 
@@ -409,14 +439,14 @@ grippy structure is exactly what a fatty ribeye needs.
     <h2>Reason about the dish, then go looking</h2>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/wine-pairing-agent/blob/main/writeup.md">Read the writeup</a>
-      <a class="textlink" href="https://github.com/lyhjeremy/wine-pairing-agent">or the code</a>
+      <a class="textlink" href="https://github.com/lyhjeremy/wine-pairing-agent">Code on GitHub</a>
     </div>
   </section>
 
   <footer>
     <p>
       Wine Pairing Agent ·
-      <a href="../">Showcase</a> ·
+      <a href="../">Project page</a> ·
       <a href="https://github.com/lyhjeremy/wine-pairing-agent/blob/main/writeup.md">Writeup</a> ·
       <a href="https://github.com/lyhjeremy/wine-pairing-agent">Source</a> ·
       MIT © 2026 Jeremy Lee
