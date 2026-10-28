@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Wine Pairing Agent: a LangGraph agent that picks a wine style, searches real reviews as a tool, and critiques its own pairing</title>
+<title>Wine Pairing Agent: a LangGraph agent that picks a wine style, searches wine reviews as a tool, and critiques its own pairing</title>
 <meta name="description" content="Describe a dish and a five-node LangGraph agent reasons from pairing principles to a wine style, calls review search as a LangChain StructuredTool with your budget as a filter, recommends with citations, and retries when its own critique finds a problem." />
 <meta name="theme-color" content="#F1ECE3" />
 <meta property="og:title" content="Wine Pairing Agent" />
@@ -275,7 +275,7 @@
 
   <section class="hero">
     <p class="kicker">A LangGraph agent with retrieval as a tool</p>
-    <h1>Name a dish. It works out the wine style, then finds real bottles.</h1>
+    <h1>Name a dish. It works out the wine style, then finds bottles that fit it.</h1>
 
     <p class="hero-sub">
       Given "grilled ribeye steak with a peppercorn cream sauce" and a $45
@@ -369,7 +369,7 @@
       <div class="row chosen"><span class="w">[5] Textbook 2005 Mise en Place Cabernet Sauvignon, Oakville</span><span class="lead" aria-hidden="true"></span><span class="v">94 · $44</span></div>
       <p class="note">Second pick: "that grippy structure is exactly what a fatty ribeye needs."</p>
       <div class="row"><span class="w">[6] Las Vertientes 2014 Reserva Cabernet Sauvignon, Mendoza</span><span class="lead" aria-hidden="true"></span><span class="v">92 · $40</span></div>
-      <p class="foot">Critique: sound. The agent framed the two picks by style, [3] "elegant and polished" and [5] "bold and grippy", instead of only ranking them.</p>
+      <p class="foot">Critique: sound. The agent framed the two picks by style, [3] "elegant and polished" and [5] "bold and grippy", which tells a guest more than a ranking would.</p>
     </div>
   </section>
 
@@ -399,11 +399,12 @@
 
   <section class="stop stop--warn">
     <p class="eyebrow">Limitations</p>
-    <h2>A working agent, not a measured one</h2>
+    <h2>It works and checks itself; nobody has scored it</h2>
     <p>
       There is no scored evaluation of pairing quality here, unlike the
       retrieval benchmark in the sommelier project. Pairing has few single right
-      answers, which makes it harder to score, and that leaves the gap open.
+      answers, which makes it harder to score, though that explains the gap
+      without closing it.
       This page shows a traced agent that checks itself; it does not show that
       its pairings beat a human's or a simpler baseline.
     </p>
@@ -413,7 +414,7 @@
       The pairing principles are a short list, so fortified wines, very hot
       food and dessert courses get thinner treatment. Retrieval filters on price
       only; a color preference reaches the agent through the query and the
-      critique, not as a hard filter. The index holds the 30,000
+      critique, with no hard filter behind it. The index holds the 30,000
       highest-scored reviews by default.
     </p>
   </section>

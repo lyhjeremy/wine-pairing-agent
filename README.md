@@ -1,6 +1,6 @@
 # Wine Pairing Agent
 
-A LangGraph agent that takes a dish, reasons to a wine style, searches real Wine Enthusiast reviews as a tool, recommends bottles with citations, and critiques its own pairing.
+A LangGraph agent that takes a dish, reasons to a wine style, searches Wine Enthusiast reviews as a tool, recommends bottles with citations, and critiques its own pairing.
 
 [Live site](https://lyhjeremy.github.io/wine-pairing-agent/) · [Write-up](https://lyhjeremy.github.io/wine-pairing-agent/overview/) · [Technical notes](writeup.md) · [Sample run](examples/sample_run.md)
 
@@ -88,7 +88,7 @@ AGENT TRACE  (node · time · detail)
 
 ## Limitations
 
-- Pairing quality has no scored evaluation; the repo shows a working, self-checking agent, not a measured one.
+- Pairing quality has no scored evaluation. The repo shows that the agent works and checks itself; how good its pairings are hasn't been measured.
 - The pairing principles are a short list. Fortified wines, very hot food and dessert courses get thinner treatment.
 - Retrieval filters on price only. A color preference reaches the agent through the query and the critique.
 - The default index holds the 30,000 highest-scored reviews of the 129,971 in the dataset.

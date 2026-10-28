@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Wine Pairing Agent: a LangGraph agent that pairs wine to a dish and checks its own pick</title>
-<meta name="description" content="Describe a dish. A five-node LangGraph agent reasons to a wine style, searches real Wine Enthusiast reviews as a tool with your budget as a filter, recommends with citations, and retries when its critique finds a problem." />
+<meta name="description" content="Describe a dish. A five-node LangGraph agent reasons to a wine style, searches Wine Enthusiast reviews as a tool with your budget as a filter, recommends with citations, and retries when its critique finds a problem." />
 <link rel="stylesheet" href="assets/family.css" />
 <style>
   * { box-sizing: border-box; border-radius: 0; }
@@ -65,7 +65,7 @@
   <header>
     <p class="house">A LangGraph agent with retrieval as a tool</p>
     <h1>Name a dish. It picks the style, finds the bottles, then checks itself.</h1>
-    <p class="lede">The agent reasons from pairing principles to a wine style, searches real Wine Enthusiast reviews with your budget as a filter, recommends one or two bottles with citations, and goes back to re-strategize if its own critique finds a problem.</p>
+    <p class="lede">The agent reasons from pairing principles to a wine style, searches Wine Enthusiast reviews with your budget as a filter, recommends one or two bottles with citations, and goes back to re-strategize if its own critique finds a problem.</p>
     <p class="by">By Jeremy Lee, WSET Level 3 · <a href="https://github.com/lyhjeremy/wine-pairing-agent">Source on GitHub</a></p>
   </header>
 
@@ -125,7 +125,7 @@ sound --> END</pre>
   <p class="src">Trace tree as recorded in the README, bullet glyphs dropped.</p>
 
   <h2>Limits</h2>
-  <p>Pairing quality is not scored against a benchmark, so this shows a working, self-checking agent, not a measured one. The principles are a short list, retrieval filters on price only, and the default index holds the 30,000 highest-scored reviews.</p>
+  <p>Pairing quality is not scored against a benchmark, so this shows that the agent works and checks itself, and leaves the quality of its pairings unmeasured. The principles are a short list, retrieval filters on price only, and the default index holds the 30,000 highest-scored reviews.</p>
 
   <footer>MIT License · © 2026 Jeremy Lee · <a href="overview/">Full writeup</a> · <a href="https://github.com/lyhjeremy/wine-pairing-agent/blob/main/writeup.md">Technical writeup</a> · <a href="https://github.com/lyhjeremy/wine-pairing-agent">Source on GitHub</a></footer>
 </div>
