@@ -241,7 +241,8 @@
   .route::before, .stop::before { display: none; }
   .stop { padding-left: 0; }
   .stop + .stop { border-top: 1px solid var(--rule); padding-top: 56px; }
-  .bignum { font-weight: 600; letter-spacing: -.01em; }
+  .bignum { font-weight: 600; letter-spacing: -.01em;
+            line-height: 1.02; margin-bottom: 14px; }  /* Cormorant descenders hit the note at .86 */
 
 
   .bignum { line-height: 1.02; margin-bottom: 14px; }
@@ -267,6 +268,42 @@
 </style>
 </head>
 <body>
+<style>
+  /* page-specific: the recorded run as a five-course walkthrough with a time strip */
+  .walk { margin: 28px 0 0; border: 1px solid var(--edge); background: var(--card); }
+  .strip { display: flex; width: 100%; border-bottom: 1px solid var(--edge); }
+  .strip button { flex: var(--t) 1 0; min-width: 0; border: 0; border-right: 1px solid var(--edge); background: var(--paper); color: var(--ink);
+                  padding: 10px 6px 8px; cursor: pointer; text-align: left; font: 600 13px/1.2 var(--mono); overflow: hidden; }
+  .strip button:last-child { border-right: 0; }
+  .strip button span { display: block; font: 400 12px/1.2 var(--mono); color: var(--muted); margin-top: 3px; }
+  .strip button:hover { background: color-mix(in srgb, var(--accent) 12%, var(--paper)); }
+  .strip button[aria-selected="true"] { background: var(--accent); color: var(--paper); }
+  .strip button[aria-selected="true"] span { color: var(--paper); }
+  .strip button.local { background: color-mix(in srgb, var(--accent2) 16%, var(--paper)); }
+  .strip button.local[aria-selected="true"] { background: var(--accent2); }
+  .scale { display: flex; justify-content: space-between; font: 400 11.5px var(--mono); color: var(--muted); padding: 4px 8px 0; }
+  .panel { padding: 18px 22px 18px; }
+  .panel .num { font-family: var(--display); font-style: italic; font-size: 18px; color: var(--accent); margin: 0; }
+  .panel h3 { font-family: var(--display); font-size: 30px; font-weight: 600; margin: 0 0 8px; }
+  .panel .does { font-family: var(--sans); font-size: 15px; color: var(--ink2); margin: 0 0 14px; max-width: 62ch; }
+  .panel .got { border-top: 1px dotted var(--edge); padding-top: 10px; }
+  .panel .got p { margin: 0 0 6px; max-width: none; }
+  .panel .k { font: 600 11.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin: 8px 0 4px; }
+  .panel q, .panel .quote { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--ink); }
+  .panel ul { margin: 4px 0 0; padding: 0; list-style: none; }
+  .panel li { display: flex; gap: 8px; align-items: baseline; font-family: var(--serif); font-size: 15.5px; color: var(--ink2); padding: 3px 0; }
+  .panel li .lead { flex: 1 1 18px; border-bottom: 2px dotted var(--edge); transform: translateY(-5px); min-width: 12px; }
+  .panel li b { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--ink2); white-space: nowrap; }
+  .panel li.pick { color: var(--ink); font-weight: 600; } .panel li.pick b { color: var(--accent); }
+  .nav { display: flex; justify-content: space-between; gap: 10px; padding: 0 22px 18px; }
+  .nav button { font: 600 14px/1 var(--sans); padding: 9px 14px; border: 1px solid var(--edge); background: var(--paper); color: var(--ink); cursor: pointer; }
+  .nav button:hover { background: var(--ink); color: var(--paper); }
+  .nav button[disabled] { color: var(--muted); cursor: default; background: var(--paper); }
+  .strip .nm { font-style: normal; }
+  @media (max-width: 560px) { .strip .nm { display: none; } .strip button { text-align: center; }
+  @media (max-width: 560px) { .strip button { font-size: 11px; padding: 8px 3px; } .strip button span { font-size: 10.5px; } .panel { padding: 14px 14px; } .nav { padding: 0 14px 14px; } .panel h3 { font-size: 26px; } .panel li { flex-wrap: wrap; } .panel li .lead { display: none; } }
+</style>
+
 <div class="wrap">
   <header class="masthead">
     <div class="logo"><span class="dot" aria-hidden="true"></span>Wine Pairing Agent</div>
@@ -278,13 +315,11 @@
     <h1>Name a dish. It works out the wine style, then finds bottles that fit it.</h1>
 
     <p class="hero-sub">
-      Given "grilled ribeye steak with a peppercorn cream sauce" and a $45
-      budget, the agent reasoned to a full-bodied, tannic Cabernet, searched
-      the Wine Enthusiast review index through a LangChain
-      <code>StructuredTool</code>, got six Cabernets back, all inside the budget,
-      and recommended two with citations. A critique node then checked the
-      pairing and would have sent it back to re-strategize if it had found a
-      problem.
+      Given "grilled ribeye steak with a peppercorn cream sauce" and a $45 budget, the agent
+      reasoned to a full-bodied, tannic Cabernet, searched the Wine Enthusiast review index
+      through a LangChain <code>StructuredTool</code>, got six Cabernets back inside the
+      budget, and recommended two with citations. A critique node then checked the pairing;
+      had it found a problem, it would have sent the agent back to try another style.
     </p>
 
     <div class="cta-row">
@@ -295,23 +330,19 @@
     <div class="claims">
       <div class="claim">
         <div class="n">5 nodes</div>
-        <p>parse, strategize, retrieve, recommend, critique, with a conditional
-           edge from critique back to strategize.</p>
+        <p>Parse, strategize, retrieve, recommend, critique, with a conditional edge from critique back to strategize.</p>
       </div>
       <div class="claim">
         <div class="n">6 of 6</div>
-        <p>candidates inside the $45 budget in the recorded run, because the
-           budget is a filter on retrieval.</p>
+        <p>Candidates inside the $45 budget in the recorded run, because the budget is a filter on retrieval.</p>
       </div>
       <div class="claim">
         <div class="n">0.3 s</div>
-        <p>for the local retrieval step in a traced run, against 1.2 to 3.0
-           seconds for each LLM node.</p>
+        <p>For the local retrieval step in a traced run, against 1.2 to 3.0 seconds for each LLM node.</p>
       </div>
       <div class="claim">
         <div class="n">[n]</div>
-        <p>on every recommended bottle, pointing at a retrieved review. The full
-           candidate list prints with the answer.</p>
+        <p>On every recommended bottle, pointing at a retrieved review. The full candidate list prints with the answer.</p>
       </div>
     </div>
   </section>
@@ -325,33 +356,49 @@
     <h2>A dish is not a search query</h2>
     <p>
       The sibling project, <a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine
-      Sommelier RAG</a>, answers requests that already contain their search
-      terms: "a bold red under $25" is close to a query. "Grilled ribeye with
-      peppercorn sauce" says nothing about tannin or dark fruit, so a retriever
-      has nothing to match on.
+      Sommelier RAG</a>, answers requests that already contain their search terms: "a bold red
+      under $25" is close to a query. "Grilled ribeye with peppercorn sauce" says nothing about
+      tannin or dark fruit, so a retriever has nothing to match on.
     </p>
     <p>
-      This agent reasons about the dish first (body, fat, sauce, cuisine,
-      cooking method), picks a target wine style from a short list of pairing
-      principles in <code>src/pairing.py</code>, writes a search query for that
-      style, and only then calls retrieval. Afterwards it checks its own answer.
+      This agent reasons about the dish first, picks a target style from a short list of
+      pairing principles in <code>src/pairing.py</code> (acid cuts fat, tannin binds protein,
+      match weight, sweetness tames heat, regional dishes with regional wines), writes a search
+      query for that style, and only then calls retrieval. Afterwards it checks its own answer.
     </p>
-    <ol class="graph">
-      <li><b>parse</b><span>Turns the free-text meal into JSON features: main ingredient, body, sauce, cuisine, flavors, cooking method.</span></li>
-      <li><b>strategize</b><span>Reasons from the principles (acid cuts fat, tannin binds protein, match weight, sweetness tames heat, regional dishes with regional wines) to a target style and a search query.</span></li>
-      <li><b>retrieve</b><span>Calls the <code>search_wines</code> StructuredTool: dense search over the local Chroma index with the budget as a price filter, 40 candidates re-ordered by 0.8 × similarity + 0.2 × rating, top six kept.</span></li>
-      <li><b>recommend</b><span>Claude picks one or two of the retrieved wines, cites each as <code>[n]</code>, and explains the pairing logic.</span></li>
-      <li><b>critique</b><span>Deterministic checks (at least two candidates, at least one within budget) plus an LLM coherence check. Any issue routes back to strategize with the feedback, up to <code>--max-attempts</code> (default 2).</span></li>
-    </ol>
   </section>
 
   <section class="stop stop--key">
-    <p class="eyebrow">A recorded run</p>
+    <p class="eyebrow">Course by course</p>
+    <h2>One run through the five nodes</h2>
+    <p>
+      Step through the recorded ribeye run from <code>examples/sample_run.md</code>. Each
+      node's width in the strip is its time in the traced ribeye run in the README (same
+      $45 budget, shorter wording of the dish): 9.0 seconds in all, of which the local search
+      took 0.3. The retrieve segment is drawn wider than its share so its label fits. On a phone the strip shows node numbers only.
+    </p>
+
+    <div class="walk" role="group" aria-label="Walkthrough of the recorded run, one node at a time">
+      <div class="strip" role="tablist" aria-label="Agent nodes, sized by time" id="pa-strip"></div>
+      <div class="scale" aria-hidden="true"><span>0 s</span><span>9.0 s</span></div>
+      <div class="panel" role="tabpanel" id="pa-panel" aria-live="polite"></div>
+      <div class="nav"><button type="button" id="pa-prev">Previous node</button><button type="button" id="pa-next">Next node</button></div>
+    </div>
+    <p style="margin-top:18px">
+      The retrieve step ranks 40 candidates by 0.8 &times; cosine similarity + 0.2 &times;
+      rating, with the rating scaled so 80 points is 0 and 100 is 1. On that blend a 95-point
+      wine beats a 92-point one only if its similarity is no more than
+      0.0375 lower, so the rating
+      breaks near-ties and does not override the match.
+    </p>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">The answer</p>
     <h2>Ribeye in, two Cabernets out</h2>
     <p>
-      From <code>examples/sample_run.md</code>. The agent printed the six
-      candidates it chose from as well as its two picks, so the choice can be
-      checked against the alternatives.
+      The agent printed the six candidates it chose from as well as its two picks, so the
+      choice can be checked against the alternatives.
     </p>
 
     <div class="menu" role="group" aria-label="The recorded ribeye pairing: the dish, the two recommended wines, and the six retrieved candidates">
@@ -377,10 +424,10 @@
     <p class="eyebrow">Observability</p>
     <h2>Every run can be traced and timed</h2>
     <p>
-      Because <code>retrieve</code> is a named LangChain tool, it shows up in a
-      trace as a tool call. <code>--trace</code> times each node, prints a trace
-      tree, and saves the run as JSON under <code>traces/</code>. A traced
-      ribeye run with a $45 budget, as recorded in the README (bullet glyphs dropped):
+      Because <code>retrieve</code> is a named LangChain tool, it shows up in a trace as a tool
+      call. <code>--trace</code> times each node, prints a trace tree, and saves the run as JSON
+      under <code>traces/</code>. The traced ribeye run behind the strip above, as recorded in
+      the README with its bullet glyphs dropped:
     </p>
     <div class="term">
 <pre>AGENT TRACE  (node · time · detail)
@@ -391,9 +438,8 @@
   critique      2.2s   sound</pre>
     </div>
     <p style="margin-top:22px">
-      The run took about nine seconds, and the local vector search was 0.3 of
-      them; nearly all the latency is the four LLM calls. When critique sends
-      the agent back to strategize, the second pass appears in the same trace.
+      Nearly all the latency is the four LLM calls. When critique sends the agent back to
+      strategize, the second pass appears in the same trace.
     </p>
   </section>
 
@@ -401,20 +447,19 @@
     <p class="eyebrow">Limitations</p>
     <h2>It works and checks itself; nobody has scored it</h2>
     <p>
-      There is no scored evaluation of pairing quality here, unlike the
-      retrieval benchmark in the sommelier project. Pairing has few single right
-      answers, which makes it harder to score, though that explains the gap
-      without closing it.
-      This page shows a traced agent that checks itself; it does not show that
-      its pairings beat a human's or a simpler baseline.
+      There is no scored evaluation of pairing quality here, unlike the retrieval benchmark in
+      the sommelier project. Pairing has few single right answers, which makes it harder to
+      score, though that explains the gap without closing it. This page shows a traced agent
+      that checks itself; it does not show that its pairings beat a human's or a simpler
+      baseline. The walkthrough is one recorded run, and the timings come from a separate
+      traced run of a similar ribeye request.
     </p>
     <p>
-      <code>assets/make_trace_figure.py</code> can draw a saved trace as a
-      timeline, but no rendered timeline from a live run is in the repository.
-      The pairing principles are a short list, so fortified wines, very hot
-      food and dessert courses get thinner treatment. Retrieval filters on price
-      only; a color preference reaches the agent through the query and the
-      critique, with no hard filter behind it. The index holds the 30,000
+      <code>assets/make_trace_figure.py</code> can draw a saved trace as a timeline, but no
+      rendered timeline from a live run is in the repository. The pairing principles are a
+      short list, so fortified wines, very hot food and dessert courses get thinner treatment.
+      Retrieval filters on price only; a color preference reaches the agent through the query
+      and the critique, with no hard filter behind it. The index holds the 30,000
       highest-scored reviews by default.
     </p>
   </section>
@@ -454,5 +499,64 @@
     </p>
   </footer>
 </div>
+
+<script>
+(function () {
+  // Node outputs from examples/sample_run.md; times from the traced run in README.md.
+  var N = [
+    { id: "parse", t: 1.2, llm: true,
+      does: "Turns the free-text meal into JSON features: main ingredient, body, sauce, cuisine, flavors, cooking method.",
+      got: "<span class=\"k\">Recorded output</span><p class=\"quote\">grilled ribeye steak (rich body)</p>" },
+    { id: "strategize", t: 2.3, llm: true,
+      does: "Reasons from the pairing principles to a target style and writes a search query for it.",
+      got: "<span class=\"k\">Target style</span><p class=\"quote\">full-bodied, tannic dry red, Cabernet Sauvignon or a Bordeaux-style blend</p>" +
+           "<span class=\"k\">Search query</span><p><code>full-bodied Cabernet Sauvignon bold ripe black currant firm tannins oak vanilla savory pairs with grilled steak</code></p>" },
+    { id: "retrieve", t: 0.3, llm: false,
+      does: "Calls the search_wines StructuredTool: dense search over the local Chroma index with the budget as a price filter, 40 candidates re-ordered by similarity and rating, top six kept. No LLM call.",
+      got: "<span class=\"k\">Six candidates, all at or under $45</span><ul>" +
+        [["[1] Stark-Condé 2011, Stellenbosch", "92 · $27"], ["[2] JD 2007, Diamond Mountain District", "94 · $40"], ["[3] Vinifera 2006, Napa Valley", "95 · $40"],
+         ["[4] Foley Johnson 2013, Rutherford", "92 · $45"], ["[5] Textbook 2005 Mise en Place, Oakville", "94 · $44"], ["[6] Las Vertientes 2014 Reserva, Mendoza", "92 · $40"]]
+        .map(function (w) { return "<li><span>" + w[0] + "</span><span class=\"lead\" aria-hidden=\"true\"></span><b>" + w[1] + "</b></li>"; }).join("") + "</ul>" },
+    { id: "recommend", t: 3.0, llm: true,
+      does: "Claude picks one or two of the retrieved wines, cites each as [n], and explains the pairing logic.",
+      got: "<span class=\"k\">Picks</span><ul><li class=\"pick\"><span>[3] Vinifera 2006 Cabernet Sauvignon</span><span class=\"lead\" aria-hidden=\"true\"></span><b>top pick</b></li>" +
+           "<li class=\"pick\"><span>[5] Textbook 2005 Mise en Place</span><span class=\"lead\" aria-hidden=\"true\"></span><b>second</b></li></ul>" +
+           "<span class=\"k\">Opening line</span><p class=\"quote\">For a rich, char-grilled ribeye with peppery cream sauce, you want bold tannin to cut the savory fat and dark fruit to echo the char.</p>" },
+    { id: "critique", t: 2.2, llm: true,
+      does: "Deterministic checks (at least two candidates, at least one within budget) plus an LLM coherence check. Any issue routes back to strategize with the feedback, up to --max-attempts (default 2).",
+      got: "<span class=\"k\">Verdict</span><p class=\"quote\">sound</p><p>The pairing passed on the first attempt, so the retry edge back to strategize was not taken.</p>" }
+  ];
+  var cur = 0, strip = document.getElementById("pa-strip"), panel = document.getElementById("pa-panel");
+  var total = N.reduce(function (s, n) { return s + n.t; }, 0);
+  N.forEach(function (n, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.setAttribute("role", "tab"); b.id = "pa-tab-" + i;
+    b.style.setProperty("--t", Math.max(n.t, 0.9));
+    if (!n.llm) b.className = "local";
+    b.innerHTML = (i + 1) + "<em class=\"nm\"> " + n.id + "</em><span>" + n.t.toFixed(1) + " s</span>";
+    b.setAttribute("aria-label", "Node " + (i + 1) + ", " + n.id + ", " + n.t.toFixed(1) + " seconds" + (n.llm ? "" : ", no LLM call"));
+    b.addEventListener("click", function () { show(i); });
+    b.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); show(Math.min(N.length - 1, cur + 1), true); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); show(Math.max(0, cur - 1), true); }
+    });
+    strip.appendChild(b);
+  });
+  function show(i, focus) {
+    cur = i;
+    strip.querySelectorAll("button").forEach(function (b, j) { b.setAttribute("aria-selected", String(j === i)); b.tabIndex = j === i ? 0 : -1; });
+    var n = N[i], share = Math.round(n.t / total * 100);
+    panel.setAttribute("aria-labelledby", "pa-tab-" + i);
+    panel.innerHTML = "<p class=\"num\">Node " + (i + 1) + " of 5 · " + n.t.toFixed(1) + " s, " + share + "% of the run" + (n.llm ? "" : " · no LLM call") + "</p>" +
+      "<h3>" + n.id + "</h3><p class=\"does\">" + n.does + "</p><div class=\"got\">" + n.got + "</div>";
+    document.getElementById("pa-prev").disabled = i === 0;
+    document.getElementById("pa-next").disabled = i === N.length - 1;
+    if (focus) document.getElementById("pa-tab-" + i).focus();
+  }
+  document.getElementById("pa-prev").addEventListener("click", function () { if (cur > 0) show(cur - 1); });
+  document.getElementById("pa-next").addEventListener("click", function () { if (cur < N.length - 1) show(cur + 1); });
+  show(0);
+})();
+</script>
 </body>
 </html>
