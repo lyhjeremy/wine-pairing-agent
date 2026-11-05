@@ -1,0 +1,25 @@
+{
+  "note": "Frozen eval set for the pairing agent, written 2026-11-05 before any run. Each dish lists the grape varieties (Wine Enthusiast 'variety' values) that classic pairing rules accept for it. A pick counts as a match when its variety is in the list.",
+  "dishes": [
+    {"id": "ribeye", "meal": "grilled ribeye steak with a peppercorn cream sauce", "budget": 45,
+     "accept": ["Cabernet Sauvignon", "Bordeaux-style Red Blend", "Malbec", "Syrah", "Shiraz", "Merlot", "Cabernet Franc", "Zinfandel", "Tempranillo", "Nebbiolo", "Red Blend", "Rhône-style Red Blend", "Petite Sirah", "Aglianico"]},
+    {"id": "oysters", "meal": "raw oysters on the half shell with mignonette", "budget": 30,
+     "accept": ["Champagne Blend", "Sparkling Blend", "Melon", "Chardonnay", "Sauvignon Blanc", "Albariño", "Picpoul", "Assyrtiko", "Chenin Blanc", "Grüner Veltliner", "Riesling"]},
+    {"id": "green-curry", "meal": "spicy Thai green curry with chicken", "budget": 25,
+     "accept": ["Riesling", "Gewürztraminer", "Grüner Veltliner", "Chenin Blanc", "Pinot Gris", "Pinot Grigio", "Torrontés", "Viognier", "Rosé", "Sparkling Blend", "Moscato", "Muscat"]},
+    {"id": "risotto", "meal": "wild mushroom risotto with parmesan", "budget": 35,
+     "accept": ["Pinot Noir", "Chardonnay", "Nebbiolo", "Barbera", "Sangiovese", "Gamay", "Pinot Gris", "Pinot Grigio"]},
+    {"id": "roast-chicken", "meal": "roast chicken with lemon and herbs", "budget": 25,
+     "accept": ["Chardonnay", "Pinot Noir", "Sauvignon Blanc", "Chenin Blanc", "Viognier", "Rosé", "Gamay", "Pinot Gris", "Pinot Grigio", "Grenache", "White Blend", "Grüner Veltliner"]},
+    {"id": "lamb", "meal": "braised lamb shank with rosemary and garlic", "budget": 40,
+     "accept": ["Syrah", "Shiraz", "Grenache", "Rhône-style Red Blend", "Tempranillo", "Cabernet Sauvignon", "Bordeaux-style Red Blend", "Malbec", "Mourvèdre", "Nebbiolo", "Sangiovese", "Red Blend", "Merlot", "Cabernet Franc"]},
+    {"id": "salmon", "meal": "pan-seared salmon with dill butter", "budget": 30,
+     "accept": ["Pinot Noir", "Chardonnay", "Rosé", "Sauvignon Blanc", "Gamay", "Pinot Gris", "Pinot Grigio", "Riesling", "Grüner Veltliner"]},
+    {"id": "goat-cheese", "meal": "goat cheese and roasted beet salad", "budget": 20,
+     "accept": ["Sauvignon Blanc", "Chenin Blanc", "Grüner Veltliner", "Rosé", "Pinot Noir", "Gamay"]},
+    {"id": "chocolate", "meal": "flourless dark chocolate torte", "budget": 40,
+     "accept": ["Port", "Sherry", "Muscat", "Brachetto", "Furmint"]},
+    {"id": "pizza", "meal": "pepperoni pizza", "budget": 20,
+     "accept": ["Sangiovese", "Barbera", "Zinfandel", "Primitivo", "Montepulciano", "Nero d'Avola", "Lambrusco", "Red Blend", "Grenache", "Tempranillo", "Syrah", "Shiraz", "Rhône-style Red Blend"]}
+  ]
+}
