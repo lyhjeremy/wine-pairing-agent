@@ -1,0 +1,404 @@
+[
+  {
+    "id": "ribeye",
+    "meal": "grilled ribeye steak with a peppercorn cream sauce",
+    "budget": 45,
+    "baseline_pick": {
+      "title": "Mattucci 2013 Bentley Ironworks Cabernet Sauvignon (Paso Robles)",
+      "variety": "Cabernet Sauvignon",
+      "price": 45.0,
+      "points": 94
+    },
+    "baseline_match": true,
+    "strategy": {
+      "target_style": "Full-bodied Cabernet Sauvignon or Cabernet-led blend from California or Washington, firm ripe tannins, good acidity, recent vintage, around $45",
+      "search_query": "full-bodied Cabernet Sauvignon firm tannins structured fresh acidity black currant cassis cedar black pepper spice savory",
+      "rationale": "A ribeye's marbled fat and char call for a full-bodied Cabernet whose firm tannins grip the fat and whose acidity cuts the cream sauce, while the black pepper and cassis notes in the wine echo the peppercorns, and it matches the American steakhouse setting."
+    },
+    "candidates": [
+      {
+        "title": "Stark-Condé 2011 Unfined and Unfiltered Cabernet Sauvignon (Stellenbosch)",
+        "variety": "Cabernet Sauvignon",
+        "price": 27.0,
+        "points": 92
+      },
+      {
+        "title": "Dalton 2013 D Series Cabernet Sauvignon (Galilee)",
+        "variety": "Cabernet Sauvignon",
+        "price": 20.0,
+        "points": 91
+      },
+      {
+        "title": "Sineann 2012 Cabernet Sauvignon (Columbia Valley (WA))",
+        "variety": "Cabernet Sauvignon",
+        "price": 30.0,
+        "points": 94
+      },
+      {
+        "title": "Cono Sur 2013 20 Barrels Cabernet Sauvignon (Maipo Valley)",
+        "variety": "Cabernet Sauvignon",
+        "price": 35.0,
+        "points": 93
+      },
+      {
+        "title": "JD 2007 Cabernet Sauvignon (Diamond Mountain District)",
+        "variety": "Cabernet Sauvignon",
+        "price": 40.0,
+        "points": 94
+      },
+      {
+        "title": "Viña Requingua 2012 Potro de Piedra Family Reserve Single Vineyard Cabernet Sauvignon-Cabernet Franc (Curicó Valley)",
+        "variety": "Cabernet Sauvignon-Cabernet Franc",
+        "price": 30.0,
+        "points": 93
+      }
+    ],
+    "recommendation": "For this ribeye with peppercorn cream, I'd pick these two:\n\n**JD 2007 Cabernet Sauvignon, Diamond Mountain District (94 pts, $40) [5].** It's the closest match to the target: a California Cabernet near $45 with \"tightly wound mountain tannins\" that will grip the marbled fat and clean the palate between bites. Its blackberry, black currant and cedar sit well against the char, and the wine is still fresh enough to cut through the cream sauce. It's an older vintage, but the review says it's approachable now and will keep for years.\n\n**Sineann 2012 Cabernet Sauvignon, Columbia Valley, WA (94 pts, $30) [3].** This is the Washington option, riper and more concentrated, and it costs less. The dense black fruit has the body to hold up to a rich steak. The coffee and molasses running through its tannins go with the grill char, and the baking-spice notes pick up the cracked pepper in the sauce.\n\nIf you want one bottle, take the JD [5]. Its firmer tannins and cedar structure handle the fat better than the plusher Sineann does.",
+    "cited": [
+      5,
+      3
+    ],
+    "invalid_citations": [],
+    "agent_pick": {
+      "title": "JD 2007 Cabernet Sauvignon (Diamond Mountain District)",
+      "variety": "Cabernet Sauvignon",
+      "price": 40.0,
+      "points": 94
+    },
+    "agent_match": true,
+    "all_picks_match": true,
+    "over_budget": [],
+    "critique": {
+      "issues": [
+        "The 2007 JD will be about 19 years old in 2026. Its tannins have probably softened since release, so a review from release time saying they are 'tightly wound' and will 'grip the marbled fat' may no longer hold.",
+        "Cutting through a cream sauce is mostly acidity's job. The note credits the wine's freshness without naming its acidity, and a mature mountain Cabernet may not have much lift left.",
+        "The Sineann's molasses, coffee and ripe fruit could feel heavy next to a rich cream sauce. Without acidity to balance it, the pairing can turn cloying.",
+        "Black pepper pulls toward Syrah. A Northern Rhône or Washington Syrah would match the peppercorn more directly, and the note doesn't mention that option.",
+        "The $40 price is probably the release price. A 2007 bottle will likely cost more now, or be hard to find."
+      ],
+      "ok": false
+    },
+    "attempts": 2,
+    "log": [
+      "parse → ribeye steak (rich body)",
+      "strategize → Full-bodied, structured red with firm tannins and good acidity, such as Cabernet Sauvignon or a Cabernet-led blend | query: \"full-bodied Cabernet Sauvignon firm tannins blackcurrant cassis black pepper cedar good acidity structured\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): Both lead wines are 2007 vintages, about 19 years old now. The 'tight mountain tannins' and 'sandpapery tannins' read like release-time tasting notes; by 2026 the tannins will have softened a lot, so the claims about tannins gripping fat and scrubbing the palate may overstate what is in the glass.",
+      "strategize → Peppery, full-bodied Syrah from a recent vintage (Washington, Northern Rhône such as Crozes-Hermitage or Saint-Joseph, or Paso Robles), with ripe dark fruit, moderate firm tannins and fresh acidity | query: \"full-bodied Syrah black pepper dark fruit savory smoked meat firm tannins fresh acidity recent vintage Washington Crozes-Hermitage Saint-Joseph\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): Tannin reasoning is backwards for the Trust: a fatty ribeye wants firm tannin to grip the fat, and peppercorn cream sauce does not make tannin taste harsh. 'The review says nothing about strong tannins' is an argument from silence, not a reason to pick it.",
+      "strategize → Full-bodied Cabernet Sauvignon or Cabernet-led blend from California or Washington, firm ripe tannins, good acidity, recent vintage, around $45 | query: \"full-bodied Cabernet Sauvignon firm tannins structured fresh acidity black currant cassis cedar black pepper spice savory\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): The 2007 JD will be about 19 years old in 2026. Its tannins have probably softened since release, so a review from release time saying they are 'tightly wound' and will 'grip the marbled fat' may no longer hold."
+    ],
+    "error": null,
+    "llm_calls": 10,
+    "wall_s": 72.38,
+    "cost_usd": 1.31385
+  },
+  {
+    "id": "oysters",
+    "meal": "raw oysters on the half shell with mignonette",
+    "budget": 30,
+    "baseline_pick": {
+      "title": "Melville 2008 Chardonnay (Sta. Rita Hills)",
+      "variety": "Chardonnay",
+      "price": 26.0,
+      "points": 95
+    },
+    "baseline_match": true,
+    "strategy": {
+      "target_style": "Bone-dry, unoaked, high-acid coastal white with saline minerality: Muscadet Sèvre et Maine sur lie, Picpoul de Pinet, or a Brut Champagne/Crémant",
+      "search_query": "Muscadet sur lie or Picpoul de Pinet or brut Crémant, bone-dry unoaked crisp, saline, sea spray, chalky minerality, lemon, green apple, high acidity",
+      "rationale": "Oysters and a vinegar mignonette need a lean, unoaked, high-acid white with saline minerality; oak tends to turn metallic against the oyster's iodine, and ripe fruit tastes sweet next to the brine, while Muscadet, Picpoul and dry Crémant usually sell for under $30 and avoid both problems."
+    },
+    "candidates": [
+      {
+        "title": "Trisaetum 2015 Coast Range Estate Dry Riesling",
+        "variety": "Riesling",
+        "price": 28.0,
+        "points": 94
+      },
+      {
+        "title": "Markus Huber 2016 Engelsberg Riesling (Traisental)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 93
+      },
+      {
+        "title": "Domaine Zind-Humbrecht 2015 Goldert Grand Cru Muscat (Alsace)",
+        "variety": "Muscat",
+        "price": 26.0,
+        "points": 95
+      },
+      {
+        "title": "Neumeister 2016 Steirische Klassik Gelber Muskateller",
+        "variety": "Gelber Muskateller",
+        "price": 21.0,
+        "points": 92
+      },
+      {
+        "title": "Salomon-Undhof 2016 Stein a.d. Donau Riesling (Kremstal)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 91
+      },
+      {
+        "title": "Paul O'Brien 2013 Bone Dry Riesling (Umpqua Valley)",
+        "variety": "Riesling",
+        "price": 26.0,
+        "points": 92
+      }
+    ],
+    "recommendation": "None of the six wines is a Muscadet, Picpoul or Champagne, so I've picked the two closest to that lean, salty style.\n\n**Salomon-Undhof 2016 Stein a.d. Donau Riesling (Kremstal), 91 pts, $25 [5]**\nThis is the closest match to a Muscadet sur lie. The review calls it \"taut, dry, slender\" and notes a yeasty, \"almost-salty texture\" with a bright lemon streak, which suits the brine of the oyster. Its light body won't swamp a raw oyster, and its acidity is high enough to hold up against the red wine vinegar in the mignonette.\n\n**Paul O'Brien 2013 Bone Dry Riesling (Umpqua Valley), 92 pts, $26 [6]**\nPick this one if you like more acid. It's bone dry and \"searingly tart,\" and the review describes stony notes along with lime and grapefruit. That sharp citrus works the way a squeeze of lemon does on an oyster, and with no oak or sweetness, the iodine won't taste metallic and the brine won't make the fruit taste sweet.\n\nI left out the two Muscats [3, 4] because their floral, peachy perfume would compete with the shallot and pepper.",
+    "cited": [
+      5,
+      6
+    ],
+    "invalid_citations": [],
+    "agent_pick": {
+      "title": "Salomon-Undhof 2016 Stein a.d. Donau Riesling (Kremstal)",
+      "variety": "Riesling",
+      "price": 25.0,
+      "points": 91
+    },
+    "agent_match": true,
+    "all_picks_match": true,
+    "over_budget": [],
+    "critique": {
+      "issues": [
+        "Vintage age is not addressed: by 2026 the 2013 Oregon and 2016 Kremstal Rieslings may have developed petrol or kerosene notes, which can clash with raw oyster brine and undercut the 'lean Muscadet-like' rationale",
+        "Riesling is an aromatic grape with more fruit than Muscadet or Picpoul, so calling it the 'closest match to a Muscadet sur lie' overstates the similarity; the pairing works on acid and dryness, not on style",
+        "'Searingly tart' wine next to a red wine vinegar mignonette risks stacking acid on acid, so the wine may taste thin or sour; this deserves a caveat instead of being pitched as the bonus pick",
+        "The claim that brine 'won't make the fruit taste sweet' has no clear basis; salt usually softens perceived bitterness and acidity, it doesn't add sweetness",
+        "The iodine/metallic argument is mostly about tannin and red wine, not oak in a white, so it is a weak justification here"
+      ],
+      "ok": false
+    },
+    "attempts": 2,
+    "log": [
+      "parse → raw oysters (light body)",
+      "strategize → Bone-dry, high-acid, unoaked coastal white from the Loire: Muscadet Sèvre et Maine sur lie (Chablis or Picpoul de Pinet as alternates) | query: \"Muscadet Sèvre et Maine sur lie Melon de Bourgogne bone dry crisp high acidity saline briny mineral sea spray citrus lemon green apple unoaked\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): The 2006 Orthogneiss is about 20 years old in 2026. The 'not completely molded round' tasting note describes a young wine, so it says little about how it drinks now, and the $24 price and availability are doubtful.",
+      "strategize → Young unoaked Chablis (village or Petit Chablis): bone-dry Chardonnay from northern Burgundy with high acidity, a lean, light body and a chalky, saline, oyster-shell finish, at about $20–30 | query: \"Chablis unoaked Chardonnay crisp high acidity lean mineral chalky saline oyster shell flinty citrus green apple lemon dry light-bodied young\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): Both picks are New World or Austrian Chardonnays that likely saw some oak; Sanford usually barrel-ferments, so 'nothing suggests buttery oak' is an inference from the review, not a fact, and the user should be told",
+      "strategize → Bone-dry, unoaked, high-acid coastal white with saline minerality: Muscadet Sèvre et Maine sur lie, Picpoul de Pinet, or a Brut Champagne/Crémant | query: \"Muscadet sur lie or Picpoul de Pinet or brut Crémant, bone-dry unoaked crisp, saline, sea spray, chalky minerality, lemon, green apple, high acidity\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): Vintage age is not addressed: by 2026 the 2013 Oregon and 2016 Kremstal Rieslings may have developed petrol or kerosene notes, which can clash with raw oyster brine and undercut the 'lean Muscadet-like' rationale"
+    ],
+    "error": null,
+    "llm_calls": 10,
+    "wall_s": 76.96,
+    "cost_usd": 1.23322
+  },
+  {
+    "id": "green-curry",
+    "meal": "spicy Thai green curry with chicken",
+    "budget": 25,
+    "baseline_pick": {
+      "title": "Bründlmayer 2015 Terrassen Riesling (Kamptal)",
+      "variety": "Riesling",
+      "price": 21.0,
+      "points": 93
+    },
+    "baseline_match": true,
+    "strategy": {
+      "target_style": "Off-dry German Riesling Kabinett from a recent vintage (2020 or later), low alcohol (8 to 10% ABV), noticeable residual sugar and bright lime-citrus acidity",
+      "search_query": "off-dry Riesling Kabinett Mosel young fresh lime green apple white peach slightly sweet low alcohol",
+      "rationale": "Low alcohol and clear sweetness calm the green chili without adding burn, and young Riesling's lime and green apple fruit sit close to the lime, lemongrass and basil in the curry, which the aged Vouvray and the possibly dry Anjou could not promise."
+    },
+    "candidates": [
+      {
+        "title": "Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 92
+      },
+      {
+        "title": "Markus Molitor 2011 Haus Klosterberg Riesling (Mosel)",
+        "variety": "Riesling",
+        "price": 18.0,
+        "points": 92
+      },
+      {
+        "title": "Fritz Haag 2015 Trocken Riesling (Mosel)",
+        "variety": "Riesling",
+        "price": 22.0,
+        "points": 92
+      },
+      {
+        "title": "Dr. Pauly Bergweiler 2015 Bernkasteler Badstube Kabinett Riesling (Mosel)",
+        "variety": "Riesling",
+        "price": 20.0,
+        "points": 92
+      },
+      {
+        "title": "C. von Nell-Breuning 2014 Kaseler Dominikanerberg Kabinett Riesling (Mosel)",
+        "variety": "Riesling",
+        "price": 19.0,
+        "points": 91
+      },
+      {
+        "title": "Sineann 2013 Riesling (Oregon)",
+        "variety": "Riesling",
+        "price": 24.0,
+        "points": 95
+      }
+    ],
+    "recommendation": "None of these six wines meets the 2020-or-later target; the youngest are from 2015. These two come closest.\n\n**Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel), 92 pts, $25 [1].** This is my first pick. The review calls it \"feather-light,\" which in Mosel Kabinett usually means low alcohol, so it won't make the green chili burn more. Its sweet peach and tropical fruit soften the heat, and the lemon-lime acidity sits close to the lime and lemongrass in the curry and keeps the coconut milk from feeling heavy. The review says it drinks well through at least 2025, so it may be close to the end of that window now.\n\n**Dr. Pauly Bergweiler 2015 Bernkasteler Badstube Kabinett Riesling (Mosel), 92 pts, $20 [4].** This is the backup. Its mango, melon and tangerine go well with coconut and Thai basil, and its \"mouthwatering acidity\" cuts through the richness of the sauce. The review also gives 2025 as the end of its drinking window, so it has the same age concern as [1].\n\nThe dry Fritz Haag Trocken [3] doesn't have the sweetness to tame the chili. The Sineann [6] is a dessert wine and would overpower a savory curry. The von Nell-Breuning [5] was meant to be drunk by 2020. None of the reviews give alcohol levels, so the 8 to 10% ABV target can't be confirmed for any of them.",
+    "cited": [
+      1,
+      4,
+      3,
+      6,
+      5
+    ],
+    "invalid_citations": [],
+    "agent_pick": {
+      "title": "Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel)",
+      "variety": "Riesling",
+      "price": 25.0,
+      "points": 92
+    },
+    "agent_match": true,
+    "all_picks_match": true,
+    "over_budget": [],
+    "critique": {
+      "issues": [
+        "Both wines are past their reviewed drinking windows (through 2025) as of late 2026, and the 2013 is now 13 years old. An aged Kabinett may have lost the fresh fruit and the noticeable sweetness that the heat-taming argument relies on, and may show petrol or tertiary notes that work less well with lime, basil and lemongrass.",
+        "A feather-light Kabinett is a bit lighter than a medium-bodied coconut curry, so the coconut milk could thin out the wine. A Spätlese or a fuller off-dry Riesling would match the weight better.",
+        "Low alcohol is inferred from the word 'feather-light' and not confirmed; Mosel Kabinett is usually 7.5 to 10% ABV, so the inference is reasonable but unverified.",
+        "The fish sauce saltiness and the umami are not addressed, though residual sugar and acidity handle them well."
+      ],
+      "ok": false
+    },
+    "attempts": 2,
+    "log": [
+      "parse → chicken (medium body)",
+      "strategize → Off-dry, aromatic, high-acid white such as Kabinett-level Riesling (or Gewürztraminer as an alternative) | query: \"off-dry Riesling Kabinett, slightly sweet, crisp acidity, lime, green apple, peach, floral, low alcohol\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): Kabinett is light-bodied and the coconut-based curry is medium-bodied, so the wine may taste thin next to the sauce; a Spätlese or a fuller off-dry Riesling would match the weight better",
+      "strategize → Off-dry Chenin Blanc (Vouvray demi-sec or a similar medium-bodied off-dry white from a recent vintage) | query: \"off-dry demi-sec Chenin Blanc Vouvray medium-bodied, ripe pear, quince, honeydew, lime zest, bright acidity, touch of sweetness, young fresh vintage\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): The 2013 Vouvray Demi-Sec will be about 13 years old in 2026. Demi-sec Chenin ages well, but by now it may have moved into honey and lanolin notes and lost some of the fresh fruit that suits lime and basil, so check the bottle's condition.",
+      "strategize → Off-dry German Riesling Kabinett from a recent vintage (2020 or later), low alcohol (8 to 10% ABV), noticeable residual sugar and bright lime-citrus acidity | query: \"off-dry Riesling Kabinett Mosel young fresh lime green apple white peach slightly sweet low alcohol\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): Both wines are past their reviewed drinking windows (through 2025) as of late 2026, and the 2013 is now 13 years old. An aged Kabinett may have lost the fresh fruit and the noticeable sweetness that the heat-taming argument relies on, and may show petrol or tertiary notes that work less well with lime, basil and lemongrass."
+    ],
+    "error": null,
+    "llm_calls": 10,
+    "wall_s": 78.76,
+    "cost_usd": 1.24188
+  },
+  {
+    "id": "risotto",
+    "meal": "wild mushroom risotto with parmesan",
+    "budget": 35,
+    "baseline_pick": {
+      "title": "Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein)",
+      "variety": "Riesling",
+      "price": 26.0,
+      "points": 93
+    },
+    "baseline_match": false,
+    "strategy": {
+      "target_style": "Earthy, medium-bodied red with bright acidity and fine tannins: Nebbiolo (Langhe, Barbaresco) or Burgundy-style Pinot Noir with forest-floor and mushroom notes, from a recent vintage",
+      "search_query": "Nebbiolo or Pinot Noir, earthy, forest floor, mushroom, truffle, dried cherry, bright acidity, fine silky tannins, medium body, savory",
+      "rationale": "Nebbiolo and Pinot Noir both have earthy, truffle-like flavors that pick up the wild mushrooms, and their acidity and light tannins cut through the parmesan cream without making it taste bitter."
+    },
+    "candidates": [
+      {
+        "title": "Salwey 2012 Estate Dry Pinot Noir (Baden)",
+        "variety": "Pinot Noir",
+        "price": 25.0,
+        "points": 94
+      },
+      {
+        "title": "Windemere 2013 MacGregor Vineyard Pinot Noir (Edna Valley)",
+        "variety": "Pinot Noir",
+        "price": 31.0,
+        "points": 94
+      },
+      {
+        "title": "Altocedro 2013 Finca Los Galos Petit Verdot (La Consulta)",
+        "variety": "Petit Verdot",
+        "price": 35.0,
+        "points": 91
+      },
+      {
+        "title": "Center of Effort 2014 Effort Pinot Noir (Edna Valley)",
+        "variety": "Pinot Noir",
+        "price": 27.0,
+        "points": 94
+      },
+      {
+        "title": "Wrath 2012 Swan/828 Pinot Noir (Monterey)",
+        "variety": "Pinot Noir",
+        "price": 35.0,
+        "points": 93
+      },
+      {
+        "title": "Weatherborne 2012 Pinot Noir (Sta. Rita Hills)",
+        "variety": "Pinot Noir",
+        "price": 35.0,
+        "points": 92
+      }
+    ],
+    "recommendation": "My first pick is the **Weatherborne 2012 Pinot Noir, Sta. Rita Hills (92 pts, $35) [6]**. Its wet-earth, mushroom and shiitake flavors match the wild mushrooms almost exactly. It is soft and elegant in the mouth, with no hard tannin, so it won't taste bitter against the parmesan cream. The savory umami in the wine also matches the umami in the cheese.\n\nFor a bit more energy, try the **Wrath 2012 Swan/828 Pinot Noir, Monterey (93 pts, $35) [5]**. The review calls it \"a study of umami,\" with shiitake, loam and soy, so it has the same earthy profile as the risotto. It's silky but has \"immediate verve,\" and that freshness cuts through the rich, creamy rice, so each bite tastes as good as the first.\n\nNeither wine is Nebbiolo, and both are from 2012 instead of a recent vintage. Even so, these two are the closest fit to the forest-floor Pinot style you asked for.",
+    "cited": [
+      6,
+      5
+    ],
+    "invalid_citations": [],
+    "agent_pick": {
+      "title": "Weatherborne 2012 Pinot Noir (Sta. Rita Hills)",
+      "variety": "Pinot Noir",
+      "price": 35.0,
+      "points": 92
+    },
+    "agent_match": true,
+    "all_picks_match": true,
+    "over_budget": [],
+    "critique": {
+      "issues": [
+        "The user asked for Nebbiolo and a recent vintage. Neither request is met, and the reply only says so at the end.",
+        "Both wines are 2012 California Pinot at $35, which makes them 14 years old in 2026. They may be past peak, with the fruit faded, and nothing in the reply checks their current condition.",
+        "Pinot Noir is lighter-bodied than a rich parmesan-cream risotto. A riper, fuller Pinot or a white with some oak, such as Chardonnay or white Burgundy, would match the weight better.",
+        "The claim that the wine's umami matches the cheese is loose. Wine has little real umami, and umami can make red wine taste more bitter. The low tannin is what actually keeps this pairing safe.",
+        "The two picks are nearly the same style, so they offer little real choice. An Italian option such as Nebbiolo/Langhe, Barbera or Fiano would suit the cuisine better."
+      ],
+      "ok": false
+    },
+    "attempts": 2,
+    "log": [
+      "parse → wild mushroom risotto (rich body)",
+      "strategize → Medium-bodied Piedmont Nebbiolo (Langhe Nebbiolo), earthy and high in acid with moderate tannin | query: \"Langhe Nebbiolo earthy mushroom truffle dried cherry rose bright acidity medium-bodied\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): The Cascina delle Rose 2012 is a Langhe Nebbiolo the reviewer said to drink young, and by 2026 it is 14 years old. Recommending it as the closest match when it may be faded or oxidized is a real problem; it should be the backup, not a co-pick.",
+      "strategize → Full-bodied, textured Italian or Burgundian-style white with bright acidity and light oak or lees aging, such as Fiano di Avellino, Soave Classico, Verdicchio Riserva or a restrained oaked Chardonnay, recent vintage, around $35 | query: \"textured white with bright acidity, hazelnut, toasted almond, mushroom, lees, honeyed, creamy mid-palate, mineral finish; Fiano, Soave Classico, Verdicchio, Chardonnay; recent vintage\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 4 issue(s): Neither wine picks up the earthy mushroom note. Both are matched to the cream and the nuttiness, so a Barbaresco or Burgundy-style Pinot Noir would be a useful red option.",
+      "strategize → Earthy, medium-bodied red with bright acidity and fine tannins: Nebbiolo (Langhe, Barbaresco) or Burgundy-style Pinot Noir with forest-floor and mushroom notes, from a recent vintage | query: \"Nebbiolo or Pinot Noir, earthy, forest floor, mushroom, truffle, dried cherry, bright acidity, fine silky tannins, medium body, savory\"",
+      "retrieve → 6 candidate wines (tool: search_wines)",
+      "recommend → drafted pairing with citations",
+      "critique → 5 issue(s): The user asked for Nebbiolo and a recent vintage. Neither request is met, and the reply only says so at the end."
+    ],
+    "error": null,
+    "llm_calls": 10,
+    "wall_s": 79.83,
+    "cost_usd": 1.24813
+  }
+]

@@ -40,7 +40,7 @@ The agent uses the dense retriever from the first version of Wine Sommelier RAG:
 
 ## Limitations and next steps
 
-Pairing quality is not scored. Pairing has few single right answers, which explains the gap without filling it. The principles are also a compact list, well short of a sommelier's full judgment, and fortified wines, very hot food and dessert courses get thinner treatment.
+Pairing quality is scored only against a grape key. On 10 frozen dishes (`eval/dishes.json`), searching with the dish text alone picked an accepted grape for 3; the agent did for all 4 dishes it ran, at $1.25 API-equivalent and 78 seconds a pairing. The critique node rejected all 12 drafts in those runs, 7 of them first for the wine's age, since no review in the file is newer than the 2017 vintage. A grape match is a floor: pairing has few single right answers, and no sommelier checked the picks. The principles are also a compact list, well short of a sommelier's full judgment, and fortified wines, very hot food and dessert courses get thinner treatment.
 
 `retrieve` filters on price only. A color or grape preference reaches the agent through the query and the critique, with no hard filter behind it.
 

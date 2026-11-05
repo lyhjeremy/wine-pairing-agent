@@ -1,0 +1,502 @@
+[
+  {
+    "id": "ribeye",
+    "meal": "grilled ribeye steak with a peppercorn cream sauce",
+    "budget": 45,
+    "pick": {
+      "title": "Mattucci 2013 Bentley Ironworks Cabernet Sauvignon (Paso Robles)",
+      "variety": "Cabernet Sauvignon",
+      "price": 45.0,
+      "points": 94
+    },
+    "top6": [
+      {
+        "title": "Mattucci 2013 Bentley Ironworks Cabernet Sauvignon (Paso Robles)",
+        "variety": "Cabernet Sauvignon",
+        "price": 45.0,
+        "points": 94
+      },
+      {
+        "title": "Luigi Bosca 2014 Gala 2 Red (Mendoza)",
+        "variety": "Cabernet Blend",
+        "price": 38.0,
+        "points": 93
+      },
+      {
+        "title": "Falcone 2013 Cabernet Sauvignon (Central Coast)",
+        "variety": "Cabernet Sauvignon",
+        "price": 35.0,
+        "points": 93
+      },
+      {
+        "title": "Pianetta 2012 Tuscan Nights Red (Central Coast)",
+        "variety": "Red Blend",
+        "price": 42.0,
+        "points": 93
+      },
+      {
+        "title": "Paul Achs 2013 Edelgrund Blaufränkisch (Burgenland)",
+        "variety": "Blaufränkisch",
+        "price": 35.0,
+        "points": 92
+      },
+      {
+        "title": "Psagot 2012 Cabernet Sauvignon (Judean Hills)",
+        "variety": "Cabernet Sauvignon",
+        "price": 30.0,
+        "points": 92
+      }
+    ],
+    "match": true
+  },
+  {
+    "id": "oysters",
+    "meal": "raw oysters on the half shell with mignonette",
+    "budget": 30,
+    "pick": {
+      "title": "Melville 2008 Chardonnay (Sta. Rita Hills)",
+      "variety": "Chardonnay",
+      "price": 26.0,
+      "points": 95
+    },
+    "top6": [
+      {
+        "title": "Melville 2008 Chardonnay (Sta. Rita Hills)",
+        "variety": "Chardonnay",
+        "price": 26.0,
+        "points": 95
+      },
+      {
+        "title": "Adriano Marco & Vittorio 2010 Sanadaive  (Barbaresco)",
+        "variety": "Nebbiolo",
+        "price": 28.0,
+        "points": 94
+      },
+      {
+        "title": "DanCin 2013 Chaîné Chardonnay (Southern Oregon)",
+        "variety": "Chardonnay",
+        "price": 29.0,
+        "points": 93
+      },
+      {
+        "title": "Neil Ellis 2011 Chardonnay (Elgin)",
+        "variety": "Chardonnay",
+        "price": 28.0,
+        "points": 91
+      },
+      {
+        "title": "Gunter Triebaumer 2015 Geyerumriss Chardonnay (Burgenland)",
+        "variety": "Chardonnay",
+        "price": 30.0,
+        "points": 91
+      },
+      {
+        "title": "Adriano Marco & Vittorio 2013 Sanadaive  (Barbaresco)",
+        "variety": "Nebbiolo",
+        "price": 30.0,
+        "points": 94
+      }
+    ],
+    "match": true
+  },
+  {
+    "id": "green-curry",
+    "meal": "spicy Thai green curry with chicken",
+    "budget": 25,
+    "pick": {
+      "title": "Bründlmayer 2015 Terrassen Riesling (Kamptal)",
+      "variety": "Riesling",
+      "price": 21.0,
+      "points": 93
+    },
+    "top6": [
+      {
+        "title": "Bründlmayer 2015 Terrassen Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 21.0,
+        "points": 93
+      },
+      {
+        "title": "St. Hubertus 2013 Oak Bay Vineyard Gewürztraminer (Okanagan Valley)",
+        "variety": "Gewürztraminer",
+        "price": 22.0,
+        "points": 91
+      },
+      {
+        "title": "Loimer 2014 Langenlois Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 92
+      },
+      {
+        "title": "Jurtschitsch 2016 Stein Grüner Veltliner (Kamptal)",
+        "variety": "Grüner Veltliner",
+        "price": 18.0,
+        "points": 93
+      },
+      {
+        "title": "L'Amandine 2011 Bel Air Red",
+        "variety": "Rhône-style Red Blend",
+        "price": 24.0,
+        "points": 92
+      },
+      {
+        "title": "Domäne Wachau 2015 Bruck Federspiel Riesling (Wachau)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 93
+      }
+    ],
+    "match": true
+  },
+  {
+    "id": "risotto",
+    "meal": "wild mushroom risotto with parmesan",
+    "budget": 35,
+    "pick": {
+      "title": "Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein)",
+      "variety": "Riesling",
+      "price": 26.0,
+      "points": 93
+    },
+    "top6": [
+      {
+        "title": "Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein)",
+        "variety": "Riesling",
+        "price": 26.0,
+        "points": 93
+      },
+      {
+        "title": "Allram 2012 Gaisberg Reserve Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 33.0,
+        "points": 93
+      },
+      {
+        "title": "Wittmann 2014 Trocken Riesling (Rheinhessen)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 93
+      },
+      {
+        "title": "Malat 2013 Steinbühel Riesling (Kremstal)",
+        "variety": "Riesling",
+        "price": 33.0,
+        "points": 93
+      },
+      {
+        "title": "Rabl 2010 Schenkenbichl Reserve Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 34.0,
+        "points": 92
+      },
+      {
+        "title": "Eichinger 2012 Gaisberg Reserve Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 30.0,
+        "points": 93
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "roast-chicken",
+    "meal": "roast chicken with lemon and herbs",
+    "budget": 25,
+    "pick": {
+      "title": "Eichinger 2014 Vm Berg Riesling (Kamptal)",
+      "variety": "Riesling",
+      "price": 18.0,
+      "points": 94
+    },
+    "top6": [
+      {
+        "title": "Eichinger 2014 Vm Berg Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 18.0,
+        "points": 94
+      },
+      {
+        "title": "Jurtschitsch 2016 Stein Grüner Veltliner (Kamptal)",
+        "variety": "Grüner Veltliner",
+        "price": 18.0,
+        "points": 93
+      },
+      {
+        "title": "Bründlmayer 2015 Terrassen Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 21.0,
+        "points": 93
+      },
+      {
+        "title": "Thörle 2016 Trocken Riesling (Rheinhessen)",
+        "variety": "Riesling",
+        "price": 22.0,
+        "points": 91
+      },
+      {
+        "title": "Wittmann 2014 Trocken Riesling (Rheinhessen)",
+        "variety": "Riesling",
+        "price": 25.0,
+        "points": 93
+      },
+      {
+        "title": "Recanati 2014 Shiraz (Galilee)",
+        "variety": "Shiraz",
+        "price": 17.0,
+        "points": 93
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "lamb",
+    "meal": "braised lamb shank with rosemary and garlic",
+    "budget": 40,
+    "pick": {
+      "title": "Paltrinieri 2016 Radice  (Lambrusco di Sorbara)",
+      "variety": "Lambrusco di Sorbara",
+      "price": 20.0,
+      "points": 93
+    },
+    "top6": [
+      {
+        "title": "Paltrinieri 2016 Radice  (Lambrusco di Sorbara)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 20.0,
+        "points": 93
+      },
+      {
+        "title": "Emmerich Knoll 2013 Loibner Auslese Grüner Veltliner (Wachau)",
+        "variety": "Grüner Veltliner",
+        "price": 40.0,
+        "points": 96
+      },
+      {
+        "title": "Bodegas Gutiérrez de la Vega 2013 Recóndita Armonía Dulce Monastrell (Spain)",
+        "variety": "Monastrell",
+        "price": 35.0,
+        "points": 94
+      },
+      {
+        "title": "Pace 2013 Syrah (Santa Ynez Valley)",
+        "variety": "Syrah",
+        "price": 35.0,
+        "points": 93
+      },
+      {
+        "title": "Cleto Chiarli 2016 Vecchia Modena Premium  (Lambrusco di Sorbara)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 16.0,
+        "points": 91
+      },
+      {
+        "title": "Paltrinieri 2012 Grosso Metodo Classico  (Lambrusco di Modena)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 30.0,
+        "points": 92
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "salmon",
+    "meal": "pan-seared salmon with dill butter",
+    "budget": 30,
+    "pick": {
+      "title": "Waters 2015 Prelude White (Washington)",
+      "variety": "White Blend",
+      "price": 28.0,
+      "points": 92
+    },
+    "top6": [
+      {
+        "title": "Waters 2015 Prelude White (Washington)",
+        "variety": "White Blend",
+        "price": 28.0,
+        "points": 92
+      },
+      {
+        "title": "Quivira 2016 Wine Creek Ranch Rosé (Dry Creek Valley)",
+        "variety": "Rosé",
+        "price": 22.0,
+        "points": 93
+      },
+      {
+        "title": "Emmerich Knoll 2014 Loibner Federspiel Riesling (Wachau)",
+        "variety": "Riesling",
+        "price": 29.0,
+        "points": 94
+      },
+      {
+        "title": "Eichinger 2013 Gaisberg Reserve Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 28.0,
+        "points": 94
+      },
+      {
+        "title": "Eichinger 2015 Gaisberg Reserve Riesling (Kamptal)",
+        "variety": "Riesling",
+        "price": 29.0,
+        "points": 95
+      },
+      {
+        "title": "Jurtschitsch 2014 Loiserberg Reserve Grüner Veltliner (Kamptal)",
+        "variety": "Grüner Veltliner",
+        "price": 26.0,
+        "points": 93
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "goat-cheese",
+    "meal": "goat cheese and roasted beet salad",
+    "budget": 20,
+    "pick": {
+      "title": "Paltrinieri 2016 Radice  (Lambrusco di Sorbara)",
+      "variety": "Lambrusco di Sorbara",
+      "price": 20.0,
+      "points": 93
+    },
+    "top6": [
+      {
+        "title": "Paltrinieri 2016 Radice  (Lambrusco di Sorbara)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 20.0,
+        "points": 93
+      },
+      {
+        "title": "Cavicchioli 2016 Vigna del Cristo  (Lambrusco di Sorbara)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 18.0,
+        "points": 92
+      },
+      {
+        "title": "Andrew Murray 2014 Tous les Jours Syrah (Santa Ynez Valley)",
+        "variety": "Syrah",
+        "price": 18.0,
+        "points": 92
+      },
+      {
+        "title": "Renaudin 2009 Reserve Syrah (Carneros)",
+        "variety": "Syrah",
+        "price": 18.0,
+        "points": 92
+      },
+      {
+        "title": "Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard Loiregon Sauvignon Blanc (Rogue Valley)",
+        "variety": "Sauvignon Blanc",
+        "price": 20.0,
+        "points": 92
+      },
+      {
+        "title": "Two Vintners 2013 Make Haste Cinsault (Yakima Valley)",
+        "variety": "Cinsault",
+        "price": 20.0,
+        "points": 93
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "chocolate",
+    "meal": "flourless dark chocolate torte",
+    "budget": 40,
+    "pick": {
+      "title": "Maculan 2008 Torcolato Vespaiolo (Breganze)",
+      "variety": "Vespaiolo",
+      "price": 40.0,
+      "points": 92
+    },
+    "top6": [
+      {
+        "title": "Maculan 2008 Torcolato Vespaiolo (Breganze)",
+        "variety": "Vespaiolo",
+        "price": 40.0,
+        "points": 92
+      },
+      {
+        "title": "Weninger 2012 Kirchholz Alte Reben Blaufränkisch (Mittelburgenland)",
+        "variety": "Blaufränkisch",
+        "price": 39.0,
+        "points": 92
+      },
+      {
+        "title": "Numanthia 2010 Termes  (Toro)",
+        "variety": "Tinta de Toro",
+        "price": 28.0,
+        "points": 92
+      },
+      {
+        "title": "Luigi Bosca 2013 Gala 1 Malbec-Petit Verdot-Tannat Red (Mendoza)",
+        "variety": "Red Blend",
+        "price": 38.0,
+        "points": 92
+      },
+      {
+        "title": "Nittnaus Anita und Hans 2006 TBA White (Burgenland)",
+        "variety": "White Blend",
+        "price": 27.0,
+        "points": 94
+      },
+      {
+        "title": "Bodegas Toro Albala, SL 2004 Don PX Pedro Ximénez (Montilla-Moriles)",
+        "variety": "Pedro Ximénez",
+        "price": 29.0,
+        "points": 93
+      }
+    ],
+    "match": false
+  },
+  {
+    "id": "pizza",
+    "meal": "pepperoni pizza",
+    "budget": 20,
+    "pick": {
+      "title": "Jurtschitsch 2016 Stein Grüner Veltliner (Kamptal)",
+      "variety": "Grüner Veltliner",
+      "price": 18.0,
+      "points": 93
+    },
+    "top6": [
+      {
+        "title": "Jurtschitsch 2016 Stein Grüner Veltliner (Kamptal)",
+        "variety": "Grüner Veltliner",
+        "price": 18.0,
+        "points": 93
+      },
+      {
+        "title": "Cavicchioli 2016 Vigna del Cristo  (Lambrusco di Sorbara)",
+        "variety": "Lambrusco di Sorbara",
+        "price": 18.0,
+        "points": 92
+      },
+      {
+        "title": "Varvaglione Vigne & Vini 2012 Papale  (Primitivo di Manduria)",
+        "variety": "Primitivo",
+        "price": 19.0,
+        "points": 91
+      },
+      {
+        "title": "Centovigne 2012 Il Centovigne Red (Coste della Sesia)",
+        "variety": "Red Blend",
+        "price": 16.0,
+        "points": 92
+      },
+      {
+        "title": "Uvaggio 2010 Secco Moscato Giallo (Lodi)",
+        "variety": "Moscato Giallo",
+        "price": 16.0,
+        "points": 94
+      },
+      {
+        "title": "Comelli 2012 Friulano (Colli Orientali del Friuli)",
+        "variety": "Friulano",
+        "price": 20.0,
+        "points": 91
+      }
+    ],
+    "match": false
+  }
+]

@@ -1,10 +1,28 @@
 # Wine Pairing Agent
 
-A LangGraph agent that takes a dish, reasons to a wine style, searches Wine Enthusiast reviews as a tool, recommends bottles with citations, and critiques its own pairing.
+A dish is not a search query: this LangGraph agent reasons from the dish to a wine style, searches Wine Enthusiast reviews as a tool, recommends bottles with citations, and critiques its own pairing.
+On a frozen 10-dish set its first pick was an accepted grape for all 4 dishes it ran (searching with the dish text alone: 3 of those 4, 3 of 10), at $1.25 API-equivalent and 78 s per pairing, because its critique rejected all 12 drafts and spent every retry.
 
 [Live site](https://lyhjeremy.github.io/wine-pairing-agent/) · [Write-up](https://lyhjeremy.github.io/wine-pairing-agent/overview/) · [Technical notes](writeup.md) · [Sample run](examples/sample_run.md)
 
 Design and copy follow [these standards](https://github.com/lyhjeremy/lyhjeremy/blob/main/DESIGN_STANDARDS.md).
+
+## Results
+
+`eval/dishes.json` holds 10 dishes, each with a budget and the grapes classic pairing rules accept for it, committed before the first run. `python -m eval.run_eval` scores the agent and a baseline (the same search tool queried with the raw dish text, top hit taken) and records the cost and time of every Claude CLI call. Run on 2026-11-05 on an Apple M4:
+
+| | Baseline (search on dish text) | Agent |
+|---|---|---|
+| Dishes run | 10 | 4 (the first four; each pairing costs about $1.25) |
+| First pick an accepted grape | 3 of 10; 3 of the agent's 4 | 4 of 4 |
+| Cost per pairing, API-equivalent | $0 (local) | $1.25 median, $1.23 to $1.31 |
+| Latency per pairing | 0.3 s for the search in a traced run (not timed here) | 77.9 s median, 79.7 s p95 (n = 4) |
+
+The cost is the `total_cost_usd` the Claude CLI reports (Opus 5.5, its default here); the CLI runs on a subscription, so nothing was billed. Each call read about 13,300 cached tokens and wrote 12,100 to 15,300 more, which is the CLI's own context; the agent's prompts and replies are a few hundred tokens.
+
+The main failure is the critique. It found issues in all 12 rounds across the 4 runs, so every run made 10 LLM calls instead of 4 and stopped at the attempt limit. 7 of the 12 rounds opened by calling the wine too old ("The 2007 JD will be about 19 years old in 2026"): no vintage in the review file is newer than 2017, and the critique judges the notes as of today. The rest were quibbles with one line of the explanation, suggestions of a different grape, and one request for a style the index lacks. Hand-coded counts are in `eval/critique_issues.json`; every run, with its candidates, picks and critique, is in `eval/runs.json`.
+
+The baseline fails where the dish words sound like a wine: "lamb" retrieves Lambrusco. The key is strict, and two baseline misses are arguable (a sweet Torcolato for chocolate, Riesling for roast chicken).
 
 ## What it does
 
@@ -85,10 +103,12 @@ AGENT TRACE  (node · time · detail)
 | `src/llm.py` | LLM wrapper: Claude CLI (default) or Anthropic API |
 | `src/cli.py` | Collects the meal, runs the agent, prints the pairing and trace |
 | `examples/sample_run.md` | The recorded ribeye run |
+| `eval/` | Frozen dish set, scoring script, per-run outputs, per-call cost and latency |
 
 ## Limitations
 
-- Pairing quality has no scored evaluation. The repo shows that the agent works and checks itself; how good its pairings are hasn't been measured.
+- The scored run is small (the agent on 4 dishes) and the answer key is mine, written from standard pairing rules. A grape match is a floor, not a judgment of the pairing; no sommelier or blind tasting checked the picks.
+- The critique has no notion that the review index is a 2017 snapshot, so it rejects nearly every pick for its age.
 - The pairing principles are a short list. Fortified wines, very hot food and dessert courses get thinner treatment.
 - Retrieval filters on price only. A color preference reaches the agent through the query and the critique.
 - The default index holds the 30,000 highest-scored reviews of the 129,971 in the dataset.

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-05",
+  "machine": "Apple M4",
+  "n_dishes": 4,
+  "n_completed": 4,
+  "baseline_matches_all_dishes": "3 of 10",
+  "baseline_matches_on_agent_dishes": 3,
+  "agent_matches": 4,
+  "agent_all_picks_match": 4,
+  "critique_passed": 0,
+  "runs_with_retry": 4,
+  "llm_calls": 40,
+  "llm_calls_per_pairing": [
+    10,
+    10,
+    10,
+    10
+  ],
+  "cost_per_pairing_median": 1.245,
+  "cost_per_pairing_mean": 1.2593,
+  "latency_median_s": 77.9,
+  "latency_p95_s": 79.7,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "cost_note": "total_cost_usd from claude -p --output-format json: API-equivalent, nothing billed (Claude subscription)"
+}

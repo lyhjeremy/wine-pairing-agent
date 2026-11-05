@@ -1,0 +1,180 @@
+{
+  "note": "Hand-coded 2026-11-05 from eval/runs.json. 'final' covers every issue in each dish's last critique; 'first_issue_per_round' covers the first issue the critique listed in each of its three rounds (from the run log).",
+  "categories": {
+    "vintage age": "the critique judges a 2005-2016 vintage from the review against the current date (drinking window passed, release price stale)",
+    "pairing-logic quibble": "objects to one sentence of the explanation while accepting the wine",
+    "better style proposed": "suggests a different grape or weight would suit the dish better",
+    "style not in the index": "strategize asked for a style or vintage the 30,000-review index does not hold under the budget"
+  },
+  "final": [
+    {
+      "dish": "ribeye",
+      "category": "vintage age",
+      "issue": "The 2007 JD will be about 19 years old in 2026. Its tannins have probably softened since release, so a review from release time saying they are 'tightly wound' and will 'grip the marbled fat' may no longer hold."
+    },
+    {
+      "dish": "ribeye",
+      "category": "vintage age",
+      "issue": "Cutting through a cream sauce is mostly acidity's job. The note credits the wine's freshness without naming its acidity, and a mature mountain Cabernet may not have much lift left."
+    },
+    {
+      "dish": "ribeye",
+      "category": "pairing-logic quibble",
+      "issue": "The Sineann's molasses, coffee and ripe fruit could feel heavy next to a rich cream sauce. Without acidity to balance it, the pairing can turn cloying."
+    },
+    {
+      "dish": "ribeye",
+      "category": "better style proposed",
+      "issue": "Black pepper pulls toward Syrah. A Northern Rhône or Washington Syrah would match the peppercorn more directly, and the note doesn't mention that option."
+    },
+    {
+      "dish": "ribeye",
+      "category": "vintage age",
+      "issue": "The $40 price is probably the release price. A 2007 bottle will likely cost more now, or be hard to find."
+    },
+    {
+      "dish": "oysters",
+      "category": "vintage age",
+      "issue": "Vintage age is not addressed: by 2026 the 2013 Oregon and 2016 Kremstal Rieslings may have developed petrol or kerosene notes, which can clash with raw oyster brine and undercut the 'lean Muscadet-like' rationale"
+    },
+    {
+      "dish": "oysters",
+      "category": "pairing-logic quibble",
+      "issue": "Riesling is an aromatic grape with more fruit than Muscadet or Picpoul, so calling it the 'closest match to a Muscadet sur lie' overstates the similarity; the pairing works on acid and dryness, not on style"
+    },
+    {
+      "dish": "oysters",
+      "category": "pairing-logic quibble",
+      "issue": "'Searingly tart' wine next to a red wine vinegar mignonette risks stacking acid on acid, so the wine may taste thin or sour; this deserves a caveat instead of being pitched as the bonus pick"
+    },
+    {
+      "dish": "oysters",
+      "category": "pairing-logic quibble",
+      "issue": "The claim that brine 'won't make the fruit taste sweet' has no clear basis; salt usually softens perceived bitterness and acidity, it doesn't add sweetness"
+    },
+    {
+      "dish": "oysters",
+      "category": "pairing-logic quibble",
+      "issue": "The iodine/metallic argument is mostly about tannin and red wine, not oak in a white, so it is a weak justification here"
+    },
+    {
+      "dish": "green-curry",
+      "category": "vintage age",
+      "issue": "Both wines are past their reviewed drinking windows (through 2025) as of late 2026, and the 2013 is now 13 years old. An aged Kabinett may have lost the fresh fruit and the noticeable sweetness that the heat-taming argument relies on, and may show petrol or tertiary notes that work less well with lime, basil and lemongrass."
+    },
+    {
+      "dish": "green-curry",
+      "category": "better style proposed",
+      "issue": "A feather-light Kabinett is a bit lighter than a medium-bodied coconut curry, so the coconut milk could thin out the wine. A Spätlese or a fuller off-dry Riesling would match the weight better."
+    },
+    {
+      "dish": "green-curry",
+      "category": "pairing-logic quibble",
+      "issue": "Low alcohol is inferred from the word 'feather-light' and not confirmed; Mosel Kabinett is usually 7.5 to 10% ABV, so the inference is reasonable but unverified."
+    },
+    {
+      "dish": "green-curry",
+      "category": "pairing-logic quibble",
+      "issue": "The fish sauce saltiness and the umami are not addressed, though residual sugar and acidity handle them well."
+    },
+    {
+      "dish": "risotto",
+      "category": "style not in the index",
+      "issue": "The user asked for Nebbiolo and a recent vintage. Neither request is met, and the reply only says so at the end."
+    },
+    {
+      "dish": "risotto",
+      "category": "vintage age",
+      "issue": "Both wines are 2012 California Pinot at $35, which makes them 14 years old in 2026. They may be past peak, with the fruit faded, and nothing in the reply checks their current condition."
+    },
+    {
+      "dish": "risotto",
+      "category": "better style proposed",
+      "issue": "Pinot Noir is lighter-bodied than a rich parmesan-cream risotto. A riper, fuller Pinot or a white with some oak, such as Chardonnay or white Burgundy, would match the weight better."
+    },
+    {
+      "dish": "risotto",
+      "category": "pairing-logic quibble",
+      "issue": "The claim that the wine's umami matches the cheese is loose. Wine has little real umami, and umami can make red wine taste more bitter. The low tannin is what actually keeps this pairing safe."
+    },
+    {
+      "dish": "risotto",
+      "category": "better style proposed",
+      "issue": "The two picks are nearly the same style, so they offer little real choice. An Italian option such as Nebbiolo/Langhe, Barbera or Fiano would suit the cuisine better."
+    }
+  ],
+  "first_issue_per_round": [
+    {
+      "dish": "ribeye",
+      "round": 1,
+      "category": "vintage age"
+    },
+    {
+      "dish": "ribeye",
+      "round": 2,
+      "category": "pairing-logic quibble"
+    },
+    {
+      "dish": "ribeye",
+      "round": 3,
+      "category": "vintage age"
+    },
+    {
+      "dish": "oysters",
+      "round": 1,
+      "category": "vintage age"
+    },
+    {
+      "dish": "oysters",
+      "round": 2,
+      "category": "pairing-logic quibble"
+    },
+    {
+      "dish": "oysters",
+      "round": 3,
+      "category": "vintage age"
+    },
+    {
+      "dish": "green-curry",
+      "round": 1,
+      "category": "better style proposed"
+    },
+    {
+      "dish": "green-curry",
+      "round": 2,
+      "category": "vintage age"
+    },
+    {
+      "dish": "green-curry",
+      "round": 3,
+      "category": "vintage age"
+    },
+    {
+      "dish": "risotto",
+      "round": 1,
+      "category": "vintage age"
+    },
+    {
+      "dish": "risotto",
+      "round": 2,
+      "category": "better style proposed"
+    },
+    {
+      "dish": "risotto",
+      "round": 3,
+      "category": "style not in the index"
+    }
+  ],
+  "counts_final": {
+    "vintage age": 6,
+    "pairing-logic quibble": 8,
+    "better style proposed": 4,
+    "style not in the index": 1
+  },
+  "counts_first_issue": {
+    "vintage age": 7,
+    "pairing-logic quibble": 2,
+    "better style proposed": 2,
+    "style not in the index": 1
+  }
+}

@@ -1,0 +1,11 @@
+dish,node,wall_s,duration_ms,cost_usd,input_tokens,output_tokens,cache_read,cache_write,models
+risotto,parse_dish,2.63,1314,0.1141972,2,93,13286,13709,claude-opus-5-5
+risotto,strategize,5.46,4604,0.10774500000000001,2,402,13285,12130,claude-opus-5-5
+risotto,recommend,9.84,8438,0.13980900000000002,2,766,13285,15228,claude-opus-5-5
+risotto,critique,8.82,7601,0.1291338,2,639,13289,14211,claude-opus-5-5
+risotto,strategize,9.61,8102,0.129785,2,540,13285,14540,claude-opus-5-5
+risotto,recommend,9.12,6843,0.134297,2,514,13285,15169,claude-opus-5-5
+risotto,critique,7.53,6272,0.12632179999999998,2,508,13289,14187,claude-opus-5-5
+risotto,strategize,5.17,4368,0.107225,2,278,13285,12375,claude-opus-5-5
+risotto,recommend,8.07,6635,0.132325,2,383,13285,15250,claude-opus-5-5
+risotto,critique,9.18,7869,0.1272898,2,572,13289,14148,claude-opus-5-5
