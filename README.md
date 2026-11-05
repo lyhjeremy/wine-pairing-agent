@@ -56,6 +56,8 @@ Stack: Python, LangGraph, LangChain tools, sentence-transformers, Chroma, Claude
 ## How to run
 
 ```bash
+git clone https://github.com/lyhjeremy/wine-pairing-agent && cd wine-pairing-agent
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python fetch_data.py                 # download the ~130k-review dataset to data/
