@@ -1,0 +1,220 @@
+{
+ "dish": "pizza",
+ "meal": "pepperoni pizza",
+ "budget": 20,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 30816,
+ "cost_usd": 0.48457,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 6076,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 6.07,
+     "duration_ms": 4867,
+     "cost_usd": 0.1146906,
+     "input_tokens": 2,
+     "output_tokens": 109,
+     "cache_read": 13393,
+     "cache_write": 13728
+    }
+   ],
+   "input": {
+    "meal": "pepperoni pizza",
+    "budget": 20
+   },
+   "output": {
+    "main": "pepperoni",
+    "body": "medium",
+    "sauce": "tomato sauce",
+    "cuisine": "Italian-American",
+    "key_flavors": [
+     "acidic tomato",
+     "spicy cured pork",
+     "salty",
+     "fatty mozzarella",
+     "oregano",
+     "charred crust"
+    ],
+    "cooking_method": "baked"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 6076,
+   "ms": 6012,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 6.01,
+     "duration_ms": 4831,
+     "cost_usd": 0.1200664,
+     "input_tokens": 2,
+     "output_tokens": 213,
+     "cache_read": 13392,
+     "cache_write": 14140
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Medium-bodied, high-acid Italian red with soft tannins and bright red fruit, such as Chianti, Sangiovese or Barbera",
+    "search_query": "Barbera or Chianti Sangiovese, bright acidity, tart cherry, red fruit, herbal, soft tannins, medium-bodied, juicy, savory",
+    "rationale": "A high-acid Italian red matches the acidity of the tomato sauce and cuts through the fatty mozzarella and pepperoni, and its soft tannins won't make the spicy pork taste hotter; Chianti and Barbera are easy to find for about $20."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 12088,
+   "ms": 258,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "Barbera or Chianti Sangiovese, bright acidity, tart cherry, red fruit, herbal, soft tannins, medium-bodied, juicy, savory",
+     "max_price": 20,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Quinta da Rede 2010 Rede Reserva Red (Douro)",
+     "variety": "Portuguese Red",
+     "price": 14.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "This has great fruits and plenty of structure to go with it. Juicy plum flavors complement the dense tannins, mineral structure and concentrated texture. It's a stylish wine that will develop some more. Drink from 2016."
+    },
+    {
+     "title": "François Lurton 2013 Hacienda Araucano Clos de Lolol Red (Lolol Valley)",
+     "variety": "Red Blend",
+     "price": 20.0,
+     "points": 91,
+     "country": "Chile",
+     "note": "Woodsy, spicy aromas of herbal plum and berry come with a light coating of chocolate. A round, rubbery palate is tight in the long run. Saturated plum and blackberry flavors are oaky in front of an extracted finish..."
+    },
+    {
+     "title": "Selvapiana 2013  Chianti Rufina",
+     "variety": "Red Blend",
+     "price": 18.0,
+     "points": 93,
+     "country": "Italy",
+     "note": "Elegant and fragrant, this opens with aromas of pressed rose, crushed violet, wild berry and a whiff of baking spice. The vibrant, focused palate delivers juicy red cherry, raspberry, white pepper, cinnamon and dried..."
+    },
+    {
+     "title": "Recanati 2014 Shiraz (Galilee)",
+     "variety": "Shiraz",
+     "price": 17.0,
+     "points": 93,
+     "country": "Israel",
+     "note": "Deep red violet in color, this wine has a bouquet of blueberries and mountainside herbs. It is fresh on the palate, with soft tannins dominated by flavors of black cherry, strawberry, cranberry, thyme and orange..."
+    },
+    {
+     "title": "Charles B. Mitchell 2012 Syrah (El Dorado)",
+     "variety": "Syrah",
+     "price": 18.0,
+     "points": 92,
+     "country": "US",
+     "note": "This wine brings out the variety's richness and depth of fruit flavors, while keeping the texture smooth and pleasing. It's very firm with tannins and acidity, yet not overly full-bodied. The ripe blackberry and..."
+    },
+    {
+     "title": "Quinta do Sobral 2014 Santar Reserva Red (Dão)",
+     "variety": "Portuguese Red",
+     "price": 13.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "This rich, spicy blend of Alfrocheiro, Touriga Nacional, Tinta Roriz and Jaen from winemaker Carlos Lucas offers rich black-plum fruits with layers of wood flavors. It is generous, juicy with some firm tannins and..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 12346,
+   "ms": 7846,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.85,
+     "duration_ms": 7099,
+     "cost_usd": 0.1152024,
+     "input_tokens": 2,
+     "output_tokens": 395,
+     "cache_read": 13392,
+     "cache_write": 13077
+    }
+   ],
+   "output": "**Selvapiana 2013 Chianti Rufina** (93 pts, $18) [3] is the closest match to what you're after. It's Sangiovese-based with bright acidity, so the tomato sauce won't make it taste flat, and that acidity cuts through the mozzarella and pepperoni fat. The supple tannins won't make the spicy pork taste hotter. Its red cherry, white pepper and dried herb flavors sit well next to the oregano and the cured meat.\n\n**Recanati 2014 Shiraz (Galilee)** (93 pts, $17) [4] is a good second choice if you'd like something a little darker. It's fresh, with soft tannins and red fruit (strawberry, cranberry), so it stays lively against the tomato. The thyme and roasted herb notes go with the oregano and the charred crust.\n\nI'd skip the others for pizza. The two Portuguese reds and the Chilean blend have firm, oaky tannins that would clash with the spice and the salt."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 20193,
+   "ms": 10623,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.62,
+     "duration_ms": 9861,
+     "cost_usd": 0.13460919999999998,
+     "input_tokens": 2,
+     "output_tokens": 1024,
+     "cache_read": 13406,
+     "cache_write": 13930
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [3], [4]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Pepperoni pizza is medium-bodied. The Chianti Rufina is described as elegant and focused, and the Galilee Shiraz as fresh with soft tannins, so both are medium in weight and neither is too light or too heavy for the dish."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "The reasoning holds up. Bright acidity in the Chianti matches the acidic tomato sauce and cuts the mozzarella and pork fat. Supple or soft tannins avoid clashing with the spice and salt in the cured meat. Turning down the firm, tannic, oaky reds for this dish is also sound."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "The bridges are plausible: the Chianti's dried herb and white pepper with the oregano and spicy pepperoni, its red cherry with the tomato, and the Shiraz's thyme and roasting herbs with the oregano and the charred crust."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "What is said about the two recommended wines matches their reviews: bright acidity, supple tannins, cherry, white pepper and dried herb for [3], and fresh, soft tannins, strawberry, cranberry and thyme for [4]. Sangiovese is a fair inference for Chianti Rufina. One minor overreach: the Rede review mentions dense tannins but no oak, so grouping it under 'oaky' is loose. It concerns a wine the pairing turned down, so it does not change the recommendation."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "**Selvapiana 2013 Chianti Rufina** (93 pts, $18) [3] is the closest match to what you're after. It's Sangiovese-based with bright acidity, so the tomato sauce won't make it taste flat, and that acidity cuts through the mozzarella and pepperoni fat. The supple tannins won't make the spicy pork taste hotter. Its red cherry, white pepper and dried herb flavors sit well next to the oregano and the cured meat.\n\n**Recanati 2014 Shiraz (Galilee)** (93 pts, $17) [4] is a good second choice if you'd like something a little darker. It's fresh, with soft tannins and red fruit (strawberry, cranberry), so it stays lively against the tomato. The thyme and roasted herb notes go with the oregano and the charred crust.\n\nI'd skip the others for pizza. The two Portuguese reds and the Chilean blend have firm, oaky tannins that would clash with the spice and the salt.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

@@ -2,6 +2,7 @@
 
     python -m eval.run_critic_eval              # 1. agent with the rubric critic, all dishes
     python -m eval.run_critic_eval --judges     # 2. re-judge each first-round draft
+    python -m eval.run_critic_eval --controls   # 2b. six deliberately mismatched drafts
     python -m eval.run_critic_eval --summary    # 3. write eval/critic/summary.json
 
 Step 1 runs the full LangGraph agent (parse, strategize, retrieve, recommend,
@@ -243,7 +244,7 @@ def rubric_verdict(llm, dish, draft, budget) -> dict:
     res = rubric.judge(llm, dish, draft["candidates_text"], draft["recommendation"])
     c = rubric.decide(code, res)
     return {"ok": c["ok"], "issues": c["issues"], "criteria": c["criteria"],
-            "schema_valid": c["schema_valid"], "repaired": c["repaired"]}
+            "schema_valid": c["schema_valid"], "repaired": c["repaired"], "raw": res["raw"]}
 
 
 def run_judges(which):
@@ -270,6 +271,35 @@ def run_judges(which):
             judges[name][r["id"]] = v
             print(f"{name:<7} {r['id']:<14} ok={v['ok']}", flush=True)
             path.write_text(json.dumps(judges, indent=1, ensure_ascii=False))
+
+
+# --------------------------------------------------------------------------- #
+# Step 2b: known-bad controls
+# --------------------------------------------------------------------------- #
+# A critic that passes everything would also pass these: one dish's first draft
+# presented as the pairing for a dish it clearly does not suit. Code checks use
+# the donor's budget, so only the four LLM criteria decide.
+CONTROLS = [("ribeye", "oysters"), ("oysters", "ribeye"), ("chocolate", "green-curry"),
+            ("green-curry", "chocolate"), ("lamb", "goat-cheese"), ("chocolate", "oysters")]
+
+
+def run_controls():
+    runs = {r["id"]: r for r in json.loads((OUT / "runs.json").read_text())}
+    path = OUT / "controls.json"
+    res = json.loads(path.read_text()) if path.exists() else {}
+    llm = _llm(SYSTEM_MODEL)
+    for donor, target in CONTROLS:
+        key = f"{donor}->{target}"
+        if key in res:
+            continue
+        CTX.update(dish=key, tag="control")
+        n0 = len(CALLS)
+        v = rubric_verdict(llm, runs[target]["dish"], runs[donor]["rounds"][0], runs[donor]["budget"])
+        v["llm_failed"] = [k for k in rubric.LLM_CRITERIA if not v["criteria"].get(k, {}).get("pass", False)]
+        v["cost_usd"] = round(sum(c["cost_usd"] or 0 for c in CALLS[n0:]), 5)
+        res[key] = v
+        print(key, v["ok"], v["llm_failed"], flush=True)
+        path.write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
 
 # --------------------------------------------------------------------------- #
@@ -366,15 +396,27 @@ def summary():
             pa = [first[i]["criteria"][k]["pass"] for i in have if k in judges[name][i]["criteria"]]
             pb = [judges[name][i]["criteria"][k]["pass"] for i in have if k in judges[name][i]["criteria"]]
             per[k] = kappa(pa, pb)
-        pooled_a = [first[i]["criteria"][k]["pass"] for i in have for k in rubric.LLM_CRITERIA]
-        pooled_b = [judges[name][i]["criteria"][k]["pass"] for i in have for k in rubric.LLM_CRITERIA]
+        full = [i for i in have if all(k in judges[name][i]["criteria"] for k in rubric.LLM_CRITERIA)]
+        pooled_a = [first[i]["criteria"][k]["pass"] for i in full for k in rubric.LLM_CRITERIA]
+        pooled_b = [judges[name][i]["criteria"][k]["pass"] for i in full for k in rubric.LLM_CRITERIA]
         out[f"agreement_{name}"] = {
             "model": judges[name][have[0]]["model"] if have else None,
             "overall_verdict": kappa(a, b), "pooled_criteria": kappa(pooled_a, pooled_b),
             "per_criterion": per, "judge_pass": f"{sum(b)} of {len(b)}",
+            "schema_repaired": sum(judges[name][i]["repaired"] for i in have),
+            "schema_invalid": sum(not judges[name][i]["schema_valid"] for i in have),
+            "disagreements": {i: {"system_ok": first[i]["ok"], "judge_ok": judges[name][i]["ok"],
+                                  "judge_issues": judges[name][i]["issues"]}
+                              for i in have if first[i]["ok"] != judges[name][i]["ok"]},
             "cost_median": round(statistics.median(judges[name][i]["cost_usd"] for i in have), 4),
             "wall_median_s": round(statistics.median(judges[name][i]["wall_s"] for i in have), 1),
         }
+    if (OUT / "controls.json").exists():
+        ctl = json.loads((OUT / "controls.json").read_text())
+        out["controls_mismatched_drafts"] = {
+            "n": len(ctl), "rejected": sum(not v["ok"] for v in ctl.values()),
+            "failed_criteria": {k: sum(k in v["llm_failed"] for v in ctl.values())
+                                for k in rubric.LLM_CRITERIA}}
     (OUT / "summary.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
     print(json.dumps(out, indent=2, ensure_ascii=False))
 
@@ -384,10 +426,13 @@ def main():
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--judges", nargs="*", help="legacy second repeat (default: all three)")
     ap.add_argument("--summary", action="store_true")
+    ap.add_argument("--controls", action="store_true")
     a = ap.parse_args()
     dishes = json.loads((EVAL / "dishes.json").read_text())["dishes"]
     if a.summary:
         return summary()
+    if a.controls:
+        return run_controls()
     if a.judges is not None:
         return run_judges(a.judges or ["legacy", "second", "repeat"])
     run_agent(dishes, a.only)

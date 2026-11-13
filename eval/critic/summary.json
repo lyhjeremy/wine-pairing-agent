@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-13",
+  "machine": "Apple M4",
+  "system_model": "opus",
+  "second_judge_model": "sonnet",
+  "models_seen": [
+    "claude-opus-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "n_dishes": 10,
+  "n_completed": 10,
+  "pass_rate": "10 of 10",
+  "passed_first_round": 9,
+  "critique_rounds": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+  ],
+  "critique_rounds_mean": 1.1,
+  "criterion_failures_all_rounds": {
+    "claims_supported": 1
+  },
+  "issues_mentioning_age": 0,
+  "schema_valid_first_try": 11,
+  "schema_repaired": 0,
+  "schema_invalid": 0,
+  "critique_calls_total": 11,
+  "agent_matches": "10 of 10",
+  "agent_all_picks_match": "10 of 10",
+  "over_budget_picks": 0,
+  "baseline_matches": "3 of 10",
+  "legacy_run_2026_11_05": {
+    "critique_passed": "0 of 4",
+    "agent_matches": "4 of 4",
+    "cost_per_pairing_median": 1.245,
+    "latency_median_s": 77.9,
+    "llm_calls_per_pairing": 10
+  },
+  "llm_calls_per_pairing": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    7
+  ],
+  "cost_per_pairing_median": 0.4897,
+  "cost_per_pairing_p95": 0.7506,
+  "latency_median_s": 33.7,
+  "latency_p95_s": 54.9,
+  "per_call_cost_median": 0.1232,
+  "per_call_wall_median_s": 7.57,
+  "cost_note": "total_cost_usd from claude -p --output-format json: API-equivalent cost reported by the Claude CLI, nothing billed (Claude subscription)",
+  "first_drafts_legacy_critic_pass": "0 of 10",
+  "first_drafts_legacy_issues_mentioning_age": 9,
+  "first_drafts_rubric_critic_pass": "9 of 10",
+  "agreement_second": {
+    "model": "sonnet",
+    "overall_verdict": {
+      "n": 10,
+      "agree": 6,
+      "percent": 60.0,
+      "kappa": 0.2
+    },
+    "pooled_criteria": {
+      "n": 36,
+      "agree": 33,
+      "percent": 91.7,
+      "kappa": 0.372
+    },
+    "per_criterion": {
+      "body_match": {
+        "n": 9,
+        "agree": 9,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "structure_logic": {
+        "n": 9,
+        "agree": 9,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "flavor_link": {
+        "n": 9,
+        "agree": 9,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "claims_supported": {
+        "n": 9,
+        "agree": 6,
+        "percent": 66.7,
+        "kappa": 0.27
+      }
+    },
+    "judge_pass": "5 of 10",
+    "schema_repaired": 6,
+    "schema_invalid": 1,
+    "disagreements": {
+      "lamb": {
+        "system_ok": true,
+        "judge_ok": false,
+        "judge_issues": [
+          "rubric: the critic's reply did not match the schema after one repair"
+        ]
+      },
+      "salmon": {
+        "system_ok": true,
+        "judge_ok": false,
+        "judge_issues": [
+          "claims_supported: Most claims match the reviews, but a few are not in them. The review for Stephen Ross never mentions Chablis, so calling it 'closest to a Chablis style' is invented. 'Lean enough' also conflicts with how the review frames it. Au Bon Climat's 'lemon fruit' is loosely drawn from 'lemondrop candy', which is a stretch. Kendall-Jackson's 'lime fruit' and 'brisk acidity' are supported."
+        ]
+      },
+      "goat-cheese": {
+        "system_ok": true,
+        "judge_ok": false,
+        "judge_issues": [
+          "claims_supported: Mostly accurate: [3] review cites a creamy goat cheese salad, Sancerre likeness, fennel and citrus; [1] cites low alcohol, bright acidity, honeydew, sweet hay, lime and 'sure-fire' for goat cheese. But the 'Sancerre style you're after' is an invented premise, since the user never asked for Sancerre."
+        ]
+      },
+      "pizza": {
+        "system_ok": true,
+        "judge_ok": false,
+        "judge_issues": [
+          "claims_supported: Most claims match the reviews, but some are invented. Sangiovese is not in the Chianti review, which says only Red Blend. The Shiraz review has no roasted or charred notes that would link to the charred crust. The Chilean blend is called firm and oaky-tannic, but its review says rubbery and oaky, not firm tannins."
+        ]
+      }
+    },
+    "cost_median": 0.1264,
+    "wall_median_s": 9.7
+  },
+  "agreement_repeat": {
+    "model": "opus",
+    "overall_verdict": {
+      "n": 10,
+      "agree": 10,
+      "percent": 100.0,
+      "kappa": 1.0
+    },
+    "pooled_criteria": {
+      "n": 40,
+      "agree": 40,
+      "percent": 100.0,
+      "kappa": 1.0
+    },
+    "per_criterion": {
+      "body_match": {
+        "n": 10,
+        "agree": 10,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "structure_logic": {
+        "n": 10,
+        "agree": 10,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "flavor_link": {
+        "n": 10,
+        "agree": 10,
+        "percent": 100.0,
+        "kappa": null
+      },
+      "claims_supported": {
+        "n": 10,
+        "agree": 10,
+        "percent": 100.0,
+        "kappa": 1.0
+      }
+    },
+    "judge_pass": "9 of 10",
+    "schema_repaired": 0,
+    "schema_invalid": 0,
+    "disagreements": {},
+    "cost_median": 0.1321,
+    "wall_median_s": 10.3
+  },
+  "controls_mismatched_drafts": {
+    "n": 6,
+    "rejected": 6,
+    "failed_criteria": {
+      "body_match": 6,
+      "structure_logic": 6,
+      "flavor_link": 6,
+      "claims_supported": 2
+    }
+  }
+}

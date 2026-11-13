@@ -1,0 +1,282 @@
+{
+ "ribeye->oysters": {
+  "ok": false,
+  "issues": [
+   "body_match: The dish is light raw oysters with mignonette. The recommendation is written for a grilled ribeye and picks full-bodied and medium-weight Cabernets, which would overwhelm delicate, briny oysters.",
+   "structure_logic: The reasoning relies on beef fat and protein softening firm tannins, but raw oysters have neither. Tannic reds with raw shellfish bring out metallic, bitter flavors, and the vinegar mignonette makes these low-acid-relative reds taste flat.",
+   "flavor_link: Every bridge it names (char, marbled fat, cream sauce, savory beef) is for a steak that is not on the plate. The black pepper on the Stark-Conde finish loosely echoes the mignonette's pepper, but the recommendation never makes that link for this dish, and it would not rescue the clash with brine."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [2], [1], [3]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The dish is light raw oysters with mignonette. The recommendation is written for a grilled ribeye and picks full-bodied and medium-weight Cabernets, which would overwhelm delicate, briny oysters."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "The reasoning relies on beef fat and protein softening firm tannins, but raw oysters have neither. Tannic reds with raw shellfish bring out metallic, bitter flavors, and the vinegar mignonette makes these low-acid-relative reds taste flat."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "Every bridge it names (char, marbled fat, cream sauce, savory beef) is for a steak that is not on the plate. The black pepper on the Stark-Conde finish loosely echoes the mignonette's pepper, but the recommendation never makes that link for this dish, and it would not rescue the clash with brine."
+   },
+   "claims_supported": {
+    "pass": true,
+    "reason": "The wine descriptions match the reviews: Vinifera is full-bodied and dry with blackberry, currant, graphite and silky tannins; Stark-Conde has leather, cigar box, a black pepper finish, fine but firm tannins and medium weight, and costs $13 less; JD has mountain tannins, cocoa and cedar. The dish description is wrong, but that is covered by the other criteria."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link"
+  ],
+  "cost_usd": 0.13387
+ },
+ "oysters->ribeye": {
+  "ok": false,
+  "issues": [
+   "body_match: The recommendation is written for oysters with mignonette, but the dish is a grilled ribeye with peppercorn cream sauce. A lean, crisp Chablis and a light, bright Muscadet are far too light for rich, marbled beef in a cream sauce.",
+   "structure_logic: The structural reasoning (acid to match mignonette vinegar, no oak against raw shellfish) is about a dish that was not served. Nothing addresses the ribeye's fat and protein or the cream and black pepper, and high-acid, lean whites with no grip are a poor structural match for a steak.",
+   "flavor_link: The only bridges offered are brine, citrus and vinegar for oysters. None of charred beef, black pepper, cream or umami is linked to the wines, so the actual dish gets no flavor bridge or deliberate contrast."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [2], [5], [4], [3], [1], [6]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The recommendation is written for oysters with mignonette, but the dish is a grilled ribeye with peppercorn cream sauce. A lean, crisp Chablis and a light, bright Muscadet are far too light for rich, marbled beef in a cream sauce."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "The structural reasoning (acid to match mignonette vinegar, no oak against raw shellfish) is about a dish that was not served. Nothing addresses the ribeye's fat and protein or the cream and black pepper, and high-acid, lean whites with no grip are a poor structural match for a steak."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "The only bridges offered are brine, citrus and vinegar for oysters. None of charred beef, black pepper, cream or umami is linked to the wines, so the actual dish gets no flavor bridge or deliberate contrast."
+   },
+   "claims_supported": {
+    "pass": true,
+    "reason": "The descriptions match the reviews: [2] puts acidity and a crisp, tangy texture first with only hints of wood; [5] spent 10 years on lees and keeps crisp acidity and brightness; [4] is described as creamy and [3] as having lost its instant freshness. Calling [5] light-bodied is a small inference, not an invention."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link"
+  ],
+  "cost_usd": 0.13094
+ },
+ "chocolate->green-curry": {
+  "ok": false,
+  "issues": [
+   "body_match: The dish is a medium-bodied simmered chicken green curry. A fortified, high-alcohol, rancio-style Maury is far heavier and more intense than that, and it would overwhelm the coconut-herb sauce. The recommendation sizes the wine against a dense chocolate torte, a dish that isn't on the table.",
+   "structure_logic: All the structural reasoning is written for a chocolate dessert. For a spicy green curry, a fortified wine's high alcohol makes chili burn hotter, and the review's 'gripping' tannins clash with the heat. The off-dry, high-acid Knoll Auslese [1] is the structurally sound choice here, and it was rejected for being too light for chocolate.",
+   "flavor_link: Every flavor bridge it names (cocoa, buttery torte, bitter chocolate edge) points to a dessert that isn't the dish. Nothing links the walnut, rancio and black tea notes to green chili, coconut, Thai basil or lime-leaf aromatics, and none is plausible.",
+   "claims_supported: It says ten years of aging 'softened the tannins', but the review describes a 'gripping palate'. It calls the Knoll a 'light' white, while its review stresses concentration and richer, sweeter Auslese character. The claims of a 'target style' and chocolate matching aren't grounded in the dish or the reviews."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [4], [2], [3], [5], [6], [1]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The dish is a medium-bodied simmered chicken green curry. A fortified, high-alcohol, rancio-style Maury is far heavier and more intense than that, and it would overwhelm the coconut-herb sauce. The recommendation sizes the wine against a dense chocolate torte, a dish that isn't on the table."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "All the structural reasoning is written for a chocolate dessert. For a spicy green curry, a fortified wine's high alcohol makes chili burn hotter, and the review's 'gripping' tannins clash with the heat. The off-dry, high-acid Knoll Auslese [1] is the structurally sound choice here, and it was rejected for being too light for chocolate."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "Every flavor bridge it names (cocoa, buttery torte, bitter chocolate edge) points to a dessert that isn't the dish. Nothing links the walnut, rancio and black tea notes to green chili, coconut, Thai basil or lime-leaf aromatics, and none is plausible."
+   },
+   "claims_supported": {
+    "pass": false,
+    "reason": "It says ten years of aging 'softened the tannins', but the review describes a 'gripping palate'. It calls the Knoll a 'light' white, while its review stresses concentration and richer, sweeter Auslese character. The claims of a 'target style' and chocolate matching aren't grounded in the dish or the reviews."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link",
+   "claims_supported"
+  ],
+  "cost_usd": 0.13508
+ },
+ "green-curry->chocolate": {
+  "ok": false,
+  "issues": [
+   "body_match: The torte is rich, dense and sweet, but both picks are light: [3] is described as 'feather-light nectar' and [1] is a quaffable off-dry Riesling. The recommendation even justifies [3] as not swamping a 'medium-bodied chicken curry', a dish that isn't on the plate.",
+   "structure_logic: The reasoning is written for a spicy coconut curry: softening chili burn and cutting coconut cream. With a sweet chocolate dessert, the wine needs to be at least as sweet as the dish. A Kabinett or off-dry Riesling will taste thin and sour against the torte. The only dessert-style wine, Sineann [5], is rejected as 'too sweet for a savory main', which gets the dish wrong.",
+   "flavor_link: Every flavor bridge points to lemongrass, Thai basil, coconut or curry paste, none of which is in the dish. No link or deliberate contrast is drawn to bittersweet chocolate, cocoa or butter, and stone fruit and honeydew have little plausible connection to dark chocolate."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [3], [1], [4], [6], [5]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The torte is rich, dense and sweet, but both picks are light: [3] is described as 'feather-light nectar' and [1] is a quaffable off-dry Riesling. The recommendation even justifies [3] as not swamping a 'medium-bodied chicken curry', a dish that isn't on the plate."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "The reasoning is written for a spicy coconut curry: softening chili burn and cutting coconut cream. With a sweet chocolate dessert, the wine needs to be at least as sweet as the dish. A Kabinett or off-dry Riesling will taste thin and sour against the torte. The only dessert-style wine, Sineann [5], is rejected as 'too sweet for a savory main', which gets the dish wrong."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "Every flavor bridge points to lemongrass, Thai basil, coconut or curry paste, none of which is in the dish. No link or deliberate contrast is drawn to bittersweet chocolate, cocoa or butter, and stone fruit and honeydew have little plausible connection to dark chocolate."
+   },
+   "claims_supported": {
+    "pass": true,
+    "reason": "The wine descriptors match the reviews: honeyed sweetness, lemon-lime acidity and feather-light body for [3]; saffron, honey, white peach and honeydew for [1]; [4] and [6] dry; [5] dessert-style. The errors about the dish are covered under the other criteria."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link"
+  ],
+  "cost_usd": 0.15014
+ },
+ "lamb->goat-cheese": {
+  "ok": false,
+  "issues": [
+   "body_match: The pairing was written for a rosemary-garlic lamb shank, but the dish is a light goat cheese and roasted beet salad with vinaigrette. Both recommended wines are full-bodied Rhône reds that would overwhelm a light salad.",
+   "structure_logic: The tannin reasoning is about binding with lamb protein and fat, and neither of those is in this dish. Firm tannins from the Pegau will clash with the vinaigrette's acid and turn bitter against tangy goat cheese. The dish needs a wine with high acid and low tannin, which neither pick has.",
+   "flavor_link: Every flavor bridge offered (roasted meat, black olive, pepper against rosemary, garlic and braise) points to lamb. Nothing ties either wine to the beets' earthy sweetness or the creamy, tangy goat cheese."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [2], [5]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The pairing was written for a rosemary-garlic lamb shank, but the dish is a light goat cheese and roasted beet salad with vinaigrette. Both recommended wines are full-bodied Rhône reds that would overwhelm a light salad."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "The tannin reasoning is about binding with lamb protein and fat, and neither of those is in this dish. Firm tannins from the Pegau will clash with the vinaigrette's acid and turn bitter against tangy goat cheese. The dish needs a wine with high acid and low tannin, which neither pick has."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "Every flavor bridge offered (roasted meat, black olive, pepper against rosemary, garlic and braise) points to lamb. Nothing ties either wine to the beets' earthy sweetness or the creamy, tangy goat cheese."
+   },
+   "claims_supported": {
+    "pass": true,
+    "reason": "The descriptions match the reviews. Grand Montmirail is the 80/15/5 blend, with herbal, roasted meat and black olive notes, full body and fine texture. Pegau has firm tannins from 50-year-old vines and cracked pepper, black olive and dried spice."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link"
+  ],
+  "cost_usd": 0.13239
+ },
+ "chocolate->oysters": {
+  "ok": false,
+  "issues": [
+   "body_match: The dish is light raw oysters with mignonette, but the pick is a heavy, sweet, fortified Maury Grenache with rancio character. It would bury the delicate oyster. The write-up argues against a chocolate torte, which is not the dish being paired.",
+   "structure_logic: A sweet, tannic, oxidative red fortified wine with briny raw shellfish and a vinegar mignonette is unsound. The tannin and sugar clash with the salt and acid and leave a metallic, fishy taste. The reasoning is built for a sweet chocolate dessert, not this dish.",
+   "flavor_link: The wine has no bridge to the briny, mineral, shallot and pepper notes. The proposed links (cocoa, buttery torte, bitter chocolate edge) refer to a dessert that is not on the plate.",
+   "claims_supported: The text says ten years of aging softened the tannins so they won't fight, but the review describes a 'gripping palate'. It also calls the Knoll Auslese a light white that would disappear, while its review stresses concentration and richer, sweeter Auslese character. The other descriptors are taken from the review."
+  ],
+  "criteria": {
+   "grounded": {
+    "pass": true,
+    "reason": "cites [4], [2], [3], [5], [6], [1]"
+   },
+   "within_budget": {
+    "pass": true,
+    "reason": "all cited wines within budget"
+   },
+   "enough_candidates": {
+    "pass": true,
+    "reason": "6 candidates retrieved"
+   },
+   "body_match": {
+    "pass": false,
+    "reason": "The dish is light raw oysters with mignonette, but the pick is a heavy, sweet, fortified Maury Grenache with rancio character. It would bury the delicate oyster. The write-up argues against a chocolate torte, which is not the dish being paired."
+   },
+   "structure_logic": {
+    "pass": false,
+    "reason": "A sweet, tannic, oxidative red fortified wine with briny raw shellfish and a vinegar mignonette is unsound. The tannin and sugar clash with the salt and acid and leave a metallic, fishy taste. The reasoning is built for a sweet chocolate dessert, not this dish."
+   },
+   "flavor_link": {
+    "pass": false,
+    "reason": "The wine has no bridge to the briny, mineral, shallot and pepper notes. The proposed links (cocoa, buttery torte, bitter chocolate edge) refer to a dessert that is not on the plate."
+   },
+   "claims_supported": {
+    "pass": false,
+    "reason": "The text says ten years of aging softened the tannins so they won't fight, but the review describes a 'gripping palate'. It also calls the Knoll Auslese a light white that would disappear, while its review stresses concentration and richer, sweeter Auslese character. The other descriptors are taken from the review."
+   }
+  },
+  "schema_valid": true,
+  "repaired": false,
+  "llm_failed": [
+   "body_match",
+   "structure_logic",
+   "flavor_link",
+   "claims_supported"
+  ],
+  "cost_usd": 0.14812
+ }
+}

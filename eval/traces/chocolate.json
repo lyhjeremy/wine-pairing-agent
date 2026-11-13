@@ -1,0 +1,395 @@
+{
+ "dish": "chocolate",
+ "meal": "flourless dark chocolate torte",
+ "budget": 40,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 66347,
+ "cost_usd": 0.88492,
+ "llm_calls": 7,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 5365,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.36,
+     "duration_ms": 3799,
+     "cost_usd": 0.1147946,
+     "input_tokens": 2,
+     "output_tokens": 113,
+     "cache_read": 13393,
+     "cache_write": 13731
+    }
+   ],
+   "input": {
+    "meal": "flourless dark chocolate torte",
+    "budget": 40
+   },
+   "output": {
+    "main": "flourless dark chocolate torte",
+    "body": "rich",
+    "sauce": "none",
+    "cuisine": "French-inspired dessert",
+    "key_flavors": [
+     "bittersweet chocolate",
+     "cocoa",
+     "butter",
+     "sweet",
+     "slightly bitter",
+     "dense and creamy"
+    ],
+    "cooking_method": "baked"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 5365,
+   "ms": 7461,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.46,
+     "duration_ms": 6178,
+     "cost_usd": 0.1220784,
+     "input_tokens": 2,
+     "output_tokens": 312,
+     "cache_read": 13392,
+     "cache_write": 14144
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Fortified sweet red such as Banyuls or Maury (Grenache-based vin doux naturel from Roussillon), with Late Bottled Vintage or Ruby Port as an alternative",
+    "search_query": "Banyuls Maury Grenache vin doux naturel fortified sweet red dark chocolate black cherry plum raisin mocha, or LBV Ruby Port",
+    "rationale": "The wine has to be at least as sweet as this dense, bittersweet torte, and a fortified Grenache from Roussillon has the sweetness and weight to match it, plus dark fruit to set off the cocoa; good bottles are easy to find under $40, and it is the classic French match for chocolate."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 12826,
+   "ms": 507,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "Banyuls Maury Grenache vin doux naturel fortified sweet red dark chocolate black cherry plum raisin mocha, or LBV Ruby Port",
+     "max_price": 40,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Emmerich Knoll 2013 Loibner Auslese Grüner Veltliner (Wachau)",
+     "variety": "Grüner Veltliner",
+     "price": 40.0,
+     "points": 96,
+     "country": "Austria",
+     "note": "Hints of moss, yeast and freshly zested orange peel edged with pine honey initially suggest a dry wine. It is only on the palate that the richer and sweeter Auslese character comes to bear—again in the guise of dark,..."
+    },
+    {
+     "title": "Quinta de Chocapalha 2013 Vinha Mãe Red (Lisboa)",
+     "variety": "Portuguese Red",
+     "price": 40.0,
+     "points": 94,
+     "country": "Portugal",
+     "note": "The top red from Chocapalha, this comes from a single parcel. It has concentrated tannins, along with the minty flavors that come from new wood. Balancing that combination are the rich fruits: blackberry, damson..."
+    },
+    {
+     "title": "Prospect 772 2007 The Brat Red (Sierra Foothills)",
+     "variety": "Rhône-style Red Blend",
+     "price": 36.0,
+     "points": 94,
+     "country": "US",
+     "note": "Softly tannic, sexy and delicious, with waves of berry-cherry pie filling and mocha for richness, and drier, tarter notes of currants, leather, rhubarb and pomegranates, accentuated with smoky wood. A blend of..."
+    },
+    {
+     "title": "Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury)",
+     "variety": "Grenache",
+     "price": 30.0,
+     "points": 91,
+     "country": "France",
+     "note": "Aged in glass demijohns for one year and oak tuns for nine, this is a mature selection that's ready to drink now, though it can certainly keep for many more years to come. A beautiful rancio characteristic leads,..."
+    },
+    {
+     "title": "Mas Blanch I Jové 2009 Saó Expressiu Red (Costers del Segre)",
+     "variety": "Red Blend",
+     "price": 34.0,
+     "points": 92,
+     "country": "Spain",
+     "note": "Subtle, rooty, expressive aromas of blackberry, raisin and tobacco are heady and pure, with magnetic pull. A full-bodied palate is loaded with ripe berry fruit and baked, peppery, spicy blackberry flavors that end..."
+    },
+    {
+     "title": "Qupé 2008 Bien Nacido Hillside Estate Syrah (Santa Maria Valley)",
+     "variety": "Syrah",
+     "price": 40.0,
+     "points": 92,
+     "country": "US",
+     "note": "Massive blackberry, cherry, currant and mocha flavors characterize this dry, potent Syrah. At the age of five, it's round and mellow in the mouth, with firm tannins and a gentle scour of acidity. Just beginning to..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 13333,
+   "ms": 9670,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 9.67,
+     "duration_ms": 8444,
+     "cost_usd": 0.1371704,
+     "input_tokens": 2,
+     "output_tokens": 517,
+     "cache_read": 13392,
+     "cache_write": 15518
+    }
+   ],
+   "output": "**Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury) · 91 pts · $30 [4]**\n\nThis is the only wine in the list that matches the target style: a fortified Grenache vin doux naturel from Roussillon, and the classic French choice for dark chocolate. It is sweet enough to meet the torte, so the chocolate's bitterness won't make the wine taste thin or sour. The cherry and plum fruit offsets the cocoa, and the rancio notes of walnut, orange oil and baking spice match the torte's buttery richness. Ten years of oxidative aging has softened the tannins, so they won't fight the dense chocolate, and the black tea and licorice finish echoes the torte's bitter edge.\n\nI'd stop at one bottle. The other reds [2], [3], [5] and [6] are all dry, and dry wine next to a sweet chocolate dessert turns bitter and hollow. Some have mocha notes, but that doesn't help here. The Knoll Auslese [1] is sweet, but it's a light, high-acid white built around pine honey and citrus peel, and it would disappear under this much chocolate. If you want a Port alternative, look outside this list; these six don't include one."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 23002,
+   "ms": 11011,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 11.01,
+     "duration_ms": 10246,
+     "cost_usd": 0.13394119999999998,
+     "input_tokens": 2,
+     "output_tokens": 813,
+     "cache_read": 13406,
+     "cache_write": 14374
+    }
+   ],
+   "output": {
+    "ok": false,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [4], [2], [3], [5], [6], [1]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "A Maury vin doux naturel is a rich, fortified sweet red, which suits the weight of a dense, buttery flourless chocolate torte."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "The reasoning is sound. A sweet fortified red at least as sweet as the dessert keeps the wine from tasting thin or sour, and the dry reds are correctly ruled out for a sweet chocolate dish."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "The review's cherry, plum, black tea, licorice root and orange oil notes give plausible bridges to bittersweet chocolate and cocoa. Red fruit and orange with dark chocolate is a classic pairing."
+     },
+     "claims_supported": {
+      "pass": false,
+      "reason": "Two claims conflict with the review text. The review calls the Mas Amiel palate 'gripping', but the pick says aging has softened its tannins so they won't fight the chocolate. It also calls the Knoll [1] a 'light' white, while its review stresses concentration and a richer, sweeter Auslese character."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  },
+  {
+   "step": 6,
+   "node": "bump",
+   "t_start_ms": 34013,
+   "ms": 0,
+   "llm_calls": [],
+   "output": {
+    "attempts": 1
+   }
+  },
+  {
+   "step": 7,
+   "node": "strategize",
+   "t_start_ms": 34013,
+   "ms": 7576,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.57,
+     "duration_ms": 6916,
+     "cost_usd": 0.10773440000000001,
+     "input_tokens": 2,
+     "output_tokens": 362,
+     "cache_read": 13392,
+     "cache_write": 12226
+    }
+   ],
+   "input": {
+    "feedback": [
+     "claims_supported: Two claims conflict with the review text. The review calls the Mas Amiel palate 'gripping', but the pick says aging has softened its tannins so they won't fight the chocolate. It also calls the Knoll [1] a 'light' white, while its review stresses concentration and a richer, sweeter Auslese character."
+    ]
+   },
+   "output": {
+    "target_style": "Sweet fortified red: Late Bottled Vintage or Reserve Ruby Port",
+    "search_query": "late bottled vintage port ruby port sweet fortified red blackberry plum dark chocolate mocha",
+    "rationale": "Chocolate this dense and bittersweet needs a wine at least as sweet and as full-bodied as the torte, and Port's dark-fruit sweetness and fortified weight can stand up to the cocoa without tasting thin or sour, so this search moves to a different style from the earlier Maury and Auslese picks."
+   }
+  },
+  {
+   "step": 8,
+   "node": "retrieve",
+   "t_start_ms": 41589,
+   "ms": 558,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "late bottled vintage port ruby port sweet fortified red blackberry plum dark chocolate mocha",
+     "max_price": 40,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Ramos-Pinto 2009 RPLBV Late Bottled Vintage  (Port)",
+     "variety": "Port",
+     "price": 27.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "Beautifully perfumed, this has ripe blackberry flavors and a relatively dry character. The spirit is now well balanced, giving a backbone to the violet aromas and spicy character of this still-young LBV. It is good..."
+    },
+    {
+     "title": "Taylor Fladgate 2007 Late Bottled Vintage  (Port)",
+     "variety": "Port",
+     "price": 18.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "Bottled in January 2012, this classic LBV has great perfumed fruit, soft and elegant. A blackberry jam flavor dominates, laced with black cherries and soft tannins. Immediately appealing and drinkable now."
+    },
+    {
+     "title": "Ferreira 2013 Late Bottled Vintage  (Port)",
+     "variety": "Port",
+     "price": 26.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "With fragrant violet and red-fruit aromas, this is an enticing wine. Its structure and its concentration bring out its richness and dense black fruits. The wine is elegant, on the dry side of Ports with some firm..."
+    },
+    {
+     "title": "Ferreira 2012 Late Bottled Vintage  (Port)",
+     "variety": "Port",
+     "price": 26.0,
+     "points": 92,
+     "country": "Portugal",
+     "note": "The wine is dry, concentrated, very much in the house style of this legendary brand. It has acidity as well as the rich dried fruits, with the tannins a force in the background. It is a style of LBV that could age..."
+    },
+    {
+     "title": "Royal Oporto 2010 Late Bottled Vintage  (Port)",
+     "variety": "Port",
+     "price": 20.0,
+     "points": 91,
+     "country": "Portugal",
+     "note": "The texture of this wine is dense and concentrated while keeping the fresh fruit and acidity well in balance. It has ripe blackberry flavors that offer great fruitiness. The firm background of tannin structure is..."
+    },
+    {
+     "title": "Taylor Fladgate NV 325 Anniversary  (Port)",
+     "variety": "Port",
+     "price": 40.0,
+     "points": 97,
+     "country": "Portugal",
+     "note": "This is a superb blend of aged tawny Ports, blended to celebrate the company's 325th anniversary. Filled with rich fruit, it has great depth and spicy richness although it is also impressively fresh. Dried fruits and..."
+    }
+   ]
+  },
+  {
+   "step": 9,
+   "node": "recommend",
+   "t_start_ms": 42147,
+   "ms": 10463,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.46,
+     "duration_ms": 8904,
+     "cost_usd": 0.1337264,
+     "input_tokens": 2,
+     "output_tokens": 516,
+     "cache_read": 13392,
+     "cache_write": 15090
+    }
+   ],
+   "output": "For this torte I'd pour the **Taylor Fladgate 2007 Late Bottled Vintage** (91 pts, $18) [2]. Its blackberry-jam and black-cherry fruit gives it enough sweetness to match the dessert, so the wine won't taste thin or sour next to it. The tannins are soft, which matters here: cocoa is already a little bitter, and firm tannins would make that worse. This LBV meets the chocolate's density with its own plush weight.\n\nMy second choice is the **Royal Oporto 2010 Late Bottled Vintage** (91 pts, $20) [5]. It's described as dense and concentrated, so it has the body for a flourless torte. The ripe blackberry fruit and juicy finish work against the bittersweet edge, and its acidity cuts the butter so each bite feels fresh again.\n\nI passed over the Ferreira LBVs [3][4] and the Ramos-Pinto [1] because their notes call them dry-leaning and firm. Next to sweet chocolate, a drier Port can come across as tart."
+  },
+  {
+   "step": 10,
+   "node": "critique",
+   "t_start_ms": 52610,
+   "ms": 13737,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 13.73,
+     "duration_ms": 12930,
+     "cost_usd": 0.13547320000000002,
+     "input_tokens": 2,
+     "output_tokens": 1076,
+     "cache_read": 13406,
+     "cache_write": 13908
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [2], [5], [3], [4], [1]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Both picks are LBV Ports: fortified, sweet and full in weight. That suits a rich, dense flourless chocolate torte, and [5] is explicitly described as dense and concentrated."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "The reasoning is sound. It matches the wine's sweetness to the dessert so the wine won't taste thin, and it picks soft tannins so they don't add to the cocoa's bitterness. One inconsistency: the backup [5] has a 'firm background of tannin structure', the same trait used to reject the Ferreiras. It is still a workable second choice."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "Blackberry-jam and black-cherry fruit against bittersweet chocolate is a classic, plausible bridge between dark fruit and cocoa."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "The core claims match the reviews: [2] has blackberry jam, black cherry and soft tannins; [5] is dense and concentrated, with acidity and a juicy finish; [3] and [4] are dry-leaning with firm tannins. Two small stretches: 'plush weight' goes beyond [2]'s 'soft and elegant', and [1] is called relatively dry but never firm. Neither is serious enough to fail."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "For this torte I'd pour the **Taylor Fladgate 2007 Late Bottled Vintage** (91 pts, $18) [2]. Its blackberry-jam and black-cherry fruit gives it enough sweetness to match the dessert, so the wine won't taste thin or sour next to it. The tannins are soft, which matters here: cocoa is already a little bitter, and firm tannins would make that worse. This LBV meets the chocolate's density with its own plush weight.\n\nMy second choice is the **Royal Oporto 2010 Late Bottled Vintage** (91 pts, $20) [5]. It's described as dense and concentrated, so it has the body for a flourless torte. The ripe blackberry fruit and juicy finish work against the bittersweet edge, and its acidity cuts the butter so each bite feels fresh again.\n\nI passed over the Ferreira LBVs [3][4] and the Ramos-Pinto [1] because their notes call them dry-leaning and firm. Next to sweet chocolate, a drier Port can come across as tart.",
+  "critique_ok": true,
+  "attempts": 1
+ },
+ "error": null
+}

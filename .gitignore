@@ -4,5 +4,5 @@ __pycache__/
 .venv/
 .DS_Store
 .chroma/
-traces/
+/traces/
 assets/trace_timeline.png

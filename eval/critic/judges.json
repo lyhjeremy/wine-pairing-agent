@@ -1,0 +1,947 @@
+{
+ "legacy": {
+  "ribeye": {
+   "ok": false,
+   "issues": [
+    "The top pick is a 2006 Napa Cabernet whose review gave a window of 'Now–2014, at least'; in 2026 it is about 12 years past that window, so it may be well past peak, not just mature. It needs a stronger caveat or should not be the lead pick.",
+    "The $40 and $27 prices are release prices from the reviews, so the '$13 less' comparison probably does not hold for current market prices of 15 to 20 year old bottles.",
+    "The Stark-Condé 2011 and JD 2007 are also 15+ years old, and the answer gives no aging caveat for either; calling the JD 'longer-lived' should be checked against its review's drinking window.",
+    "Stark-Condé is described as medium-weight against a rich, fatty ribeye with cream sauce. That is a minor body mismatch, which the answer admits."
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 8.73,
+   "cost_usd": 0.12614,
+   "calls": 1
+  },
+  "oysters": {
+   "ok": false,
+   "issues": [
+    "Age is the main risk. The 2013 Chablis is now 13 years old and may have picked up honeyed or nutty notes that dull its edge against vinegar and brine. The pick relies on a review written when the wine was young.",
+    "The 2006 Muscadet spent 10 years on its lees, which tends to give a broader, more savory wine than the classic lean, saline style for raw oysters. The review says it is still bright, but it is less of a sure match than a young Muscadet sur lie.",
+    "Mignonette vinegar can make wines with less acidity taste flat. Both picks have high acidity, but the reasoning would be stronger if it said the wine's acidity needs to match or exceed the sauce's.",
+    "Nothing addresses the cracked black pepper. It is minor, but a crisp, unoaked wine with no residual sugar is the right call, and the reasoning could say so."
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 9.31,
+   "cost_usd": 0.10998,
+   "calls": 1
+  },
+  "green-curry": {
+   "ok": false,
+   "issues": [
+    "A 2013 Kabinett is about 13 years old now. Some of its sweetness will have faded and petrol notes will have built up, so it may not tame the chili as well as the note claims.",
+    "Haus Klosterberg is not always an off-dry wine. Molitor bottles it in dry and feinherb versions too, so the residual sugar for [1] needs checking before it is recommended for heat.",
+    "Calling the Kabinett feather-light argues against it: a light wine may be too thin next to coconut cream, and the note should admit that tradeoff rather than present it as a strength.",
+    "Matching saffron on the nose to the curry paste is weak, since green curry gets its aroma from lemongrass, galangal and makrut lime, not saffron.",
+    "Lemongrass and Thai basil are not in the dish description, so the fruit-to-herb pairing rests on assumed ingredients."
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 8.08,
+   "cost_usd": 0.11087,
+   "calls": 1
+  },
+  "risotto": {
+   "ok": false,
+   "issues": [
+    "In 2026 the Sassella 2009 is near the end of its 2019–2029 drinking window, not 'well inside' it, so the claim that its tannins have softened is overstated and the bottle may be past its peak",
+    "A 2013 entry-level Langhe Nebbiolo is about 13 years old and probably past its best; the storage caveat understates the risk that the fruit has faded and only drying tannin remains",
+    "The Sassella paragraph's 'though' does not follow: drinking-window position and cheese fat are offered as separate reasons the tannins won't clash, but the text does not connect them clearly",
+    "Nebbiolo's firm tannin is a mild risk with a dish that has no protein beyond parmesan; a softer or older-styled red, or a textured white (Arneis, Timorasso), would also suit the creamy rice",
+    "Acid, earth and body logic is sound: Nebbiolo with wild-mushroom risotto is a classic Northern Italian pairing"
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 10.96,
+   "cost_usd": 0.13148,
+   "calls": 1
+  },
+  "roast-chicken": {
+   "ok": false,
+   "issues": [
+    "Neither wine matches the target style: both are oaked California Chardonnays, not unoaked French whites such as Chablis or Mâcon. The pick explains this but does not fix it.",
+    "The 2013 and 2014 vintages are about 12 years old now. Chardonnays at $24 to $25 may have lost the fresh acidity the pairing depends on.",
+    "Acacia barrels are still wood. 'Less oak flavor' is a relative claim the review does not quantify.",
+    "The fallback reason for Roblar [4] assumes buttery pan juices, but the dish lists lemon and herb juices. Its vanilla and brown spice could dull the lemon.",
+    "The pick offers no lighter red, such as Burgundy-style Pinot Noir. That is a classic match for roast chicken and could beat an oaked white here."
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 8.28,
+   "cost_usd": 0.11029,
+   "calls": 1
+  },
+  "lamb": {
+   "ok": false,
+   "issues": [
+    "The 2009 Gigondas is 17 years old and more than 'a little past' its window, so the fruit may have faded to leather and earth; the pairing should warn that the bottle could be tired, not just suggest a cooler serve",
+    "Acidity is never discussed: Grenache-led Southern Rhône reds run low in acid, and against a reduced, fatty braise that point needed covering (Mourvèdre and Syrah add some lift)",
+    "Serving cooler will not bring back fruit that has already faded with age; the 60-62°F advice is fine for cellar temperature, but the reason given for it is weak",
+    "The 2012 Pegau CdR is also past its window, so both picks share the same age risk and there is no current-vintage fallback"
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 9.01,
+   "cost_usd": 0.10918,
+   "calls": 1
+  },
+  "salmon": {
+   "ok": false,
+   "issues": [
+    "The 2008 Au Bon Climat is about 18 years old in 2026; a lean, low-oak Chardonnay at that age may be oxidized or past its peak, so the bright acidity and lemon fruit described in the tasting note may have faded",
+    "The 2011 Stephen Ross is about 15 years old and has the same freshness risk, which weakens the claim that it will bring out the fresh dill",
+    "The Kendall-Jackson Grand Reserve has no vintage, so the reader cannot judge its age or how fresh it still is",
+    "Calling a Santa Maria Valley Chardonnay 'Chablis style' overstates it; it is a riper, fuller California wine",
+    "It names no lighter red option such as Pinot Noir, a common match for salmon, though all three white picks are sound"
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 9.64,
+   "cost_usd": 0.12565,
+   "calls": 1
+  },
+  "goat-cheese": {
+   "ok": false,
+   "issues": [
+    "The 2010 Easton Sauvignon Blanc is about 16 years old, so a fresh, crisp style like this has probably faded; the vintage needs checking or a current release should replace it",
+    "The 2014 Loiregon is also old for a Sauvignon Blanc meant to be drunk young, so it may have lost the bright acidity the pairing depends on",
+    "The response refers to 'the Sancerre style you're after', but the dish input asks for no style, so that preference looks made up",
+    "Both picks are Sauvignon Blanc, so the second bottle adds no range; a dry rosé or a light Pinot Noir would suit the earthy beets"
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 6.08,
+   "cost_usd": 0.10709,
+   "calls": 1
+  },
+  "chocolate": {
+   "ok": false,
+   "issues": [
+    "Linking the rancio notes (walnut, orange oil, spice) to the torte's buttery richness is a loose argument. Those notes work because walnut and orange are classic partners for chocolate, and the review should say that.",
+    "After 10 years of oxidative aging, the fruit will read as dried or stewed cherry and plum more than fresh fruit, so 'cherry and plum fruit offsets the cocoa' slightly overstates how fresh the wine tastes.",
+    "The review never says the wine should be at least as sweet as the dessert. A bittersweet torte is only moderately sweet, which suits Maury, but that is the real reason the pairing works and it should be stated."
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 8.3,
+   "cost_usd": 0.10906,
+   "calls": 1
+  },
+  "pizza": {
+   "ok": false,
+   "issues": [
+    "The claim that firm tannins clash with salt is backwards: salt softens the feel of tannin, so only the spice argument holds",
+    "The 2014 Recanati is 12 years old; calling it 'fresh' with 'lively' red fruit is doubtful for a $17 Shiraz at that age",
+    "Shiraz is riper and lower in acid than Sangiovese, so 'stays lively against the tomato' oversells how well it handles the sauce's acidity",
+    "The 2013 Chianti Rufina is 13 years old, so its 'bright acidity' and red cherry fruit may have faded into tertiary notes. Check the tasting note's drinking window"
+   ],
+   "llm_ok_field": true,
+   "model": "opus",
+   "wall_s": 8.93,
+   "cost_usd": 0.10847,
+   "calls": 1
+  }
+ },
+ "second": {
+  "ribeye": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [1], [3]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Both lead wines are Cabernets that suit a rich, grilled ribeye. Vinifera is full-bodied and rich. Stark-Condé is medium-weight, and the response states that it is lighter than the dish."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Firm Cabernet tannins work with a fatty, protein-rich ribeye, and the fat softens them. The cream sauce is rich rather than acidic or spicy, so no clash arises. The mention of silky tannins not clashing with the cream is reasonable."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Black pepper on the Stark-Condé finish links to the peppercorn sauce. Leather and cigar box link to the charred, savory beef. Graphite and blackberry with rich beef is a sound classic pairing."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The claims match the reviews. Vinifera: dry, full-bodied, 100% Cabernet, blackberry, black currant, graphite, silky tannins, and the 'Now–2014, at least' window. Stark-Condé: black pepper finish, leather, cigar box, fine yet firm tannins, medium-weight. JD: tightly wound mountain tannins, cocoa and cedar. The $13 price difference is correct. The claim that the beef's fat softens the tannins is general pairing reasoning, not an invented wine attribute."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "sonnet",
+   "wall_s": 4.93,
+   "cost_usd": 0.07056,
+   "calls": 1
+  },
+  "oysters": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [5], [4], [3], [1], [6]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Light dish. Chablis Premier Cru with crisp, tangy acidity and citrus/green-plum fruit is light-to-medium and fits. The Muscadet is described as bright and crisp, and its lees texture is modest."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "High acidity suits the vinegar and shallot in the mignonette and the brininess of raw oysters. Neither pick has tannin or sweetness that would clash, and the wood is minimal."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Acid-to-acid harmony with the vinegar mignonette, citrus and green-plum fruit echoing the sharp, briny flavors, and the classic Muscadet-with-oysters bridge."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Quotes and details match the reviews: Chablis acidity, crisp tangy texture, citrus and green plum, wood as hints; Muscadet 10 years on lees, crisp acidity, bright. Rejections of [3], [4], [1], [6] are consistent with their reviews. The 'light body' for [5] is a mild inference, not a substantive invention."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 9.7,
+   "cost_usd": 0.1264,
+   "calls": 2
+  },
+  "green-curry": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [1], [4], [6], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "A feather-light, off-dry Mosel Riesling is a standard match for a medium-bodied coconut chicken curry. The coconut milk adds richness, but the wine's acidity and sweetness handle it without being overwhelmed."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Residual sugar softens the chili heat and lemon-lime acidity cuts the coconut fat. The point that the dry Trocken bottlings would make the chili taste hotter is sound. Rejecting the dessert-style Sineann as too sweet is also reasonable."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The peach and tropical fruit link to the herbal, aromatic curry, and the saffron and honey notes echo the spices. The sweetness-against-heat contrast is deliberate and plausible."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The quoted and paraphrased details match the reviews: lemon-lime acidity, feather-light, honeyed peach and tropical fruit, off-dry, white peach, honeydew, saffron and honey, and the Sineann's dessert style. The lower price of [1] is correct. Lemongrass and Thai basil are not in the dish data, but they are typical of green curry. Calling [1] riper and rounder than [3] is a mild judgment, not an invented fact."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 13.99,
+   "cost_usd": 0.13816,
+   "calls": 2
+  },
+  "risotto": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [4], [2], [1], [3]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Rizzi Nebbiolo is a medium-bodied red with firm, refined tannins and bright acidity, which suits a medium-bodied creamy risotto. The Rainoldi is bigger, but the response acknowledges that and notes the cheese will soften the tannins."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Bright acidity cuts through the butter and parmesan fat, and the refined tannins are softened by the creamy fat and protein. There is no spice, heat or delicate seafood that would clash with tannin."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The Rainoldi's underbrush, tobacco and balsamic notes echo the earthy, woodsy mushrooms. The Rizzi's Alpine herb and leather notes give a plausible bridge to the woodsy flavors."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Most claims match the reviews: Rizzi's vibrant acidity, firm refined tannins, leather and Alpine herb; Rainoldi's underbrush, tobacco, balsamic, 'assertive but polished' tannins and Lombardy origin; and the Cascina bottlings' youthful, bright-fruit notes. Minor stretch: 'cheapest bottle' is true ($24), and 'nothing earthy' is fair."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 9.66,
+   "cost_usd": 0.12722,
+   "calls": 2
+  },
+  "roast-chicken": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [6], [4], [2], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Center of Effort is racy and brightly acidic with pear, lime and nectarine, so it is medium weight and fits a medium-bodied roast chicken. Roblar is fuller but is flagged as a fallback for a buttery sauce."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Acidity is matched to the lemony pan juices, and the fat in the chicken skin is cut by bright acid. There is no tannin or sweetness clash, and the wines are dry whites suited to poultry."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Lime and lemon-juice acidity link to the lemon in the sauce. Slate minerality and chalk suit the herbs. Brown spice and vanilla echo the browned skin."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Most claims match the reviews: [6] is racy, with chalk, lime, and oak, acacia and concrete aging; [4] has lemon juice acidity, slate, and brown spice. Calling [2] and [5] rich with lees and vanilla is fair. Saying [6] has less oak flavor is an inference, but it is reasonable given the concrete and acacia aging."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 10.81,
+   "cost_usd": 0.12643,
+   "calls": 2
+  },
+  "lamb": {
+   "ok": false,
+   "issues": [
+    "rubric: the critic's reply did not match the schema after one repair"
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    }
+   },
+   "schema_valid": false,
+   "repaired": false,
+   "model": "sonnet",
+   "wall_s": 10.83,
+   "cost_usd": 0.13654,
+   "calls": 2
+  },
+  "salmon": {
+   "ok": false,
+   "issues": [
+    "claims_supported: Most claims match the reviews, but a few are not in them. The review for Stephen Ross never mentions Chablis, so calling it 'closest to a Chablis style' is invented. 'Lean enough' also conflicts with how the review frames it. Au Bon Climat's 'lemon fruit' is loosely drawn from 'lemondrop candy', which is a stretch. Kendall-Jackson's 'lime fruit' and 'brisk acidity' are supported."
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [5], [6], [2]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Medium-bodied pan-seared salmon in butter sauce suits the rich, weighty Chardonnays chosen. The Au Bon Climat is described as rich yet balanced, the Stephen Ross as dry and mineral, and the Kendall-Jackson as creamy with lees weight."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Bright acidity and minerality cut the fat of the oily salmon and the butter sauce. Nothing clashes: there are no tannins, no sweetness problem and no heat."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The buttered-toast oak notes echo the browned butter and seared crust. Lemon and citrus fruit lift the dill and the fish, and the dry spicy finish gives a contrast with the butter."
+    },
+    "claims_supported": {
+     "pass": false,
+     "reason": "Most claims match the reviews, but a few are not in them. The review for Stephen Ross never mentions Chablis, so calling it 'closest to a Chablis style' is invented. 'Lean enough' also conflicts with how the review frames it. Au Bon Climat's 'lemon fruit' is loosely drawn from 'lemondrop candy', which is a stretch. Kendall-Jackson's 'lime fruit' and 'brisk acidity' are supported."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "sonnet",
+   "wall_s": 4.7,
+   "cost_usd": 0.06227,
+   "calls": 1
+  },
+  "goat-cheese": {
+   "ok": false,
+   "issues": [
+    "claims_supported: Mostly accurate: [3] review cites a creamy goat cheese salad, Sancerre likeness, fennel and citrus; [1] cites low alcohol, bright acidity, honeydew, sweet hay, lime and 'sure-fire' for goat cheese. But the 'Sancerre style you're after' is an invented premise, since the user never asked for Sancerre."
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [1]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Light-bodied dish with a steely, crisp Sauvignon Blanc [3] and a low-alcohol, bright-acid Sauvignon Blanc [1]. Both suit the dish's weight."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "High acidity answers the vinaigrette and the creamy, tangy goat cheese. Dry whites with no tannin suit beets and cheese, and the sweetness of the beets is not overpowered."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Goat cheese plus Sauvignon Blanc is a classic bridge. Citrus and lime echo the chèvre's tang, and fennel or honeydew notes plausibly relate to the beets' earthy sweetness."
+    },
+    "claims_supported": {
+     "pass": false,
+     "reason": "Mostly accurate: [3] review cites a creamy goat cheese salad, Sancerre likeness, fennel and citrus; [1] cites low alcohol, bright acidity, honeydew, sweet hay, lime and 'sure-fire' for goat cheese. But the 'Sancerre style you're after' is an invented premise, since the user never asked for Sancerre."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 9.1,
+   "cost_usd": 0.12602,
+   "calls": 2
+  },
+  "chocolate": {
+   "ok": false,
+   "issues": [
+    "claims_supported: The review never says the wine is sweet or fortified. It also says nothing about softened tannins (it calls the palate 'gripping'). The pitch calls the wine 'the only' match and 'sweet enough' with no review support. The claim that Knoll's Auslese is 'light' is also not in its review, which says it has 'immense balance' and a 'richer and sweeter' character, and 'a tight-rope walker of a wine'. Several statements go beyond the review text."
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [4], [2], [3], [5], [6], [1]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "A 10-year-aged Maury Grenache is a rich, sweet, concentrated fortified wine, which matches the weight of a dense flourless chocolate torte."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Sweetness in the wine meets the sweet dessert, and the argument against dry reds turning bitter next to sweet chocolate is sound. The point about softened tannins is plausible for a long-aged wine."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Cherry and plum fruit, walnut, orange oil, baking spice, black tea and licorice root all give plausible bridges to cocoa and bittersweet chocolate; the Maury and chocolate combination is classic."
+    },
+    "claims_supported": {
+     "pass": false,
+     "reason": "The review never says the wine is sweet or fortified. It also says nothing about softened tannins (it calls the palate 'gripping'). The pitch calls the wine 'the only' match and 'sweet enough' with no review support. The claim that Knoll's Auslese is 'light' is also not in its review, which says it has 'immense balance' and a 'richer and sweeter' character, and 'a tight-rope walker of a wine'. Several statements go beyond the review text."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "sonnet",
+   "wall_s": 5.08,
+   "cost_usd": 0.07143,
+   "calls": 1
+  },
+  "pizza": {
+   "ok": false,
+   "issues": [
+    "claims_supported: Most claims match the reviews, but some are invented. Sangiovese is not in the Chianti review, which says only Red Blend. The Shiraz review has no roasted or charred notes that would link to the charred crust. The Chilean blend is called firm and oaky-tannic, but its review says rubbery and oaky, not firm tannins."
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [4]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Chianti Rufina is medium-bodied and elegant, which fits a medium-bodied pepperoni pizza. The Recanati Shiraz is described as fresh with soft tannins, so it is also not too heavy."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Bright acidity suits the tomato sauce and cuts the fat of the mozzarella and pepperoni. Supple or soft tannins are a sound choice with spicy, salty cured pork. Skipping the firm, oaky wines is sensible."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Dried herb in the Chianti links to the oregano, and red cherry and white pepper suit the cured, spicy pork. The Shiraz's thyme and roasting herbs also bridge to the oregano."
+    },
+    "claims_supported": {
+     "pass": false,
+     "reason": "Most claims match the reviews, but some are invented. Sangiovese is not in the Chianti review, which says only Red Blend. The Shiraz review has no roasted or charred notes that would link to the charred crust. The Chilean blend is called firm and oaky-tannic, but its review says rubbery and oaky, not firm tannins."
+    }
+   },
+   "schema_valid": true,
+   "repaired": true,
+   "model": "sonnet",
+   "wall_s": 10.21,
+   "cost_usd": 0.13252,
+   "calls": 2
+  }
+ },
+ "repeat": {
+  "ribeye": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [1], [3]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "The lead pick, Vinifera, is described as full-bodied and rich, which suits a marbled ribeye in cream sauce. The second pick, Stark-Condé, is medium-weight, and the recommendation says plainly that it is a little lighter than the dish."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "The logic holds: dry Cabernet with fine-to-firm tannins against fatty, protein-heavy grilled beef. Fat and protein soften the tannin, and the dish has no heat, sweetness or delicacy that would clash with it."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The black pepper on Stark-Condé's finish echoes the peppercorn sauce. Leather and cigar box suit the charred, savory beef, and cocoa and cedar in the JD alternative link to the char."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Almost every claim matches the reviews: Vinifera's full body, blackberry, currant, graphite and silky tannins; Stark-Condé's pepper, leather, cigar box, fine but firm tannins and medium weight; JD's mountain tannins, cocoa and cedar. Calling Vinifera's structure 'firm' goes a little past 'silky tannins', but not enough to act on."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 11.31,
+   "cost_usd": 0.13175,
+   "calls": 1
+  },
+  "oysters": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [5], [4], [3], [1], [6]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Both picks are lean, high-acid whites (Premier Cru Chablis and a crisp lees-aged Muscadet) whose weight suits a light raw oyster dish. The fuller, creamy Muscadets and oaky Chardonnays were correctly left out."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "High acidity matches the vinegar in the mignonette and cuts through the brine. Both wines have no tannin and no sweetness, and the picks avoid heavy oak, which would clash with raw shellfish."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Citrus and crisp acidity in both wines echo the acidic mignonette, and the lean mineral style of Chablis and Muscadet ties to the briny, saline oysters. This is the classic oyster bridge."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The quotes and details match the reviews: [2] crisp, tangy texture, citrus and green plum, only hints of wood; [5] 10 years on lees in underground tanks, crisp acidity, still bright; [4] creamy; [3] lost instant freshness; [1] and [6] show oak. Calling [5] light-bodied and saying lees add texture are reasonable inferences, not invented facts."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 10.49,
+   "cost_usd": 0.14719,
+   "calls": 1
+  },
+  "green-curry": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [1], [4], [6], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "A feather-light Kabinett and a riper, rounder off-dry Mosel suit a medium-bodied simmered chicken curry. The second pick adds weight for the coconut cream, and neither wine overwhelms the dish."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "The reasoning holds: residual sugar tempers chili heat, bright acidity cuts coconut fat, and there is no tannin to clash with spice. Excluding the trocken wines because they make the heat feel hotter, and the dessert wine because it is too sweet for a savory main, is standard practice."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Peach and tropical fruit set against the herbal, aromatic green curry, and the honeyed sweetness answers the dish's slight sweetness. Both bridges are plausible."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The claims match the reviews. For [3]: honeyed peach, tropical fruit, lemon-lime acidity and feather-light. For [1]: off-dry, saffron and honey nose, white peach, honeydew, bright acidity and luscious ripeness. Calling [4] and [6] dry and [5] dessert-style also fits their reviews. The lemongrass and Thai basil are assumptions about the dish, not claims about the wine."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 10.02,
+   "cost_usd": 0.12983,
+   "calls": 1
+  },
+  "risotto": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [4], [2], [1], [3]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "A medium-bodied mushroom risotto suits a Langhe Nebbiolo with refined tannins, and the classic Valtellina Nebbiolo is a reasonable step up in weight for the earthy, savory dish. Neither wine overwhelms it."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Using bright acidity against the butter and parmesan is sound. Moderate Nebbiolo tannins work with a dish that has no heat, sweetness or delicate fish, and the cheese's fat and protein will soften the Rainoldi's firmer tannins."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "There are plausible bridges to the earthy, woodsy mushrooms: the Rizzi's leather and Alpine herb notes, and the Rainoldi's underbrush, tobacco and balsamic notes. Mushroom with Nebbiolo is a classic Northern Italian pairing."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The reviews back every claim. Rizzi has vibrant acidity, firm refined tannins, leather and Alpine herb, and at $24 it is the cheapest. Rainoldi has underbrush, tobacco, balsamic, bright acidity and assertive but polished tannins, and it is from Lombardy. Both Cascina delle Rose reviews say to drink young and are fruit-led."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 10.18,
+   "cost_usd": 0.13243,
+   "calls": 1
+  },
+  "roast-chicken": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [6], [4], [2], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Roast chicken with lemon-herb pan juices is a medium-weight dish. The pick is a racy, high-acid Chardonnay [6], with the slightly fuller [4] as the alternate, and both are a reasonable weight for it. Steering away from the creamy, rich [2] and [5] is also sound."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Bright acidity matches the lemon in the sauce and cuts the fat in the skin. Tannin isn't a factor with a white, and neither wine is described as sweet. Nothing in the reasoning clashes with the dish."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The lime notes in [6] and the Meyer lemon in [4] link to the lemon in the pan juices. The brown spice in [4] also goes plausibly with the roasted, garlicky skin."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The claims match the reviews. [6] is aged in oak, acacia and concrete, and its review says racy, lime, chalk and fine-tuned acidity. [4] is quoted exactly on lemon juice acidity, with slate minerality, brown spice and vanilla soda. The reviews for [2] and [5] use rich, creamy, lees and vanilla. Medium weight and having less oak flavor are fair inferences, not invented facts."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 11.47,
+   "cost_usd": 0.15105,
+   "calls": 1
+  },
+  "lamb": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [2], [5]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Both picks are full-bodied Rhône reds: the Gigondas is described as full bodied and round, and the Pegau as intense with firm tannins. That weight suits a rich braised lamb shank."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Firm tannins against the protein and fat of braised lamb make sense, and the dish has no heat or delicacy that would clash with tannin. Neither wine's sweetness or acidity is misrepresented."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The herbal, roasted-meat and black olive notes in [2] connect to the rosemary and gamey lamb. The pepper, black olive and dried spice in [5] connect to the garlic and the savory braise."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Every claim matches the reviews: [2] is 80% Grenache with Syrah and Mourvedre and has herbal, roasted meat and olive notes and a fine texture; [5] has firm tannins from 50-year-old vines, cracked pepper, black olive and dried spices, and a 2017-2025 window. Nothing is invented."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 10.09,
+   "cost_usd": 0.13089,
+   "calls": 1
+  },
+  "salmon": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [5], [6], [2]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "The dish is medium-bodied but rich from oily salmon and butter. Medium-to-full Chardonnays with restrained oak (ABC, Stephen Ross) and a creamy, lees-weighted backup (KJ) carry about the same weight."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "The reasoning puts bright or brisk acidity against fish oil and butter fat. None of the wines has tannin to clash with fish, and all are dry. This is sound structure logic for a buttery seared fish."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "There are clear bridges: ABC's buttered-toast oak matches the browned butter and seared crust, citrus fruit goes with the dill, and Stephen Ross's spicy, mineral finish works against the herbal notes."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Each claim matches its review: ABC's bright acidity, firm minerality, lemondrop and buttered toast; Stephen Ross's chalky minerality, Meyer lemon, orange and dry spicy finish; KJ's brisk acidity, lime and lees weight. The Chablis comparison is a reasonable interpretation, and the $9 gap is correct."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 9.61,
+   "cost_usd": 0.12919,
+   "calls": 1
+  },
+  "goat-cheese": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [1]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Both are crisp, light-to-medium Sauvignon Blancs. Easton is steely and dry, and Leah Jørgensen is low in alcohol and refreshing. Both suit a light roasted beet and goat cheese salad."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "High-acid, dry whites can match a vinaigrette's acidity and cut the fat of the goat cheese. No tannin conflicts, and the beets' mild sweetness doesn't overwhelm a dry wine."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "Sauvignon Blanc with chèvre is a classic pairing. The citrus and fennel in the Easton and the lime, hay and melon in the Jørgensen work with the tangy cheese and earthy, sweet beets."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "Each claim matches the reviews: crisp, dry, steely, citrus, fennel, Sancerre-like and creamy goat cheese salad for [3]; bright acidity, low alcohol, lime, honeydew, sweet hay and 'sure-fire' with goat cheese for [1]. 'Loire-inspired' is a fair reading of the 'Loiregon' name."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 9.41,
+   "cost_usd": 0.1299,
+   "calls": 1
+  },
+  "chocolate": {
+   "ok": false,
+   "issues": [
+    "claims_supported: The pick says ten years of oxidative aging 'has softened the tannins, so they won't fight the dense chocolate', but the review describes a 'gripping palate'. That claim is invented and contradicts the review. Calling the Knoll Auslese 'light' also sits poorly with a review that stresses its concentration and richer, sweeter character."
+   ],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [4], [2], [3], [5], [6], [1]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "A ten-year-old Maury vin doux naturel is weighty and concentrated, so it can hold up to a dense, rich flourless chocolate torte."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "The logic is sound: the wine has to be at least as sweet as the dessert, so the dry reds were rightly ruled out. Maury's fortified sweetness and alcohol can stand up to bittersweet chocolate."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "There are plausible bridges. Cherry and plum fruit work against cocoa, and the black tea and licorice finish picks up the torte's bitter edge."
+    },
+    "claims_supported": {
+     "pass": false,
+     "reason": "The pick says ten years of oxidative aging 'has softened the tannins, so they won't fight the dense chocolate', but the review describes a 'gripping palate'. That claim is invented and contradicts the review. Calling the Knoll Auslese 'light' also sits poorly with a review that stresses its concentration and richer, sweeter character."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 11.64,
+   "cost_usd": 0.15099,
+   "calls": 1
+  },
+  "pizza": {
+   "ok": true,
+   "issues": [],
+   "criteria": {
+    "grounded": {
+     "pass": true,
+     "reason": "cites [3], [4]"
+    },
+    "within_budget": {
+     "pass": true,
+     "reason": "all cited wines within budget"
+    },
+    "enough_candidates": {
+     "pass": true,
+     "reason": "6 candidates retrieved"
+    },
+    "body_match": {
+     "pass": true,
+     "reason": "Pepperoni pizza is medium-weight. The Chianti Rufina is described as elegant with supple tannins, and the Recanati Shiraz as fresh with soft tannins. Both are medium-bodied reds that won't overpower the dish or get lost against it."
+    },
+    "structure_logic": {
+     "pass": true,
+     "reason": "Bright acidity is the right call for acidic tomato sauce, and it cuts the fat in the mozzarella and pepperoni. Choosing supple or soft tannins over firm ones fits the spicy, salty cured pork. Steering away from the firm-tannin, oaky options is also sound."
+    },
+    "flavor_link": {
+     "pass": true,
+     "reason": "The Chianti's dried herb, white pepper and red cherry line up with the oregano, the spicy pork and the tomato. The Shiraz's thyme and roasting-herb notes go with the oregano and the charred crust."
+    },
+    "claims_supported": {
+     "pass": true,
+     "reason": "The Selvapiana claims (bright acidity, supple tannins, red cherry, white pepper, dried herb) and the Recanati claims (fresh, soft tannins, strawberry, cranberry, thyme, roasting herbs) match their reviews. Sangiovese is standard for Chianti Rufina. One small overreach: the Quinta da Rede review mentions dense tannins but no oak. This is in the dismissal of a wine that wasn't recommended, so it isn't a fail."
+    }
+   },
+   "schema_valid": true,
+   "repaired": false,
+   "model": "opus",
+   "wall_s": 13.61,
+   "cost_usd": 0.15161,
+   "calls": 1
+  }
+ }
+}

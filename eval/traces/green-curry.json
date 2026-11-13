@@ -1,0 +1,220 @@
+{
+ "dish": "green-curry",
+ "meal": "spicy Thai green curry with chicken",
+ "budget": 25,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 29838,
+ "cost_usd": 0.48002,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 5586,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.58,
+     "duration_ms": 4126,
+     "cost_usd": 0.11475060000000001,
+     "input_tokens": 2,
+     "output_tokens": 110,
+     "cache_read": 13393,
+     "cache_write": 13733
+    }
+   ],
+   "input": {
+    "meal": "spicy Thai green curry with chicken",
+    "budget": 25
+   },
+   "output": {
+    "main": "chicken",
+    "body": "medium",
+    "sauce": "green curry sauce made with coconut milk and green chili paste",
+    "cuisine": "Thai",
+    "key_flavors": [
+     "spicy",
+     "creamy",
+     "herbal",
+     "aromatic",
+     "slightly sweet",
+     "savory"
+    ],
+    "cooking_method": "simmered"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 5586,
+   "ms": 6507,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 6.43,
+     "duration_ms": 5107,
+     "cost_usd": 0.11943440000000001,
+     "input_tokens": 2,
+     "output_tokens": 181,
+     "cache_read": 13392,
+     "cache_write": 14141
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Off-dry, aromatic white with bright acidity, such as Riesling Kabinett or Gewürztraminer",
+    "search_query": "off-dry Riesling aromatic white bright acidity lime peach slight sweetness low alcohol",
+    "rationale": "A little residual sugar calms the green chili heat, high acidity cuts through the coconut cream, and the aromatic lime and stone-fruit notes go with the Thai basil and lemongrass, while low tannin and moderate alcohol keep the spice from flaring."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 12093,
+   "ms": 373,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "off-dry Riesling aromatic white bright acidity lime peach slight sweetness low alcohol",
+     "max_price": 25,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Markus Molitor 2011 Haus Klosterberg Riesling (Mosel)",
+     "variety": "Riesling",
+     "price": 18.0,
+     "points": 92,
+     "country": "Germany",
+     "note": "Whiffs of saffron and honey lend a sweet, spicy tone to this off-dry Riesling. It's lusciously ripe on the palate, with juicy white peach and honeydew flavors accented by layers of candle wax and crushed slate. Brisk..."
+    },
+    {
+     "title": "Robert Weil 2011 Tradition Riesling (Rheingau)",
+     "variety": "Riesling",
+     "price": 22.0,
+     "points": 91,
+     "country": "Germany",
+     "note": "Whiffs of smoke and mineral lends complexity to pretty white peach and floral tones on this dainty off-dry Riesling. It's juicy with stone fruit, but maintains that streak of minerality and a clean, focused acidity..."
+    },
+    {
+     "title": "Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel)",
+     "variety": "Riesling",
+     "price": 25.0,
+     "points": 92,
+     "country": "Germany",
+     "note": "Demure apple and pear aromas belie the intensely honeyed peach and tropical fruit flavors that burst from this feather-light nectar. A crush of lemon-lime acidity cuts through the sweetness, leading a long,..."
+    },
+    {
+     "title": "Fritz Haag 2015 Trocken Riesling (Mosel)",
+     "variety": "Riesling",
+     "price": 22.0,
+     "points": 92,
+     "country": "Germany",
+     "note": "While more mineral than fruit-forward on the nose, this pretty, dry Riesling is quite yielding, suggesting ripe, rich pink grapefruit and white peach on the palate. It's feather light but silky in texture, balanced..."
+    },
+    {
+     "title": "Sineann 2013 Riesling (Oregon)",
+     "variety": "Riesling",
+     "price": 24.0,
+     "points": 95,
+     "country": "US",
+     "note": "This sweet, luscious, dessert-style wine keeps enough acidity to contrast and compensate for the sugar. There's nothing flabby here, but how sweet it is! Caramel apples, molasses, maple syrup and honey coalesce..."
+    },
+    {
+     "title": "Robert Weil 2015 Trocken Riesling (Rheingau)",
+     "variety": "Riesling",
+     "price": 20.0,
+     "points": 91,
+     "country": "Germany",
+     "note": "Whiffs of white peach and yellow cherry intensify on the palate of this punchy, concentrated dry Riesling. It's buoyantly juicy and fruity, full of fresh stone fruit and citrus flavors. Vibrant acidity and deep veins..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 12466,
+   "ms": 6624,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 6.62,
+     "duration_ms": 5686,
+     "cost_usd": 0.1158424,
+     "input_tokens": 2,
+     "output_tokens": 413,
+     "cache_read": 13392,
+     "cache_write": 13112
+    }
+   ],
+   "output": "**Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling** (92 pts, $25) [3]\nThis is the closest match to the target style. Its honeyed sweetness softens the green chili burn, and the \"crush of lemon-lime acidity\" cuts through the coconut cream. Because it's feather-light, it won't swamp a medium-bodied chicken curry, and the peach and tropical fruit go well with the lemongrass and Thai basil.\n\n**Markus Molitor 2011 Haus Klosterberg Riesling** (92 pts, $18) [1]\nThis is an off-dry Mosel with bright acidity, and it costs less. The ripe white peach and honeydew balance the heat, and the saffron and honey on the nose pick up the aromatic spices in the paste. It's a little riper and rounder than [3], which suits a curry made with plenty of coconut milk.\n\nI'd leave out the Trocken bottlings [4] and [6]. Without residual sugar, the chili will taste hotter. The Sineann [5] is a dessert wine and too sweet for a savory main."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 19091,
+   "ms": 10747,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.74,
+     "duration_ms": 10024,
+     "cost_usd": 0.1299892,
+     "input_tokens": 2,
+     "output_tokens": 759,
+     "cache_read": 13406,
+     "cache_write": 14015
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [3], [1], [4], [6], [5]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "A light, intense Kabinett and a lusciously ripe off-dry Mosel both suit a medium-bodied chicken curry. Their concentrated fruit and acidity hold up to the coconut cream without overwhelming the chicken."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "Residual sugar to tame green chili heat and bright acidity to cut coconut fat is the standard logic for Thai curry. It correctly rejects dry Trocken bottlings, which would make the chili taste hotter, and the dessert-sweet Sineann. No tannin issue."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "Peach, tropical fruit and honeydew bridge to the curry's sweet, aromatic and herbal notes, and lemon-lime acidity contrasts with the creamy coconut. Both links are plausible."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "Honeyed peach, tropical fruit, lemon-lime acidity and feather-light body for [3] match its review. Off-dry style, bright acidity, white peach, honeydew, saffron and honey for [1] match its review. The Trocken wines are described as dry and [5] as dessert-style, both as their reviews say. Calling [1] riper and rounder is a fair reading of 'lusciously ripe'."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "**Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling** (92 pts, $25) [3]\nThis is the closest match to the target style. Its honeyed sweetness softens the green chili burn, and the \"crush of lemon-lime acidity\" cuts through the coconut cream. Because it's feather-light, it won't swamp a medium-bodied chicken curry, and the peach and tropical fruit go well with the lemongrass and Thai basil.\n\n**Markus Molitor 2011 Haus Klosterberg Riesling** (92 pts, $18) [1]\nThis is an off-dry Mosel with bright acidity, and it costs less. The ripe white peach and honeydew balance the heat, and the saffron and honey on the nose pick up the aromatic spices in the paste. It's a little riper and rounder than [3], which suits a curry made with plenty of coconut milk.\n\nI'd leave out the Trocken bottlings [4] and [6]. Without residual sugar, the chili will taste hotter. The Sineann [5] is a dessert wine and too sweet for a savory main.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

@@ -1,0 +1,1368 @@
+[
+ {
+  "id": "ribeye",
+  "meal": "grilled ribeye steak with a peppercorn cream sauce",
+  "budget": 45,
+  "dish": {
+   "main": "ribeye steak",
+   "body": "rich",
+   "sauce": "peppercorn cream sauce",
+   "cuisine": "French-American steakhouse",
+   "key_flavors": [
+    "charred beef",
+    "marbled fat",
+    "black pepper",
+    "cream",
+    "savory umami"
+   ],
+   "cooking_method": "grilled"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Full-bodied, firmly tannic dry red with dark fruit, fresh acidity and some peppery or savory spice, such as Napa or Paso Robles Cabernet Sauvignon, Northern Rhône Syrah, or a Bordeaux Left Bank blend",
+     "search_query": "full-bodied Cabernet Sauvignon or Syrah, firm tannins, blackcurrant, black pepper, cedar, savory, good acidity",
+     "rationale": "The ribeye's charred, marbled protein and fat soften the firm tannins of a full-bodied Cabernet or Syrah, acidity cuts through the cream sauce, and peppery Syrah-style spice picks up the black peppercorn, all at a price that fits $45."
+    },
+    "candidates": [
+     {
+      "title": "Stark-Condé 2011 Unfined and Unfiltered Cabernet Sauvignon (Stellenbosch)",
+      "variety": "Cabernet Sauvignon",
+      "price": 27.0,
+      "points": 92,
+      "country": "South Africa"
+     },
+     {
+      "title": "Vinifera 2006 Cabernet Sauvignon (Napa Valley)",
+      "variety": "Cabernet Sauvignon",
+      "price": 40.0,
+      "points": 95,
+      "country": "US"
+     },
+     {
+      "title": "JD 2007 Cabernet Sauvignon (Diamond Mountain District)",
+      "variety": "Cabernet Sauvignon",
+      "price": 40.0,
+      "points": 94,
+      "country": "US"
+     },
+     {
+      "title": "Textbook 2005 Mise en Place Cabernet Sauvignon (Oakville)",
+      "variety": "Cabernet Sauvignon",
+      "price": 44.0,
+      "points": 94,
+      "country": "US"
+     },
+     {
+      "title": "Robert Mondavi 2007 Cabernet Sauvignon (Oakville)",
+      "variety": "Cabernet Sauvignon",
+      "price": 45.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Dalton 2012 Reserve Cabernet Sauvignon (Galilee)",
+      "variety": "Cabernet Sauvignon",
+      "price": 32.0,
+      "points": 92,
+      "country": "Israel"
+     }
+    ],
+    "candidates_text": "[1] (Stark-Condé 2011 Unfined and Unfiltered Cabernet Sauvignon (Stellenbosch) · 92 pts · $27) Stark-Condé 2011 Unfined and Unfiltered Cabernet Sauvignon (Stellenbosch) — Cabernet Sauvignon from Stellenbosch, South Africa.\nThis is a layered, earthy selection, with upfront aromas of leather and cigar box complemented by fruity tones of blackberry and cassis. The medium-weight palate is lush and velvety, and the tannins are fine yet firmly structured. Boysenberry preserves and black pepper linger on the finish.\n[2] (Vinifera 2006 Cabernet Sauvignon (Napa Valley) · 95 pts · $40) Vinifera 2006 Cabernet Sauvignon (Napa Valley) — Cabernet Sauvignon from Napa Valley, California, US.\nHere's a young, vital, impressive 100% Cabernet. It's dry, full-bodied and rich in classic flavors of blackberries, black currants, graphite and minerals, wrapped into silky tannins. Superb oak integration lends notes of vanilla and sandalwood. Just gorgeous in the mouth, filled with class and elegance. Now–2014, at least.\n[3] (JD 2007 Cabernet Sauvignon (Diamond Mountain District) · 94 pts · $40) JD 2007 Cabernet Sauvignon (Diamond Mountain District) — Cabernet Sauvignon from Diamond Mountain District, California, US.\nA beautiful, ultrafine Cabernet that shows rich blackberry, black currant, violet, cocoa and cedar flavors, and while it has tightly wound mountain tannins, it's entirely approachable now. A great, delicious success that's capable of aging for a good ten years, in a proper cellar. From the Davies family, of Schramsberg.\n[4] (Textbook 2005 Mise en Place Cabernet Sauvignon (Oakville) · 94 pts · $44) Textbook 2005 Mise en Place Cabernet Sauvignon (Oakville) — Cabernet Sauvignon from Oakville, California, US.\nThe wine is fantastic, albeit tannic. It's not a gushy one to open tonight. The tannins have a dry astringency, but even so, you can taste fabulously ripe blackberries, black cherries and currants. This wine should begin to come into its own next year and hold for many years.\n[5] (Robert Mondavi 2007 Cabernet Sauvignon (Oakville) · 92 pts · $45) Robert Mondavi 2007 Cabernet Sauvignon (Oakville) — Cabernet Sauvignon from Oakville, California, US.\nA big, dense, brooding wine, concentrated and powerful in blackberries, cherries and cassis. The tannins are sandpapery, giving the mouth a scoury feeling added to by the acids. An interesting, complex young wine that's well made and needs time to come around. Drink it over the next 6–8 years.\n[6] (Dalton 2012 Reserve Cabernet Sauvignon (Galilee) · 92 pts · $32) Dalton 2012 Reserve Cabernet Sauvignon (Galilee) — Cabernet Sauvignon from Galilee, Israel.\nRed violet in color, this wine offers a bouquet of black cherry, raspberry, apple peel and nutmeg. There are flavors of black cherry, eucalyptus, flint and black tea, with a touch of tart cherry. Strong but not overpowering tannins remain on the palate, along with flavors of mint and fresh berries.",
+    "recommendation": "For a grilled ribeye with peppercorn cream, these two fit best:\n\n**Vinifera 2006 Cabernet Sauvignon, Napa Valley (95 pts, $40) [2].** It's a full-bodied, dry 100% Cabernet with blackberry, black currant and graphite. The beef's char and marbled fat stand up to its firm structure, and its silky tannins won't clash with the cream sauce. One caution: the review gave a drinking window of \"Now–2014, at least,\" so a bottle today will be mature, with softer fruit and more savory, earthy notes. That suits steak, but check how it was stored.\n\n**Stark-Condé 2011 Unfined and Unfiltered Cabernet Sauvignon, Stellenbosch (92 pts, $27) [1].** This one matches the sauce most directly. The review notes black pepper on the finish, which picks up the peppercorns, and leather and cigar box, which suit the charred, savory beef. Its tannins are fine but firm, and the ribeye's fat and protein will soften them. It's only medium-weight, so it's a little lighter than the dish, but it costs $13 less.\n\nIf you want a bigger, longer-lived alternative, the JD 2007 Diamond Mountain Cabernet [3] has tighter mountain tannins and cocoa and cedar notes that would also hold up to the fat.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [2], [1], [3]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "The lead pick, Vinifera, is full-bodied and fits a rich grilled ribeye. The recommendation itself flags that Stark-Condé is only medium-weight and a little lighter than the dish, and it is offered as the second option."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Pairing tannic Cabernet with a fatty, protein-rich ribeye is sound: the fat and protein soften the tannins. The cream sauce is mild and there's no heat or sweetness for tannin to clash with. Noting that Vinifera's tannins are silky is a reasonable point for the cream."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The black pepper on Stark-Condé's finish matches the peppercorn sauce. Its leather and cigar box notes suit charred, savory beef. Both links are plausible."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "The claims match the reviews: Vinifera is full-bodied, dry and 100% Cabernet with blackberry, currant, graphite and silky tannins; Stark-Condé has a black pepper finish, leather and cigar box, fine but firm tannins and medium weight; JD has mountain tannins with cocoa and cedar. The $13 price gap is correct. Calling Vinifera's structure 'firm' goes a little past 'silky tannins' but fits a full-bodied wine."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Vinifera 2006 Cabernet Sauvignon (Napa Valley)",
+   "variety": "Cabernet Sauvignon",
+   "price": 40.0,
+   "points": 95,
+   "country": "US"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 40.95,
+  "cost_usd": 0.58646,
+  "error": null
+ },
+ {
+  "id": "oysters",
+  "meal": "raw oysters on the half shell with mignonette",
+  "budget": 30,
+  "dish": {
+   "main": "raw oysters",
+   "body": "light",
+   "sauce": "mignonette (shallots, vinegar, cracked black pepper)",
+   "cuisine": "French",
+   "key_flavors": [
+    "briny",
+    "saline",
+    "mineral",
+    "acidic",
+    "sharp shallot",
+    "black pepper"
+   ],
+   "cooking_method": "raw"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Bone-dry, high-acid, unoaked white with saline mineral character, ideally Muscadet Sèvre-et-Maine sur lie or Chablis",
+     "search_query": "Muscadet sur lie Melon de Bourgogne bone dry crisp high acidity saline mineral oyster shell citrus unoaked Chablis",
+     "rationale": "Muscadet and Chablis are lean, unoaked, high-acid French whites with a briny, chalky mineral edge that matches the oysters' salinity and stands up to the vinegar in the mignonette, and good bottles of either are easy to find for under $30."
+    },
+    "candidates": [
+     {
+      "title": "Jardin 2012 Barrel Fermented Chardonnay (Stellenbosch)",
+      "variety": "Chardonnay",
+      "price": 24.0,
+      "points": 92,
+      "country": "South Africa"
+     },
+     {
+      "title": "Romain Bouchard 2013 Vau de Vey Premier Cru  (Chablis)",
+      "variety": "Chardonnay",
+      "price": 21.0,
+      "points": 93,
+      "country": "France"
+     },
+     {
+      "title": "Domaines Vinet 2012 Clos de la Houssaie  (Muscadet Sèvre et Maine)",
+      "variety": "Melon",
+      "price": 19.0,
+      "points": 92,
+      "country": "France"
+     },
+     {
+      "title": "Château de la Ragotiere 2009 M des Frères Couillard Sur Lie  (Muscadet Sèvre et Maine)",
+      "variety": "Melon",
+      "price": 14.0,
+      "points": 91,
+      "country": "France"
+     },
+     {
+      "title": "Domaine du Haut Bourg 2006 Origine du Haut Bourg  (Muscadet Côtes de Grandlieu)",
+      "variety": "Melon",
+      "price": 20.0,
+      "points": 92,
+      "country": "France"
+     },
+     {
+      "title": "Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands)",
+      "variety": "Chardonnay",
+      "price": 24.0,
+      "points": 93,
+      "country": "US"
+     }
+    ],
+    "candidates_text": "[1] (Jardin 2012 Barrel Fermented Chardonnay (Stellenbosch) · 92 pts · $24) Jardin 2012 Barrel Fermented Chardonnay (Stellenbosch) — Chardonnay from Stellenbosch, South Africa.\nDespite being barrel fermented, this attractive white manages to maintain a vivid vibrancy and freshness, with notes of fresh red apple, firm peach, pineapple core, green mango and clementine that are all infused with delicate hints of toasted oak and baking spice. Ample acidity lifts the medium-weight palate and rich melon, apple and toasted brioche flavors, leading into the long, lingering wood-spiced finish.\n[2] (Romain Bouchard 2013 Vau de Vey Premier Cru  (Chablis) · 93 pts · $21) Romain Bouchard 2013 Vau de Vey Premier Cru  (Chablis) — Chardonnay from Chablis, Burgundy, France.\nPerfumed and fruity, this shows touches of wood aging, although these are really just hints that lift the fruit. Acidity and a crisp, tangy texture are more important to this wine that bursts with concentrated citrus and green-plum flavors, finishing with so much freshness. Drink from 2017.\n[3] (Domaines Vinet 2012 Clos de la Houssaie  (Muscadet Sèvre et Maine) · 92 pts · $19) Domaines Vinet 2012 Clos de la Houssaie  (Muscadet Sèvre et Maine) — Melon from Muscadet Sèvre et Maine, Loire Valley, France.\nWith the extra years of aging, this wine has smoothed itself out. It has lost that instant freshness of a young Muscadet and gained riper yellow and spice flavors that give it a full, rich character. There's just the right amount of acidity at the end to finish on a crisp note. Drink now.\n[4] (Château de la Ragotiere 2009 M des Frères Couillard Sur Lie  (Muscadet Sèvre et Maine) · 91 pts · $14) Château de la Ragotiere 2009 M des Frères Couillard Sur Lie  (Muscadet Sèvre et Maine) — Melon from Muscadet Sèvre et Maine, Loire Valley, France.\nLeft for 30 months on its lees before bottling, this is serious Muscadet. It has weight and richness, round and smooth with a creamy texture brightened by flashes of citrus acidity. Impressively rich wine, now ready to drink.\n[5] (Domaine du Haut Bourg 2006 Origine du Haut Bourg  (Muscadet Côtes de Grandlieu) · 92 pts · $20) Domaine du Haut Bourg 2006 Origine du Haut Bourg  (Muscadet Côtes de Grandlieu) — Melon from Muscadet Côtes de Grandlieu, Loire Valley, France.\nAged for 10 years in underground tanks on its lees, this wine has just been bottled. That aging process has preserved the wine's freshness, keeping the crisp acidity in place. So while the wine is beautifully mature, it is still so bright and fruity. Drink now.\n[6] (Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands) · 93 pts · $24) Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands) — Chardonnay from Santa Lucia Highlands, California, US.\nThe nose on this well-priced appellation blend by Brian Loring has it all: golden honey, caramel apple, supple peach flesh, pressed white flowers, fresh yellow flowers and even quinine. The apple-flesh flavors show oak influence in hints of butterscotch and pineapple, yet the mouthwatering acidity keeps it all in balance.",
+    "recommendation": "Two picks for oysters with mignonette:\n\n**Romain Bouchard 2013 Vau de Vey Premier Cru Chablis (93 pts, $21) [2]**\nThis is the closest match to the target style. The review says acidity and a \"crisp, tangy texture\" come first, with citrus and green-plum fruit. That acidity can handle the vinegar in the mignonette, and the lean Chablis frame suits the oysters' brininess. The wood is described as only a hint, so it won't fight the raw shellfish.\n\n**Domaine du Haut Bourg 2006 Origine du Haut Bourg, Muscadet Côtes de Grandlieu (92 pts, $20) [5]**\nMuscadet is the classic oyster wine, and this one spent 10 years on its lees in underground tanks. The review says the crisp acidity is still there and the wine is \"still so bright.\" The lees aging adds some texture against the oyster's soft flesh, and the light body won't swamp a light dish.\n\nI passed over the other two Muscadets because their reviews describe them as round and rich: [4] as \"creamy,\" [3] as having \"lost that instant freshness.\" The two Chardonnays, [1] and [6], are too oaky for raw oysters.\n\nThese vintages are old. Check that the bottle you can actually buy is still fresh, or get a younger one from the same producer.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [2], [5], [4], [3], [1], [6]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Both picks are crisp, acid-driven whites, and neither review describes a heavy wine, so they suit light raw oysters. The fuller, creamier Muscadets [3] and [4] and the oaked Chardonnays were correctly left out."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Both wines have high acidity to match the vinegar in the mignonette and cut the brine. Neither has tannin or sweetness, and the Chablis has only light wood, which suits delicate raw shellfish."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The Chablis's citrus and tangy acidity work like a squeeze of lemon on the oysters and echo the sharp mignonette. Lees-aged Muscadet with briny shellfish is a standard pairing."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "The quotes match the reviews: crisp, tangy texture, citrus and green plum, and hints of wood for [2]; 10 years on lees with crisp acidity, still bright for [5]; creamy [4]; lost freshness [3]. Oak in [1] and [6] is in their reviews. The 'light body' and 'texture' remarks on [5] are inferences, but they don't contradict the review."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Romain Bouchard 2013 Vau de Vey Premier Cru  (Chablis)",
+   "variety": "Chardonnay",
+   "price": 21.0,
+   "points": 93,
+   "country": "France"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 38.96,
+  "cost_usd": 0.48867,
+  "error": null
+ },
+ {
+  "id": "green-curry",
+  "meal": "spicy Thai green curry with chicken",
+  "budget": 25,
+  "dish": {
+   "main": "chicken",
+   "body": "medium",
+   "sauce": "green curry sauce made with coconut milk and green chili paste",
+   "cuisine": "Thai",
+   "key_flavors": [
+    "spicy",
+    "creamy",
+    "herbal",
+    "aromatic",
+    "slightly sweet",
+    "savory"
+   ],
+   "cooking_method": "simmered"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Off-dry, aromatic white with bright acidity, such as Riesling Kabinett or Gewürztraminer",
+     "search_query": "off-dry Riesling aromatic white bright acidity lime peach slight sweetness low alcohol",
+     "rationale": "A little residual sugar calms the green chili heat, high acidity cuts through the coconut cream, and the aromatic lime and stone-fruit notes go with the Thai basil and lemongrass, while low tannin and moderate alcohol keep the spice from flaring."
+    },
+    "candidates": [
+     {
+      "title": "Markus Molitor 2011 Haus Klosterberg Riesling (Mosel)",
+      "variety": "Riesling",
+      "price": 18.0,
+      "points": 92,
+      "country": "Germany"
+     },
+     {
+      "title": "Robert Weil 2011 Tradition Riesling (Rheingau)",
+      "variety": "Riesling",
+      "price": 22.0,
+      "points": 91,
+      "country": "Germany"
+     },
+     {
+      "title": "Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel)",
+      "variety": "Riesling",
+      "price": 25.0,
+      "points": 92,
+      "country": "Germany"
+     },
+     {
+      "title": "Fritz Haag 2015 Trocken Riesling (Mosel)",
+      "variety": "Riesling",
+      "price": 22.0,
+      "points": 92,
+      "country": "Germany"
+     },
+     {
+      "title": "Sineann 2013 Riesling (Oregon)",
+      "variety": "Riesling",
+      "price": 24.0,
+      "points": 95,
+      "country": "US"
+     },
+     {
+      "title": "Robert Weil 2015 Trocken Riesling (Rheingau)",
+      "variety": "Riesling",
+      "price": 20.0,
+      "points": 91,
+      "country": "Germany"
+     }
+    ],
+    "candidates_text": "[1] (Markus Molitor 2011 Haus Klosterberg Riesling (Mosel) · 92 pts · $18) Markus Molitor 2011 Haus Klosterberg Riesling (Mosel) — Riesling from Mosel, Germany.\nWhiffs of saffron and honey lend a sweet, spicy tone to this off-dry Riesling. It's lusciously ripe on the palate, with juicy white peach and honeydew flavors accented by layers of candle wax and crushed slate. Brisk and bright with acidity, it's effortlessly quaffable, but with refinement and depth.\n[2] (Robert Weil 2011 Tradition Riesling (Rheingau) · 91 pts · $22) Robert Weil 2011 Tradition Riesling (Rheingau) — Riesling from Rheingau, Germany.\nWhiffs of smoke and mineral lends complexity to pretty white peach and floral tones on this dainty off-dry Riesling. It's juicy with stone fruit, but maintains that streak of minerality and a clean, focused acidity that leads to a long, dry finish.\n[3] (Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel) · 92 pts · $25) Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel) — Riesling from Mosel, Germany.\nDemure apple and pear aromas belie the intensely honeyed peach and tropical fruit flavors that burst from this feather-light nectar. A crush of lemon-lime acidity cuts through the sweetness, leading a long, laser-focused finish. Drinks well now, but will develop well through at least 2025.\n[4] (Fritz Haag 2015 Trocken Riesling (Mosel) · 92 pts · $22) Fritz Haag 2015 Trocken Riesling (Mosel) — Riesling from Mosel, Germany.\nWhile more mineral than fruit-forward on the nose, this pretty, dry Riesling is quite yielding, suggesting ripe, rich pink grapefruit and white peach on the palate. It's feather light but silky in texture, balanced by a strike of lemon acidity that lingers on the finish.\n[5] (Sineann 2013 Riesling (Oregon) · 95 pts · $24) Sineann 2013 Riesling (Oregon) — Riesling from Oregon, US.\nThis sweet, luscious, dessert-style wine keeps enough acidity to contrast and compensate for the sugar. There's nothing flabby here, but how sweet it is! Caramel apples, molasses, maple syrup and honey coalesce around concentrated fruits, ranging from citrus through tropical. Orange and peach, pineapple and papaya are all to be found. A half bottle is rich enough to satisfy four tasters.\n[6] (Robert Weil 2015 Trocken Riesling (Rheingau) · 91 pts · $20) Robert Weil 2015 Trocken Riesling (Rheingau) — Riesling from Rheingau, Germany.\nWhiffs of white peach and yellow cherry intensify on the palate of this punchy, concentrated dry Riesling. It's buoyantly juicy and fruity, full of fresh stone fruit and citrus flavors. Vibrant acidity and deep veins of crushed slate lend refreshment to a long finish. It's an exceptionally balanced wine at a bargain price.",
+    "recommendation": "**Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling** (92 pts, $25) [3]\nThis is the closest match to the target style. Its honeyed sweetness softens the green chili burn, and the \"crush of lemon-lime acidity\" cuts through the coconut cream. Because it's feather-light, it won't swamp a medium-bodied chicken curry, and the peach and tropical fruit go well with the lemongrass and Thai basil.\n\n**Markus Molitor 2011 Haus Klosterberg Riesling** (92 pts, $18) [1]\nThis is an off-dry Mosel with bright acidity, and it costs less. The ripe white peach and honeydew balance the heat, and the saffron and honey on the nose pick up the aromatic spices in the paste. It's a little riper and rounder than [3], which suits a curry made with plenty of coconut milk.\n\nI'd leave out the Trocken bottlings [4] and [6]. Without residual sugar, the chili will taste hotter. The Sineann [5] is a dessert wine and too sweet for a savory main.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [3], [1], [4], [6], [5]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "A light, intense Kabinett and a lusciously ripe off-dry Mosel both suit a medium-bodied chicken curry. Their concentrated fruit and acidity hold up to the coconut cream without overwhelming the chicken."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Residual sugar to tame green chili heat and bright acidity to cut coconut fat is the standard logic for Thai curry. It correctly rejects dry Trocken bottlings, which would make the chili taste hotter, and the dessert-sweet Sineann. No tannin issue."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "Peach, tropical fruit and honeydew bridge to the curry's sweet, aromatic and herbal notes, and lemon-lime acidity contrasts with the creamy coconut. Both links are plausible."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "Honeyed peach, tropical fruit, lemon-lime acidity and feather-light body for [3] match its review. Off-dry style, bright acidity, white peach, honeydew, saffron and honey for [1] match its review. The Trocken wines are described as dry and [5] as dessert-style, both as their reviews say. Calling [1] riper and rounder is a fair reading of 'lusciously ripe'."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Markus Molitor 2013 Ürziger Würzgarten Kabinett Riesling (Mosel)",
+   "variety": "Riesling",
+   "price": 25.0,
+   "points": 92,
+   "country": "Germany"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 29.84,
+  "cost_usd": 0.48002,
+  "error": null
+ },
+ {
+  "id": "risotto",
+  "meal": "wild mushroom risotto with parmesan",
+  "budget": 35,
+  "dish": {
+   "main": "arborio rice with wild mushrooms",
+   "body": "medium",
+   "sauce": "creamy parmesan and butter emulsion (mantecatura) with stock",
+   "cuisine": "Italian (Northern)",
+   "key_flavors": [
+    "earthy",
+    "umami",
+    "nutty",
+    "savory",
+    "creamy",
+    "woodsy"
+   ],
+   "cooking_method": "slow-stirred simmering in stock, finished with butter and cheese"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Medium-bodied Piedmont Nebbiolo (Langhe Nebbiolo or a young Barbaresco-area bottling) with high acidity, moderate tannin and earthy, truffle-like aromatics",
+     "search_query": "Langhe Nebbiolo earthy mushroom truffle dried rose cherry bright acidity medium body Piedmont",
+     "rationale": "Nebbiolo from Piedmont has the acidity to cut the butter and parmesan, and its earthy, forest-floor notes match the wild mushrooms; it is the regional pairing, and Langhe bottlings usually cost under $35."
+    },
+    "candidates": [
+     {
+      "title": "Cascina delle Rose 2013 Nebbiolo (Langhe)",
+      "variety": "Nebbiolo",
+      "price": 30.0,
+      "points": 92,
+      "country": "Italy"
+     },
+     {
+      "title": "Rainoldi 2009 Sassella Riserva  (Valtellina Superiore)",
+      "variety": "Nebbiolo",
+      "price": 33.0,
+      "points": 91,
+      "country": "Italy"
+     },
+     {
+      "title": "Cascina delle Rose 2012 Nebbiolo (Langhe)",
+      "variety": "Nebbiolo",
+      "price": 30.0,
+      "points": 92,
+      "country": "Italy"
+     },
+     {
+      "title": "Rizzi 2013 Nebbiolo (Langhe)",
+      "variety": "Nebbiolo",
+      "price": 24.0,
+      "points": 92,
+      "country": "Italy"
+     },
+     {
+      "title": "Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein)",
+      "variety": "Riesling",
+      "price": 26.0,
+      "points": 93,
+      "country": "Germany"
+     },
+     {
+      "title": "Germano Ettore 2012 Rosanna Metodo Classico Brut Rosé Nebbiolo (Vino Spumante)",
+      "variety": "Nebbiolo",
+      "price": 35.0,
+      "points": 92,
+      "country": "Italy"
+     }
+    ],
+    "candidates_text": "[1] (Cascina delle Rose 2013 Nebbiolo (Langhe) · 92 pts · $30) Cascina delle Rose 2013 Nebbiolo (Langhe) — Nebbiolo from Langhe, Piedmont, Italy.\nAged in steel, this vibrant wine shows Nebbiolo's more elegant and youthful side. It weaves together rose, violet, perfumed berries, bright cherry, crushed raspberry and sweet baking spices alongside supple tannins and fresh acidity. Enjoy it soon to capture the crunchy berry flavors.\n[2] (Rainoldi 2009 Sassella Riserva  (Valtellina Superiore) · 91 pts · $33) Rainoldi 2009 Sassella Riserva  (Valtellina Superiore) — Nebbiolo from Valtellina Superiore, Lombardy, Italy.\nAromas of crushed violet, dried rose petal, underbrush, ripe berry and a balsamic note lead the nose on this classically crafted Nebbiolo. The firm palate delivers dried black cherries, raspberries, licorice, clove, mint and tobacco alongside assertive but polished tannins and bright acidity. It's still young so let this fully develop. Drink 2019–2029.\n[3] (Cascina delle Rose 2012 Nebbiolo (Langhe) · 92 pts · $30) Cascina delle Rose 2012 Nebbiolo (Langhe) — Nebbiolo from Langhe, Piedmont, Italy.\nThis elegant Nebbiolo has an alluring fragrance of rose petal and ripe berry while the palate delivers succulent strawberry, mint and mineral notes. Silky smooth and very fresh, drink this young to catch the softer side of Nebbiolo in all its glory.\n[4] (Rizzi 2013 Nebbiolo (Langhe) · 92 pts · $24) Rizzi 2013 Nebbiolo (Langhe) — Nebbiolo from Langhe, Piedmont, Italy.\nThis young Nebbiolo has aromas of wild strawberry, rose petal, dark baking spice and a whiff of new leather. The bright palate offers juicy red cherry, raspberry, Alpine herb and white pepper. Firm, refined tannins and vibrant acidity provide balance and structure.\n[5] (Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein) · 93 pts · $26) Matthias Müller 2012 Rheindiabas Riesling (Mittelrhein) — Riesling from Mittelrhein, Germany.\nWhile still vibrantly peachy and floral, four years of bottle aging have given this off-dry Riesling sumptuous tertiary complexities of dusty mineral and white mushroom. It's feather light on the palate yet deeply penetrating in honeyed tangerine and stone fruit flavors. Drink now through 2021.\n[6] (Germano Ettore 2012 Rosanna Metodo Classico Brut Rosé Nebbiolo (Vino Spumante) · 92 pts · $35) Germano Ettore 2012 Rosanna Metodo Classico Brut Rosé Nebbiolo (Vino Spumante) — Nebbiolo from Vino Spumante, Italy Other, Italy.\nMade entirely from Nebbiolo, this boasts finesse and structure. Aromas of rose and red berry carry over to the palate alongside bright cherry and yeasty notes of baked bread. Crisp acidity generates freshness, while the elegant perlage gives a silky texture. It finishes bone-dry. Oliver McCrum, Volio Vino.",
+    "recommendation": "**Rizzi 2013 Nebbiolo (Langhe), 92 pts, $24 [4]**\nThis is the closest match to the target style, and it's the cheapest bottle on the list. Its vibrant acidity cuts through the butter and parmesan in the mantecatura. The tannins are firm but refined, so they won't turn harsh against a creamy, medium-bodied risotto. The leather and Alpine herb notes also sit well with the woodsy mushrooms.\n\n**Rainoldi 2009 Sassella Riserva (Valtellina Superiore), 91 pts, $33 [2]**\nThis one is Nebbiolo from Lombardy rather than Piedmont, but it has the most savory, earthy profile of the group. The underbrush, tobacco and balsamic notes pick up the earthy, umami flavors of the wild mushrooms, and the bright acidity keeps the creamy rice from feeling heavy. Its \"assertive but polished\" tannins are bigger than the Rizzi's. It's now well inside its 2019–2029 drinking window, though, and the fat and protein in the cheese will soften them.\n\nBoth are older vintages (2013 and 2009), so check that the bottles were stored well. I'd skip the Cascina delle Rose Langhe bottlings [1][3]: their notes say to drink them young, and they lean toward bright fruit with nothing earthy.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [4], [2], [1], [3]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Both picks are medium-weight Nebbiolo. A bright, refined Langhe and an Alpine Valtellina Sassella suit a medium-bodied mushroom risotto without overwhelming it."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Fresh acidity against the butter and parmesan is sound. Refined to polished tannins are fine with a creamy, savory, unspiced dish, and the cheese's fat and protein will soften them. There is no sweetness or heat conflict."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The Rainoldi's underbrush, tobacco and balsamic notes link to the earthy, umami wild mushrooms. The Rizzi's leather and Alpine herb notes give a smaller woodsy link."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "The review text supports every claim: the Rizzi's vibrant acidity, firm refined tannins, leather and Alpine herb, and its $24 price as the cheapest bottle; the Rainoldi's underbrush, tobacco, balsamic, bright acidity and 'assertive but polished' tannins; and the Cascina notes advising drinking young with a fruit-forward profile."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Rizzi 2013 Nebbiolo (Langhe)",
+   "variety": "Nebbiolo",
+   "price": 24.0,
+   "points": 92,
+   "country": "Italy"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 32.92,
+  "cost_usd": 0.49069,
+  "error": null
+ },
+ {
+  "id": "roast-chicken",
+  "meal": "roast chicken with lemon and herbs",
+  "budget": 25,
+  "dish": {
+   "main": "roast chicken",
+   "body": "medium",
+   "sauce": "pan juices with lemon and herbs",
+   "cuisine": "French/Mediterranean",
+   "key_flavors": [
+    "lemon",
+    "thyme",
+    "rosemary",
+    "garlic",
+    "roasted savory skin"
+   ],
+   "cooking_method": "roasting"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Medium-bodied, unoaked or lightly oaked white with bright acidity and herbal notes, such as a white Burgundy (Mâcon-Villages Chardonnay), Côtes du Rhône Blanc, or Provençal Vermentino/Rolle; a light, low-tannin red like a Beaujolais cru would be the red alternative",
+     "search_query": "Mâcon-Villages Chardonnay or Rhône white blend, medium-bodied, crisp acidity, citrus, lemon, herbal, garrigue, subtle oak, French",
+     "rationale": "Roast chicken is medium weight, so a medium-bodied French white fits it, and the wine's acidity picks up the lemon in the pan juices while its herbal, stone-fruit flavors go with the thyme, rosemary and browned skin, with good examples available around $25."
+    },
+    "candidates": [
+     {
+      "title": "Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands)",
+      "variety": "Chardonnay",
+      "price": 24.0,
+      "points": 93,
+      "country": "US"
+     },
+     {
+      "title": "Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey)",
+      "variety": "Chardonnay",
+      "price": 21.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA))",
+      "variety": "Chardonnay",
+      "price": 25.0,
+      "points": 93,
+      "country": "US"
+     },
+     {
+      "title": "Roblar 2013 Chardonnay (Sta. Rita Hills)",
+      "variety": "Chardonnay",
+      "price": 25.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Chateau Burgozone 2012 Collection Chardonnay (Danube River Plains)",
+      "variety": "Chardonnay",
+      "price": 23.0,
+      "points": 91,
+      "country": "Bulgaria"
+     },
+     {
+      "title": "Center of Effort 2014 Effort Chardonnay (Edna Valley)",
+      "variety": "Chardonnay",
+      "price": 24.0,
+      "points": 93,
+      "country": "US"
+     }
+    ],
+    "candidates_text": "[1] (Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands) · 93 pts · $24) Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands) — Chardonnay from Santa Lucia Highlands, California, US.\nThe nose on this well-priced appellation blend by Brian Loring has it all: golden honey, caramel apple, supple peach flesh, pressed white flowers, fresh yellow flowers and even quinine. The apple-flesh flavors show oak influence in hints of butterscotch and pineapple, yet the mouthwatering acidity keeps it all in balance.\n[2] (Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey) · 92 pts · $21) Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey) — Chardonnay from Santa Barbara-Monterey, California, US.\nA very rich Chardonnay that's creamy and smooth in the mouth. A touch of oak and lees gives weight and density to the lime and peach fruit, while brisk acidity contributes brightness. A great price for a wine of this distinction.\n[3] (Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA)) · 93 pts · $25) Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA)) — Chardonnay from Columbia Valley (WA), Washington, US.\nSharp, dense, tight and oaky; this has a lot of plump pineapple, apple and sweet citrus fruit. There is a wonderful mix of spice, herb, fruit and acid. Deep and focused, this wine has serious guts and the flavors last a good long time.\n[4] (Roblar 2013 Chardonnay (Sta. Rita Hills) · 92 pts · $25) Roblar 2013 Chardonnay (Sta. Rita Hills) — Chardonnay from Sta. Rita Hills, California, US.\nThis is a great example of what most would consider a straight-ahead and delicious California Chardonnay. The nose offers aromas of seared pineapple cake, vanilla soda and Meyer lemon, and the palate blends all of the typical elements: lemon juice acidity down the middle, minerality driven by slate and white rocks, apple and a bit of brown spice on the edges.\n[5] (Chateau Burgozone 2012 Collection Chardonnay (Danube River Plains) · 91 pts · $23) Chateau Burgozone 2012 Collection Chardonnay (Danube River Plains) — Chardonnay from Danube River Plains, Bulgaria.\nPale straw in the glass, this wine has a nose of pineapple and lemon blossom with a strong dose of vanilla. It is round and full in the mouth, with rich flavors of green apple, guava and tropical fruits with a slight hint of toast that carry on through the long-lasting finish.\n[6] (Center of Effort 2014 Effort Chardonnay (Edna Valley) · 93 pts · $24) Center of Effort 2014 Effort Chardonnay (Edna Valley) — Chardonnay from Edna Valley, California, US.\nAged in oak, acacia and concrete, this is a tremendous example of a racy style done well. Aromas of crushed chalk, lightly braised apricot and slivers of cashew are seamlessly woven together, leading into a sip that shows brightness, fine-tuned acidity and structural grip. Rounded pear flavors and lime squeezed on nectarine ensure that it doesn't dive into sourness.",
+    "recommendation": "None of these six is the unoaked French white the target style calls for. All are Chardonnays and all show some oak. These two come closest because they have the most acidity and the least oak character.\n\n**Center of Effort 2014 Effort Chardonnay, Edna Valley (93 pts, $24) [6]**\nThis is my first choice. It's aged partly in concrete and acacia, so it has less oak flavor than the others. The review calls it racy, and its acidity and lime notes will pick up the lemon in the pan juices. Its chalky texture and medium weight suit the chicken without overpowering the thyme and rosemary.\n\n**Roblar 2013 Chardonnay, Sta. Rita Hills (92 pts, $25) [4]**\nThe review describes \"lemon juice acidity down the middle\" with a slate-like minerality, which suits a lemony, herby sauce. Its touch of brown spice and vanilla will go with the browned, garlicky skin. It's a little fuller than [6], so it's the better pick if the pan juices are buttery.\n\nI'd skip [2] and [5] here. The reviews call both rich or creamy, with lees and vanilla weight, and that would flatten the lemon and herbs.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [6], [4], [2], [5]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Roast chicken with pan juices is a medium-weight dish. Both picks are the leaner, higher-acid Chardonnays in the set, and the recommender deliberately avoids the rich, creamy [2] and [5]. The weight is about right."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Bright acidity matched to a lemony, herby pan sauce and moderately fatty roasted skin is sound reasoning. With no tannin or sweetness issues in play, preferring the higher-acid, lower-oak bottles is the right call."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "It names plausible bridges: the lime and lemon-juice acidity echo the lemon in the sauce, and Roblar's brown spice and vanilla go with the browned, garlicky skin."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "Each claim matches its review: [6] is aged in oak, acacia and concrete, called racy, with lime and chalk; [4] has lemon juice acidity, slate minerality, brown spice and vanilla; [2] is creamy with lees and [5] is round with vanilla. 'Medium weight' and 'less oak' are fair inferences, not invented facts."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Center of Effort 2014 Effort Chardonnay (Edna Valley)",
+   "variety": "Chardonnay",
+   "price": 24.0,
+   "points": 93,
+   "country": "US"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 34.52,
+  "cost_usd": 0.52042,
+  "error": null
+ },
+ {
+  "id": "lamb",
+  "meal": "braised lamb shank with rosemary and garlic",
+  "budget": 40,
+  "dish": {
+   "main": "lamb shank",
+   "body": "rich",
+   "sauce": "braising liquid reduced from wine and stock, with rosemary and garlic",
+   "cuisine": "Mediterranean",
+   "key_flavors": [
+    "gamey lamb",
+    "rosemary",
+    "garlic",
+    "savory",
+    "herbal"
+   ],
+   "cooking_method": "braised"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Medium- to full-bodied Southern Rhône or Provençal red blend (Grenache-Syrah-Mourvèdre), savory and earthy with herbal garrigue notes, firm but ripe tannins and enough acidity to cut the braise",
+     "search_query": "Grenache Syrah Mourvèdre blend Rhône Châteauneuf-du-Pape Gigondas Bandol savory garrigue herbs dark fruit earthy leather pepper",
+     "rationale": "Lamb and the wild-herb character of Rhône and Provençal reds come from the same part of the Mediterranean, and these wines have the body and ripe tannin for a rich, gamey braise, plus garrigue notes that pick up the rosemary and garlic, and good bottles sell for around $40."
+    },
+    "candidates": [
+     {
+      "title": "Chateau Les Amoureuses 2012 Terres des Amoureuses Voluptueuse Red (Ardèche)",
+      "variety": "Rhône-style Red Blend",
+      "price": 40.0,
+      "points": 93,
+      "country": "France"
+     },
+     {
+      "title": "Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes  (Gigondas)",
+      "variety": "Rhône-style Red Blend",
+      "price": 40.0,
+      "points": 92,
+      "country": "France"
+     },
+     {
+      "title": "Domaine de Fontavin 2012 Cuvée Empire Grenache-Syrah (Châteauneuf-du-Pape)",
+      "variety": "Grenache-Syrah",
+      "price": 33.0,
+      "points": 92,
+      "country": "France"
+     },
+     {
+      "title": "Mas de Libian 2012 Khayyâm Red (Côtes du Rhône)",
+      "variety": "Rhône-style Red Blend",
+      "price": 20.0,
+      "points": 92,
+      "country": "France"
+     },
+     {
+      "title": "Domaine du Pegau 2012 Château Pêgau  Cuvée Maclura Red (Côtes du Rhône)",
+      "variety": "Rhône-style Red Blend",
+      "price": 22.0,
+      "points": 91,
+      "country": "France"
+     },
+     {
+      "title": "Domaine de Nalys 2014 White (Châteauneuf-du-Pape)",
+      "variety": "Rhône-style White Blend",
+      "price": 40.0,
+      "points": 92,
+      "country": "France"
+     }
+    ],
+    "candidates_text": "[1] (Chateau Les Amoureuses 2012 Terres des Amoureuses Voluptueuse Red (Ardèche) · 93 pts · $40) Chateau Les Amoureuses 2012 Terres des Amoureuses Voluptueuse Red (Ardèche) — Rhône-style Red Blend from Ardèche, Rhône Valley, France.\nMainly Grenache, this is a full, rich, velvety Rhône blend. Toasty oak, vanilla and baking spices dominate the youthful aromas, backed by black cherry fruit on the palate. It's warm and plush on the finish. Drink now–2025.\n[2] (Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes  (Gigondas) · 92 pts · $40) Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes  (Gigondas) — Rhône-style Red Blend from Gigondas, Rhône Valley, France.\nThis is a top-notch effort—a blend of 80% Grenache, 15% Syrah and 5% Mourvèdre. It starts off with intriguing floral and herbal notes, then delivers deep black-cherry flavors on the palate, tinged with savory nuances of roasted meat and black olive. It's full bodied and round, richly but finely textured and very drinkable now yet with the substance to age up to 10 years or more.\n[3] (Domaine de Fontavin 2012 Cuvée Empire Grenache-Syrah (Châteauneuf-du-Pape) · 92 pts · $33) Domaine de Fontavin 2012 Cuvée Empire Grenache-Syrah (Châteauneuf-du-Pape) — Grenache-Syrah from Châteauneuf-du-Pape, Rhône Valley, France.\nThis domaine, which sprawls across several appellations, is now being farmed organically. More importantly, this wine is a terrific value. Thyme and bay leaf notes add vibrance to the ripe raspberry flavors in this blend of 80% Grenache and 20% Syrah. It's weighty without being heavy, with a velvety finish that makes it easy to drink now.\n[4] (Mas de Libian 2012 Khayyâm Red (Côtes du Rhône) · 92 pts · $20) Mas de Libian 2012 Khayyâm Red (Côtes du Rhône) — Rhône-style Red Blend from Côtes du Rhône, Rhône Valley, France.\nThis superripe blend of Grenache (70%), Syrah (15%) and Mourvèdre (15%) is full-bodied, with a rich, creamy texture and a long, velvety finish. Spice and herb notes accent dusty black cherries, and a hint of cocoa sneaks in as well. Drink now–2017.\n[5] (Domaine du Pegau 2012 Château Pêgau  Cuvée Maclura Red (Côtes du Rhône) · 91 pts · $22) Domaine du Pegau 2012 Château Pêgau  Cuvée Maclura Red (Côtes du Rhône) — Rhône-style Red Blend from Côtes du Rhône, Rhône Valley, France.\nThe aromas of cracked peppercorns, iodine, blackberries, crushed stone, dried spices and black olives are practically intoxicating on their own. Then, on the palate, you can taste the intensity, with firm tannins that come from a patch of 50-year-old vines in Sorgues. Drink this blend of 60% Grenache, 25% Syrah, 10% Mourvèdre and 5% Cinsault from 2017–2025, treating it almost as if it were a mini Châteauneuf-du-Pape.\n[6] (Domaine de Nalys 2014 White (Châteauneuf-du-Pape) · 92 pts · $40) Domaine de Nalys 2014 White (Châteauneuf-du-Pape) — Rhône-style White Blend from Châteauneuf-du-Pape, Rhône Valley, France.\nThis blend—mainly Grenche Blanc and Roussanne—is fairly neutral on the nose, but weighty and rich on the palate, where it delivers succulent notes of pineapple, perked by a sprinkling of white pepper. That peppery spice picks up in intensity on the finish, imparting vibrancy and length. Drink now.",
+    "recommendation": "For a rosemary-and-garlic lamb shank, I'd choose these two:\n\n**Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes, Gigondas (92 pts, $40) [2].** This is the closest match to the dish. It's 80% Grenache with Syrah and Mourvèdre, and its herbal notes, roasted meat and black olive mirror the gamey lamb and rosemary. It's full-bodied and finely textured, so it can stand up to a reduced braise without overpowering it.\n\n**Domaine du Pegau 2012 Château Pêgau Cuvée Maclura, Côtes du Rhône (91 pts, $22) [5].** This is the value pick, and the one with more structure. Its firm tannins from 50-year-old vines bind with the lamb's protein and fat. The cracked pepper, black olive and dried spice suit the garlic and savory braising liquid. Its suggested drinking window ended in 2025, so pour it soon.\n\nBoth wines are a little past the windows the reviewers gave, so serve them slightly cool, around 60–62°F, to keep the fruit fresh against the richness of the braise.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [2], [5]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Both picks are full-bodied Rhône reds. The Gigondas is described as full bodied and round, and the Pegau as intense with firm tannins. Either has the weight for a rich braised lamb shank with a reduced wine sauce."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "Firm tannin against the protein and fat of braised lamb is standard, sound reasoning. The dish has no heat, sweetness or delicacy that would argue against a structured red."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The bridges are plausible. Gigondas brings herbal, roasted meat and black olive notes that match the rosemary and savory lamb. Pegau brings cracked pepper, black olive and dried spice that match the garlic and savory braising liquid."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "Everything said about the wines appears in their reviews. Gigondas: 80% Grenache with Syrah and Mourvèdre, herbal, roasted meat, black olive, full bodied, finely textured. Pegau: firm tannins from 50-year-old vines, cracked peppercorns, black olive, dried spices, a 2017–2025 window. The comments on drinking windows and serving temperature are out of scope, so they don't count against it."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes  (Gigondas)",
+   "variety": "Rhône-style Red Blend",
+   "price": 40.0,
+   "points": 92,
+   "country": "France"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 35.07,
+  "cost_usd": 0.52498,
+  "error": null
+ },
+ {
+  "id": "salmon",
+  "meal": "pan-seared salmon with dill butter",
+  "budget": 30,
+  "dish": {
+   "main": "salmon",
+   "body": "medium",
+   "sauce": "dill butter",
+   "cuisine": "Scandinavian-influenced European",
+   "key_flavors": [
+    "rich oily fish",
+    "browned butter",
+    "fresh dill",
+    "herbal",
+    "savory crust"
+   ],
+   "cooking_method": "pan-seared"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Medium-bodied, high-acid white with some texture, such as a lightly oaked or lees-aged Chardonnay (Chablis or Burgundy style) or a dry Riesling",
+     "search_query": "crisp mineral Chardonnay with lemon, green apple, light oak or lees texture and bright acidity",
+     "rationale": "Salmon is oily and the dill butter adds browned richness, so the wine needs enough acidity to cut the fat, enough body to stand up to a seared crust and butter sauce, and herbal or citrus notes for the dill, all within a $30 budget."
+    },
+    "candidates": [
+     {
+      "title": "Calera 2011 Chardonnay (Mt. Harlan)",
+      "variety": "Chardonnay",
+      "price": 30.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey)",
+      "variety": "Chardonnay",
+      "price": 21.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Roblar 2013 Chardonnay (Sta. Rita Hills)",
+      "variety": "Chardonnay",
+      "price": 25.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA))",
+      "variety": "Chardonnay",
+      "price": 25.0,
+      "points": 93,
+      "country": "US"
+     },
+     {
+      "title": "Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (Santa Ynez Valley)",
+      "variety": "Chardonnay",
+      "price": 30.0,
+      "points": 93,
+      "country": "US"
+     },
+     {
+      "title": "Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (Santa Maria Valley)",
+      "variety": "Chardonnay",
+      "price": 30.0,
+      "points": 92,
+      "country": "US"
+     }
+    ],
+    "candidates_text": "[1] (Calera 2011 Chardonnay (Mt. Harlan) · 92 pts · $30) Calera 2011 Chardonnay (Mt. Harlan) — Chardonnay from Mt. Harlan, California, US.\nJosh Jensen brings his restrained hand to this very fine Chardonnay. It's notable for the excellence of all its parts, and the balanced way they co-exist. You'll find tantalizingly rich tropical fruit and peach flavors, with nuances of oak, as well as the minerality that the estate vineyard brings to all its wines, white and red.\n[2] (Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey) · 92 pts · $21) Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey) — Chardonnay from Santa Barbara-Monterey, California, US.\nA very rich Chardonnay that's creamy and smooth in the mouth. A touch of oak and lees gives weight and density to the lime and peach fruit, while brisk acidity contributes brightness. A great price for a wine of this distinction.\n[3] (Roblar 2013 Chardonnay (Sta. Rita Hills) · 92 pts · $25) Roblar 2013 Chardonnay (Sta. Rita Hills) — Chardonnay from Sta. Rita Hills, California, US.\nThis is a great example of what most would consider a straight-ahead and delicious California Chardonnay. The nose offers aromas of seared pineapple cake, vanilla soda and Meyer lemon, and the palate blends all of the typical elements: lemon juice acidity down the middle, minerality driven by slate and white rocks, apple and a bit of brown spice on the edges.\n[4] (Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA)) · 93 pts · $25) Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA)) — Chardonnay from Columbia Valley (WA), Washington, US.\nSharp, dense, tight and oaky; this has a lot of plump pineapple, apple and sweet citrus fruit. There is a wonderful mix of spice, herb, fruit and acid. Deep and focused, this wine has serious guts and the flavors last a good long time.\n[5] (Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (Santa Ynez Valley) · 93 pts · $30) Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (Santa Ynez Valley) — Chardonnay from Santa Ynez Valley, California, US.\nShows very bright acidity and a firm minerality, which gives it a tangy, mouthwatering vitality. Rich, too, in lemondrop candy, pineapple jam and spice flavors. The oak has been tastefully applied, with just- right notes of buttered toast. A flattering, balanced, elegant Chardonnay for drinking soon.\n[6] (Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (Santa Maria Valley) · 92 pts · $30) Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (Santa Maria Valley) — Chardonnay from Santa Maria Valley, California, US.\nIt's hard to define minerality in a wine, but this Chardonnay has it. It tastes and feels like a lick of chalky stone. That's on top of and below the intricate pineapple, orange and Meyer lemon fruit that's so delicious, and finishes so dry and spicy.",
+    "recommendation": "For pan-seared salmon in dill butter, these two fit best:\n\n**Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (93 pts, $30) [5].** Its very bright acidity and firm minerality cut through the oily fish and butter. The light, well-judged oak gives buttered-toast notes that match the browned butter and the seared crust, and the lemon fruit freshens the dill.\n\n**Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (92 pts, $30) [6].** This is the closest to a Chablis style: chalky minerality, Meyer lemon and orange fruit, and a dry, spicy finish. It has enough body for the butter sauce and stays lean enough to bring out the dill and the herbal side of the dish.\n\nIf you'd rather spend less, the Kendall-Jackson Grand Reserve (92 pts, $21) [2] works too. Its brisk acidity and lime fruit, plus some weight from lees aging, suit the dish well for $9 less.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [5], [6], [2]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Pan-seared salmon in dill butter is a medium-to-rich dish. The picks are medium-plus Chardonnays with some oak and lees weight, so the wine's weight matches the fish and butter without overpowering them."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "The reasoning relies on bright, brisk acidity to cut the oily fish and butter, and none of the whites has tannin to clash with the fish. That is sound for a fatty, savory, non-spicy dish."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The buttered-toast oak notes in [5] bridge to the browned butter and seared crust. Lemon and Meyer lemon fruit in [5], [6] and [2] pick up the dill and the herbal side of the dish."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "The claims match the reviews: bright acidity, firm minerality and buttered toast for [5]; chalky minerality, Meyer lemon and orange with a dry, spicy finish for [6]; brisk acidity, lime and lees weight for [2]. The Chablis comparison is an interpretation of the chalky profile, not an invented fact, and the $9 price gap is correct."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (Santa Ynez Valley)",
+   "variety": "Chardonnay",
+   "price": 30.0,
+   "points": 93,
+   "country": "US"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 30.2,
+  "cost_usd": 0.48523,
+  "error": null
+ },
+ {
+  "id": "goat-cheese",
+  "meal": "goat cheese and roasted beet salad",
+  "budget": 20,
+  "dish": {
+   "main": "goat cheese and roasted beets",
+   "body": "light",
+   "sauce": "vinaigrette",
+   "cuisine": "American",
+   "key_flavors": [
+    "tangy",
+    "earthy",
+    "sweet",
+    "creamy",
+    "acidic"
+   ],
+   "cooking_method": "roasted"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Crisp, unoaked Sauvignon Blanc (Sancerre-style or a dry Loire white) with high acidity and herbal, citrus notes",
+     "search_query": "crisp unoaked Sauvignon Blanc high acidity citrus grapefruit grassy herbal mineral goat cheese",
+     "rationale": "Sauvignon Blanc's high acidity holds up to the vinaigrette and tangy goat cheese (the classic Loire pairing of Sancerre with chèvre), its light body suits the dish, and its herbal, mineral notes go well with the earthy sweetness of roasted beets at around $20."
+    },
+    "candidates": [
+     {
+      "title": "Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard Loiregon Sauvignon Blanc (Rogue Valley)",
+      "variety": "Sauvignon Blanc",
+      "price": 20.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Guardian 2012 Angel Sauvignon Blanc (Red Mountain)",
+      "variety": "Sauvignon Blanc",
+      "price": 20.0,
+      "points": 94,
+      "country": "US"
+     },
+     {
+      "title": "Easton 2010 Monarch Mine Vineyard Sauvignon Blanc (Sierra Foothills)",
+      "variety": "Sauvignon Blanc",
+      "price": 18.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Ruby Hill Winery 2016 Reserve Collection Sauvignon Blanc (Livermore Valley)",
+      "variety": "Sauvignon Blanc",
+      "price": 19.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Ledger David 2014 Sauvignon Blanc (Rogue Valley)",
+      "variety": "Sauvignon Blanc",
+      "price": 20.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "San Pedro 2015 1865 Single Vineyard Sauvignon Blanc (Leyda Valley)",
+      "variety": "Sauvignon Blanc",
+      "price": 18.0,
+      "points": 91,
+      "country": "Chile"
+     }
+    ],
+    "candidates_text": "[1] (Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard Loiregon Sauvignon Blanc (Rogue Valley) · 92 pts · $20) Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard Loiregon Sauvignon Blanc (Rogue Valley) — Sauvignon Blanc from Rogue Valley, Oregon, US.\nThis delightful and refreshing wine is atypical in all the right ways. Intensely aromatic, it conveys a lush mix of honeysuckle, sweet hay, smoke, lime and honeydew melon. And that's before you take the first sip. The low alcohol and bright acidity set it up for a wide range of poultry, pasta and seafood options, and anything with goat cheese is sure-fire.\n[2] (Guardian 2012 Angel Sauvignon Blanc (Red Mountain) · 94 pts · $20) Guardian 2012 Angel Sauvignon Blanc (Red Mountain) — Sauvignon Blanc from Red Mountain, Washington, US.\nThis is as good as Sauvignon Blanc gets in Washington—a dense, pungent, intensely aromatic and gloriously flavorful wine sourced entirely from the Klipsun Vineyard. Inaugural scents suggest wet hay, new-mown grass, fig and citrus. Following are flavors of pineapple, more citrus, beeswax and a suggestion of bee pollen. This is one of those bottles that empties much faster than you'd like.\n[3] (Easton 2010 Monarch Mine Vineyard Sauvignon Blanc (Sierra Foothills) · 92 pts · $18) Easton 2010 Monarch Mine Vineyard Sauvignon Blanc (Sierra Foothills) — Sauvignon Blanc from Sierra Foothills, California, US.\nThis crisp white is inviting and dry, with aromas of citrus, fig and fennel. Reminiscent of a fine Sancerre, it's finely structured, steely and still lushly textured and full enough in the mouth to enjoy with seafood, a creamy goat cheese salad or entirely on its own.\n[4] (Ruby Hill Winery 2016 Reserve Collection Sauvignon Blanc (Livermore Valley) · 92 pts · $19) Ruby Hill Winery 2016 Reserve Collection Sauvignon Blanc (Livermore Valley) — Sauvignon Blanc from Livermore Valley, California, US.\nThis big wine has everything required of the variety and more. It starts with vivid citrus, herb and melon aromas, then lays on ripe white peach, honeydew and mineral notes that fill out the palate and lend mouthfilling texture. Layering, complexity and diverse flavors make it special.\n[5] (Ledger David 2014 Sauvignon Blanc (Rogue Valley) · 92 pts · $20) Ledger David 2014 Sauvignon Blanc (Rogue Valley) — Sauvignon Blanc from Rogue Valley, Oregon, US.\nFermented in stainless steel and one neutral barrel, this aromatic and compelling wine is clean, fresh and full of delicious fruit. Meyer lemon, satsuma orange and fresh pineapple are in the mix, with supporting acidity. Tasted a full day after being opened, it remained vivid and expressive.\n[6] (San Pedro 2015 1865 Single Vineyard Sauvignon Blanc (Leyda Valley) · 91 pts · $18) San Pedro 2015 1865 Single Vineyard Sauvignon Blanc (Leyda Valley) — Sauvignon Blanc from Leyda Valley, Chile.\nFresh, angular aromas of jalapeño, bell pepper, beach breeze and citrus fruits are elegant, chiseled and potent. This tingles with acidity and tastes minerally, with orange, tangerine and lime flavors. A stony, bright, pure finish confirms its high quality.",
+    "recommendation": "My top pick is the **Easton 2010 Monarch Mine Vineyard Sauvignon Blanc, Sierra Foothills (92 pts, $18) [3]**. It's the closest to the Sancerre style you're after: crisp, dry and steely, with enough acidity to stand up to the vinaigrette and cut through the creamy goat cheese. Its fennel and citrus notes work well against the earthy sweetness of the beets, and the review itself names a creamy goat cheese salad as a match.\n\nFor a second bottle, try the **Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard \"Loiregon\" Sauvignon Blanc, Rogue Valley (92 pts, $20) [1]**. It's a Loire-inspired Oregon wine with bright acidity and low alcohol, so it stays light enough for the dish. The lime cuts the tang of the chèvre, and the honeydew and sweet hay notes go well with the roasted beets. The reviewer calls anything with goat cheese \"sure-fire.\"",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [3], [1]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Both picks are crisp, dry Sauvignon Blancs. [1] is low in alcohol and [3] is steely, and both are light enough for a light roasted beet and goat cheese dish."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "High acidity can stand up to the vinaigrette and cut through the creamy chèvre. Neither wine has tannin to clash with the dish, and the reasoning about acid against fat and acid against acid is sound."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "Sauvignon Blanc with goat cheese is a classic bridge. The fennel and citrus in [3] and the honeydew and sweet hay in [1] work against the earthy sweetness of the beets."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "All tasting terms come from the reviews: crisp, dry, steely, fennel, citrus, Sancerre and goat cheese salad for [3]; bright acidity, low alcohol, lime, honeydew, sweet hay and 'sure-fire' with goat cheese for [1]. Calling [1] 'Loire-inspired' is a fair reading of the 'Loiregon' name."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Easton 2010 Monarch Mine Vineyard Sauvignon Blanc (Sierra Foothills)",
+   "variety": "Sauvignon Blanc",
+   "price": 18.0,
+   "points": 92,
+   "country": "US"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 25.53,
+  "cost_usd": 0.47929,
+  "error": null
+ },
+ {
+  "id": "chocolate",
+  "meal": "flourless dark chocolate torte",
+  "budget": 40,
+  "dish": {
+   "main": "flourless dark chocolate torte",
+   "body": "rich",
+   "sauce": "none",
+   "cuisine": "French-inspired dessert",
+   "key_flavors": [
+    "bittersweet chocolate",
+    "cocoa",
+    "butter",
+    "sweet",
+    "slightly bitter",
+    "dense and creamy"
+   ],
+   "cooking_method": "baked"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Fortified sweet red such as Banyuls or Maury (Grenache-based vin doux naturel from Roussillon), with Late Bottled Vintage or Ruby Port as an alternative",
+     "search_query": "Banyuls Maury Grenache vin doux naturel fortified sweet red dark chocolate black cherry plum raisin mocha, or LBV Ruby Port",
+     "rationale": "The wine has to be at least as sweet as this dense, bittersweet torte, and a fortified Grenache from Roussillon has the sweetness and weight to match it, plus dark fruit to set off the cocoa; good bottles are easy to find under $40, and it is the classic French match for chocolate."
+    },
+    "candidates": [
+     {
+      "title": "Emmerich Knoll 2013 Loibner Auslese Grüner Veltliner (Wachau)",
+      "variety": "Grüner Veltliner",
+      "price": 40.0,
+      "points": 96,
+      "country": "Austria"
+     },
+     {
+      "title": "Quinta de Chocapalha 2013 Vinha Mãe Red (Lisboa)",
+      "variety": "Portuguese Red",
+      "price": 40.0,
+      "points": 94,
+      "country": "Portugal"
+     },
+     {
+      "title": "Prospect 772 2007 The Brat Red (Sierra Foothills)",
+      "variety": "Rhône-style Red Blend",
+      "price": 36.0,
+      "points": 94,
+      "country": "US"
+     },
+     {
+      "title": "Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury)",
+      "variety": "Grenache",
+      "price": 30.0,
+      "points": 91,
+      "country": "France"
+     },
+     {
+      "title": "Mas Blanch I Jové 2009 Saó Expressiu Red (Costers del Segre)",
+      "variety": "Red Blend",
+      "price": 34.0,
+      "points": 92,
+      "country": "Spain"
+     },
+     {
+      "title": "Qupé 2008 Bien Nacido Hillside Estate Syrah (Santa Maria Valley)",
+      "variety": "Syrah",
+      "price": 40.0,
+      "points": 92,
+      "country": "US"
+     }
+    ],
+    "candidates_text": "[1] (Emmerich Knoll 2013 Loibner Auslese Grüner Veltliner (Wachau) · 96 pts · $40) Emmerich Knoll 2013 Loibner Auslese Grüner Veltliner (Wachau) — Grüner Veltliner from Wachau, Austria.\nHints of moss, yeast and freshly zested orange peel edged with pine honey initially suggest a dry wine. It is only on the palate that the richer and sweeter Auslese character comes to bear—again in the guise of dark, aromatic pine honey. The concentrated, deliciously bitter zestiness of the acidity, paired with the aromatically dark and equally bitter edge of the resinous honey provide a wonderful structure. While sweetness peaks up, it never gains the upper hand. This is a tight-rope walker of a wine with immense balance and poise. Glints of vanilla pod, candied peel and white pepper open up, vista after vista. If you are new to Grüner Auslese, this is the one to get you hooked.\n[2] (Quinta de Chocapalha 2013 Vinha Mãe Red (Lisboa) · 94 pts · $40) Quinta de Chocapalha 2013 Vinha Mãe Red (Lisboa) — Portuguese Red from Lisboa, Portugal.\nThe top red from Chocapalha, this comes from a single parcel. It has concentrated tannins, along with the minty flavors that come from new wood. Balancing that combination are the rich fruits: blackberry, damson along with a touch of licorice. It's a powerful wine that needs aging. Drink from 2018.\n[3] (Prospect 772 2007 The Brat Red (Sierra Foothills) · 94 pts · $36) Prospect 772 2007 The Brat Red (Sierra Foothills) — Rhône-style Red Blend from Sierra Foothills, California, US.\nSoftly tannic, sexy and delicious, with waves of berry-cherry pie filling and mocha for richness, and drier, tarter notes of currants, leather, rhubarb and pomegranates, accentuated with smoky wood. A blend of Grenache and Syrah, it's sophisticated and nuanced. Try as an interesting, more food-friendly alternative to Cabernet Sauvignon.\n[4] (Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury) · 91 pts · $30) Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury) — Grenache from Maury, Languedoc-Roussillon, France.\nAged in glass demijohns for one year and oak tuns for nine, this is a mature selection that's ready to drink now, though it can certainly keep for many more years to come. A beautiful rancio characteristic leads, with aromas of walnut shell, orange oil and earthy spice fill the bouquet. Skin-driven fruit flavors of cherry and plum dominate the gripping palate, while the complex finish reveals accents of black tea, licorice root and baking spice.\n[5] (Mas Blanch I Jové 2009 Saó Expressiu Red (Costers del Segre) · 92 pts · $34) Mas Blanch I Jové 2009 Saó Expressiu Red (Costers del Segre) — Red Blend from Costers del Segre, Catalonia, Spain.\nSubtle, rooty, expressive aromas of blackberry, raisin and tobacco are heady and pure, with magnetic pull. A full-bodied palate is loaded with ripe berry fruit and baked, peppery, spicy blackberry flavors that end long and sturdy, with integrated oak and balance between ripe berry and even riper black currant flavors. Drink through 2021.\n[6] (Qupé 2008 Bien Nacido Hillside Estate Syrah (Santa Maria Valley) · 92 pts · $40) Qupé 2008 Bien Nacido Hillside Estate Syrah (Santa Maria Valley) — Syrah from Santa Maria Valley, California, US.\nMassive blackberry, cherry, currant and mocha flavors characterize this dry, potent Syrah. At the age of five, it's round and mellow in the mouth, with firm tannins and a gentle scour of acidity. Just beginning to show its stuff. Drink now–2018.",
+    "recommendation": "**Mas Amiel NV Cuvée Spéciale 10 Ans d'Âge Grenache (Maury) · 91 pts · $30 [4]**\n\nThis is the only wine in the list that matches the target style: a fortified Grenache vin doux naturel from Roussillon, and the classic French choice for dark chocolate. It is sweet enough to meet the torte, so the chocolate's bitterness won't make the wine taste thin or sour. The cherry and plum fruit offsets the cocoa, and the rancio notes of walnut, orange oil and baking spice match the torte's buttery richness. Ten years of oxidative aging has softened the tannins, so they won't fight the dense chocolate, and the black tea and licorice finish echoes the torte's bitter edge.\n\nI'd stop at one bottle. The other reds [2], [3], [5] and [6] are all dry, and dry wine next to a sweet chocolate dessert turns bitter and hollow. Some have mocha notes, but that doesn't help here. The Knoll Auslese [1] is sweet, but it's a light, high-acid white built around pine honey and citrus peel, and it would disappear under this much chocolate. If you want a Port alternative, look outside this list; these six don't include one.",
+    "critique": {
+     "ok": false,
+     "issues": [
+      "claims_supported: Two claims conflict with the review text. The review calls the Mas Amiel palate 'gripping', but the pick says aging has softened its tannins so they won't fight the chocolate. It also calls the Knoll [1] a 'light' white, while its review stresses concentration and a richer, sweeter Auslese character."
+     ],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [4], [2], [3], [5], [6], [1]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "A Maury vin doux naturel is a rich, fortified sweet red, which suits the weight of a dense, buttery flourless chocolate torte."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "The reasoning is sound. A sweet fortified red at least as sweet as the dessert keeps the wine from tasting thin or sour, and the dry reds are correctly ruled out for a sweet chocolate dish."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The review's cherry, plum, black tea, licorice root and orange oil notes give plausible bridges to bittersweet chocolate and cocoa. Red fruit and orange with dark chocolate is a classic pairing."
+      },
+      "claims_supported": {
+       "pass": false,
+       "reason": "Two claims conflict with the review text. The review calls the Mas Amiel palate 'gripping', but the pick says aging has softened its tannins so they won't fight the chocolate. It also calls the Knoll [1] a 'light' white, while its review stresses concentration and a richer, sweeter Auslese character."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   },
+   {
+    "strategy": {
+     "target_style": "Sweet fortified red: Late Bottled Vintage or Reserve Ruby Port",
+     "search_query": "late bottled vintage port ruby port sweet fortified red blackberry plum dark chocolate mocha",
+     "rationale": "Chocolate this dense and bittersweet needs a wine at least as sweet and as full-bodied as the torte, and Port's dark-fruit sweetness and fortified weight can stand up to the cocoa without tasting thin or sour, so this search moves to a different style from the earlier Maury and Auslese picks."
+    },
+    "candidates": [
+     {
+      "title": "Ramos-Pinto 2009 RPLBV Late Bottled Vintage  (Port)",
+      "variety": "Port",
+      "price": 27.0,
+      "points": 91,
+      "country": "Portugal"
+     },
+     {
+      "title": "Taylor Fladgate 2007 Late Bottled Vintage  (Port)",
+      "variety": "Port",
+      "price": 18.0,
+      "points": 91,
+      "country": "Portugal"
+     },
+     {
+      "title": "Ferreira 2013 Late Bottled Vintage  (Port)",
+      "variety": "Port",
+      "price": 26.0,
+      "points": 91,
+      "country": "Portugal"
+     },
+     {
+      "title": "Ferreira 2012 Late Bottled Vintage  (Port)",
+      "variety": "Port",
+      "price": 26.0,
+      "points": 92,
+      "country": "Portugal"
+     },
+     {
+      "title": "Royal Oporto 2010 Late Bottled Vintage  (Port)",
+      "variety": "Port",
+      "price": 20.0,
+      "points": 91,
+      "country": "Portugal"
+     },
+     {
+      "title": "Taylor Fladgate NV 325 Anniversary  (Port)",
+      "variety": "Port",
+      "price": 40.0,
+      "points": 97,
+      "country": "Portugal"
+     }
+    ],
+    "candidates_text": "[1] (Ramos-Pinto 2009 RPLBV Late Bottled Vintage  (Port) · 91 pts · $27) Ramos-Pinto 2009 RPLBV Late Bottled Vintage  (Port) — Port from Port, Portugal.\nBeautifully perfumed, this has ripe blackberry flavors and a relatively dry character. The spirit is now well balanced, giving a backbone to the violet aromas and spicy character of this still-young LBV. It is good to drink now for its fruit, but it will improve and show more complex flavors after 2017–2018.\n[2] (Taylor Fladgate 2007 Late Bottled Vintage  (Port) · 91 pts · $18) Taylor Fladgate 2007 Late Bottled Vintage  (Port) — Port from Port, Portugal.\nBottled in January 2012, this classic LBV has great perfumed fruit, soft and elegant. A blackberry jam flavor dominates, laced with black cherries and soft tannins. Immediately appealing and drinkable now.\n[3] (Ferreira 2013 Late Bottled Vintage  (Port) · 91 pts · $26) Ferreira 2013 Late Bottled Vintage  (Port) — Port from Port, Portugal.\nWith fragrant violet and red-fruit aromas, this is an enticing wine. Its structure and its concentration bring out its richness and dense black fruits. The wine is elegant, on the dry side of Ports with some firm tannins as well as fine ripe fruits and acidity. Drink this now or (better yet) wait until 2020.\n[4] (Ferreira 2012 Late Bottled Vintage  (Port) · 92 pts · $26) Ferreira 2012 Late Bottled Vintage  (Port) — Port from Port, Portugal.\nThe wine is dry, concentrated, very much in the house style of this legendary brand. It has acidity as well as the rich dried fruits, with the tannins a force in the background. It is a style of LBV that could age well, with its structure and acidity. Drink now, certainly, but it will be an even better wine from 2020 or 2022.\n[5] (Royal Oporto 2010 Late Bottled Vintage  (Port) · 91 pts · $20) Royal Oporto 2010 Late Bottled Vintage  (Port) — Port from Port, Portugal.\nThe texture of this wine is dense and concentrated while keeping the fresh fruit and acidity well in balance. It has ripe blackberry flavors that offer great fruitiness. The firm background of tannin structure is balanced by a juicy, fruity aftertaste. Drink now.\n[6] (Taylor Fladgate NV 325 Anniversary  (Port) · 97 pts · $40) Taylor Fladgate NV 325 Anniversary  (Port) — Port from Port, Portugal.\nThis is a superb blend of aged tawny Ports, blended to celebrate the company's 325th anniversary. Filled with rich fruit, it has great depth and spicy richness although it is also impressively fresh. Dried fruits and red plums are lifted with a hint of smoky wood and good acidity. Like any tawny Port, it is ready to drink.",
+    "recommendation": "For this torte I'd pour the **Taylor Fladgate 2007 Late Bottled Vintage** (91 pts, $18) [2]. Its blackberry-jam and black-cherry fruit gives it enough sweetness to match the dessert, so the wine won't taste thin or sour next to it. The tannins are soft, which matters here: cocoa is already a little bitter, and firm tannins would make that worse. This LBV meets the chocolate's density with its own plush weight.\n\nMy second choice is the **Royal Oporto 2010 Late Bottled Vintage** (91 pts, $20) [5]. It's described as dense and concentrated, so it has the body for a flourless torte. The ripe blackberry fruit and juicy finish work against the bittersweet edge, and its acidity cuts the butter so each bite feels fresh again.\n\nI passed over the Ferreira LBVs [3][4] and the Ramos-Pinto [1] because their notes call them dry-leaning and firm. Next to sweet chocolate, a drier Port can come across as tart.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [2], [5], [3], [4], [1]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Both picks are LBV Ports: fortified, sweet and full in weight. That suits a rich, dense flourless chocolate torte, and [5] is explicitly described as dense and concentrated."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "The reasoning is sound. It matches the wine's sweetness to the dessert so the wine won't taste thin, and it picks soft tannins so they don't add to the cocoa's bitterness. One inconsistency: the backup [5] has a 'firm background of tannin structure', the same trait used to reject the Ferreiras. It is still a workable second choice."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "Blackberry-jam and black-cherry fruit against bittersweet chocolate is a classic, plausible bridge between dark fruit and cocoa."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "The core claims match the reviews: [2] has blackberry jam, black cherry and soft tannins; [5] is dense and concentrated, with acidity and a juicy finish; [3] and [4] are dry-leaning with firm tannins. Two small stretches: 'plush weight' goes beyond [2]'s 'soft and elegant', and [1] is called relatively dry but never firm. Neither is serious enough to fail."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 2,
+  "passed": true,
+  "passed_round": 2,
+  "agent_pick": {
+   "title": "Taylor Fladgate 2007 Late Bottled Vintage  (Port)",
+   "variety": "Port",
+   "price": 18.0,
+   "points": 91,
+   "country": "Portugal"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 7,
+  "wall_s": 66.35,
+  "cost_usd": 0.88492,
+  "error": null
+ },
+ {
+  "id": "pizza",
+  "meal": "pepperoni pizza",
+  "budget": 20,
+  "dish": {
+   "main": "pepperoni",
+   "body": "medium",
+   "sauce": "tomato sauce",
+   "cuisine": "Italian-American",
+   "key_flavors": [
+    "acidic tomato",
+    "spicy cured pork",
+    "salty",
+    "fatty mozzarella",
+    "oregano",
+    "charred crust"
+   ],
+   "cooking_method": "baked"
+  },
+  "rounds": [
+   {
+    "strategy": {
+     "target_style": "Medium-bodied, high-acid Italian red with soft tannins and bright red fruit, such as Chianti, Sangiovese or Barbera",
+     "search_query": "Barbera or Chianti Sangiovese, bright acidity, tart cherry, red fruit, herbal, soft tannins, medium-bodied, juicy, savory",
+     "rationale": "A high-acid Italian red matches the acidity of the tomato sauce and cuts through the fatty mozzarella and pepperoni, and its soft tannins won't make the spicy pork taste hotter; Chianti and Barbera are easy to find for about $20."
+    },
+    "candidates": [
+     {
+      "title": "Quinta da Rede 2010 Rede Reserva Red (Douro)",
+      "variety": "Portuguese Red",
+      "price": 14.0,
+      "points": 91,
+      "country": "Portugal"
+     },
+     {
+      "title": "François Lurton 2013 Hacienda Araucano Clos de Lolol Red (Lolol Valley)",
+      "variety": "Red Blend",
+      "price": 20.0,
+      "points": 91,
+      "country": "Chile"
+     },
+     {
+      "title": "Selvapiana 2013  Chianti Rufina",
+      "variety": "Red Blend",
+      "price": 18.0,
+      "points": 93,
+      "country": "Italy"
+     },
+     {
+      "title": "Recanati 2014 Shiraz (Galilee)",
+      "variety": "Shiraz",
+      "price": 17.0,
+      "points": 93,
+      "country": "Israel"
+     },
+     {
+      "title": "Charles B. Mitchell 2012 Syrah (El Dorado)",
+      "variety": "Syrah",
+      "price": 18.0,
+      "points": 92,
+      "country": "US"
+     },
+     {
+      "title": "Quinta do Sobral 2014 Santar Reserva Red (Dão)",
+      "variety": "Portuguese Red",
+      "price": 13.0,
+      "points": 91,
+      "country": "Portugal"
+     }
+    ],
+    "candidates_text": "[1] (Quinta da Rede 2010 Rede Reserva Red (Douro) · 91 pts · $14) Quinta da Rede 2010 Rede Reserva Red (Douro) — Portuguese Red from Douro, Portugal.\nThis has great fruits and plenty of structure to go with it. Juicy plum flavors complement the dense tannins, mineral structure and concentrated texture. It's a stylish wine that will develop some more. Drink from 2016.\n[2] (François Lurton 2013 Hacienda Araucano Clos de Lolol Red (Lolol Valley) · 91 pts · $20) François Lurton 2013 Hacienda Araucano Clos de Lolol Red (Lolol Valley) — Red Blend from Lolol Valley, Chile.\nWoodsy, spicy aromas of herbal plum and berry come with a light coating of chocolate. A round, rubbery palate is tight in the long run. Saturated plum and blackberry flavors are oaky in front of an extracted finish that runs long and doesn't hold back. Drink through 2022.\n[3] (Selvapiana 2013  Chianti Rufina · 93 pts · $18) Selvapiana 2013  Chianti Rufina — Red Blend from Chianti Rufina, Tuscany, Italy.\nElegant and fragrant, this opens with aromas of pressed rose, crushed violet, wild berry and a whiff of baking spice. The vibrant, focused palate delivers juicy red cherry, raspberry, white pepper, cinnamon and dried herb. It's well balanced, with supple tannins and bright acidity. Drink through 2018.\n[4] (Recanati 2014 Shiraz (Galilee) · 93 pts · $17) Recanati 2014 Shiraz (Galilee) — Shiraz from Galilee, Israel.\nDeep red violet in color, this wine has a bouquet of blueberries and mountainside herbs. It is fresh on the palate, with soft tannins dominated by flavors of black cherry, strawberry, cranberry, thyme and orange zest. There is a nice play of berries and roasting herbs lingering on the soft finish.\n[5] (Charles B. Mitchell 2012 Syrah (El Dorado) · 92 pts · $18) Charles B. Mitchell 2012 Syrah (El Dorado) — Syrah from El Dorado, California, US.\nThis wine brings out the variety's richness and depth of fruit flavors, while keeping the texture smooth and pleasing. It's very firm with tannins and acidity, yet not overly full-bodied. The ripe blackberry and cassis flavors have the intensity to match the structure and make for great balance overall.\n[6] (Quinta do Sobral 2014 Santar Reserva Red (Dão) · 91 pts · $13) Quinta do Sobral 2014 Santar Reserva Red (Dão) — Portuguese Red from Dão, Portugal.\nThis rich, spicy blend of Alfrocheiro, Touriga Nacional, Tinta Roriz and Jaen from winemaker Carlos Lucas offers rich black-plum fruits with layers of wood flavors. It is generous, juicy with some firm tannins and plenty of toasty wood flavors. Everything needs some time to soften, so wait to drink until 2019.",
+    "recommendation": "**Selvapiana 2013 Chianti Rufina** (93 pts, $18) [3] is the closest match to what you're after. It's Sangiovese-based with bright acidity, so the tomato sauce won't make it taste flat, and that acidity cuts through the mozzarella and pepperoni fat. The supple tannins won't make the spicy pork taste hotter. Its red cherry, white pepper and dried herb flavors sit well next to the oregano and the cured meat.\n\n**Recanati 2014 Shiraz (Galilee)** (93 pts, $17) [4] is a good second choice if you'd like something a little darker. It's fresh, with soft tannins and red fruit (strawberry, cranberry), so it stays lively against the tomato. The thyme and roasted herb notes go with the oregano and the charred crust.\n\nI'd skip the others for pizza. The two Portuguese reds and the Chilean blend have firm, oaky tannins that would clash with the spice and the salt.",
+    "critique": {
+     "ok": true,
+     "issues": [],
+     "criteria": {
+      "grounded": {
+       "pass": true,
+       "reason": "cites [3], [4]"
+      },
+      "within_budget": {
+       "pass": true,
+       "reason": "all cited wines within budget"
+      },
+      "enough_candidates": {
+       "pass": true,
+       "reason": "6 candidates retrieved"
+      },
+      "body_match": {
+       "pass": true,
+       "reason": "Pepperoni pizza is medium-bodied. The Chianti Rufina is described as elegant and focused, and the Galilee Shiraz as fresh with soft tannins, so both are medium in weight and neither is too light or too heavy for the dish."
+      },
+      "structure_logic": {
+       "pass": true,
+       "reason": "The reasoning holds up. Bright acidity in the Chianti matches the acidic tomato sauce and cuts the mozzarella and pork fat. Supple or soft tannins avoid clashing with the spice and salt in the cured meat. Turning down the firm, tannic, oaky reds for this dish is also sound."
+      },
+      "flavor_link": {
+       "pass": true,
+       "reason": "The bridges are plausible: the Chianti's dried herb and white pepper with the oregano and spicy pepperoni, its red cherry with the tomato, and the Shiraz's thyme and roasting herbs with the oregano and the charred crust."
+      },
+      "claims_supported": {
+       "pass": true,
+       "reason": "What is said about the two recommended wines matches their reviews: bright acidity, supple tannins, cherry, white pepper and dried herb for [3], and fresh, soft tannins, strawberry, cranberry and thyme for [4]. Sangiovese is a fair inference for Chianti Rufina. One minor overreach: the Rede review mentions dense tannins but no oak, so grouping it under 'oaky' is loose. It concerns a wine the pairing turned down, so it does not change the recommendation."
+      }
+     },
+     "schema_valid": true,
+     "repaired": false
+    }
+   }
+  ],
+  "critique_rounds": 1,
+  "passed": true,
+  "passed_round": 1,
+  "agent_pick": {
+   "title": "Selvapiana 2013  Chianti Rufina",
+   "variety": "Red Blend",
+   "price": 18.0,
+   "points": 93,
+   "country": "Italy"
+  },
+  "agent_match": true,
+  "all_picks_match": true,
+  "over_budget": [],
+  "llm_calls": 4,
+  "wall_s": 30.82,
+  "cost_usd": 0.48457,
+  "error": null
+ }
+]

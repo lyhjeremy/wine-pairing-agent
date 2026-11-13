@@ -1,0 +1,219 @@
+{
+ "dish": "salmon",
+ "meal": "pan-seared salmon with dill butter",
+ "budget": 30,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 30197,
+ "cost_usd": 0.48523,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 4820,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 4.82,
+     "duration_ms": 3463,
+     "cost_usd": 0.1146306,
+     "input_tokens": 2,
+     "output_tokens": 104,
+     "cache_read": 13393,
+     "cache_write": 13733
+    }
+   ],
+   "input": {
+    "meal": "pan-seared salmon with dill butter",
+    "budget": 30
+   },
+   "output": {
+    "main": "salmon",
+    "body": "medium",
+    "sauce": "dill butter",
+    "cuisine": "Scandinavian-influenced European",
+    "key_flavors": [
+     "rich oily fish",
+     "browned butter",
+     "fresh dill",
+     "herbal",
+     "savory crust"
+    ],
+    "cooking_method": "pan-seared"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 4820,
+   "ms": 6397,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 6.4,
+     "duration_ms": 5527,
+     "cost_usd": 0.1033144,
+     "input_tokens": 2,
+     "output_tokens": 201,
+     "cache_read": 13392,
+     "cache_write": 12076
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Medium-bodied, high-acid white with some texture, such as a lightly oaked or lees-aged Chardonnay (Chablis or Burgundy style) or a dry Riesling",
+    "search_query": "crisp mineral Chardonnay with lemon, green apple, light oak or lees texture and bright acidity",
+    "rationale": "Salmon is oily and the dill butter adds browned richness, so the wine needs enough acidity to cut the fat, enough body to stand up to a seared crust and butter sauce, and herbal or citrus notes for the dill, all within a $30 budget."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 11217,
+   "ms": 327,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "crisp mineral Chardonnay with lemon, green apple, light oak or lees texture and bright acidity",
+     "max_price": 30,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Calera 2011 Chardonnay (Mt. Harlan)",
+     "variety": "Chardonnay",
+     "price": 30.0,
+     "points": 92,
+     "country": "US",
+     "note": "Josh Jensen brings his restrained hand to this very fine Chardonnay. It's notable for the excellence of all its parts, and the balanced way they co-exist. You'll find tantalizingly rich tropical fruit and peach..."
+    },
+    {
+     "title": "Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey)",
+     "variety": "Chardonnay",
+     "price": 21.0,
+     "points": 92,
+     "country": "US",
+     "note": "A very rich Chardonnay that's creamy and smooth in the mouth. A touch of oak and lees gives weight and density to the lime and peach fruit, while brisk acidity contributes brightness. A great price for a wine of this..."
+    },
+    {
+     "title": "Roblar 2013 Chardonnay (Sta. Rita Hills)",
+     "variety": "Chardonnay",
+     "price": 25.0,
+     "points": 92,
+     "country": "US",
+     "note": "This is a great example of what most would consider a straight-ahead and delicious California Chardonnay. The nose offers aromas of seared pineapple cake, vanilla soda and Meyer lemon, and the palate blends all of..."
+    },
+    {
+     "title": "Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA))",
+     "variety": "Chardonnay",
+     "price": 25.0,
+     "points": 93,
+     "country": "US",
+     "note": "Sharp, dense, tight and oaky; this has a lot of plump pineapple, apple and sweet citrus fruit. There is a wonderful mix of spice, herb, fruit and acid. Deep and focused, this wine has serious guts and the flavors..."
+    },
+    {
+     "title": "Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (Santa Ynez Valley)",
+     "variety": "Chardonnay",
+     "price": 30.0,
+     "points": 93,
+     "country": "US",
+     "note": "Shows very bright acidity and a firm minerality, which gives it a tangy, mouthwatering vitality. Rich, too, in lemondrop candy, pineapple jam and spice flavors. The oak has been tastefully applied, with just- right..."
+    },
+    {
+     "title": "Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (Santa Maria Valley)",
+     "variety": "Chardonnay",
+     "price": 30.0,
+     "points": 92,
+     "country": "US",
+     "note": "It's hard to define minerality in a wine, but this Chardonnay has it. It tastes and feels like a lick of chalky stone. That's on top of and below the intricate pineapple, orange and Meyer lemon fruit that's so..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 11544,
+   "ms": 10289,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.29,
+     "duration_ms": 8510,
+     "cost_usd": 0.1375304,
+     "input_tokens": 2,
+     "output_tokens": 635,
+     "cache_read": 13392,
+     "cache_write": 15268
+    }
+   ],
+   "output": "For pan-seared salmon in dill butter, these two fit best:\n\n**Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (93 pts, $30) [5].** Its very bright acidity and firm minerality cut through the oily fish and butter. The light, well-judged oak gives buttered-toast notes that match the browned butter and the seared crust, and the lemon fruit freshens the dill.\n\n**Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (92 pts, $30) [6].** This is the closest to a Chablis style: chalky minerality, Meyer lemon and orange fruit, and a dry, spicy finish. It has enough body for the butter sauce and stays lean enough to bring out the dill and the herbal side of the dish.\n\nIf you'd rather spend less, the Kendall-Jackson Grand Reserve (92 pts, $21) [2] works too. Its brisk acidity and lime fruit, plus some weight from lees aging, suit the dish well for $9 less."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 21834,
+   "ms": 8363,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 8.36,
+     "duration_ms": 7596,
+     "cost_usd": 0.1297532,
+     "input_tokens": 2,
+     "output_tokens": 722,
+     "cache_read": 13406,
+     "cache_write": 14078
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [5], [6], [2]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Pan-seared salmon in dill butter is a medium-to-rich dish. The picks are medium-plus Chardonnays with some oak and lees weight, so the wine's weight matches the fish and butter without overpowering them."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "The reasoning relies on bright, brisk acidity to cut the oily fish and butter, and none of the whites has tannin to clash with the fish. That is sound for a fatty, savory, non-spicy dish."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "The buttered-toast oak notes in [5] bridge to the browned butter and seared crust. Lemon and Meyer lemon fruit in [5], [6] and [2] pick up the dill and the herbal side of the dish."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "The claims match the reviews: bright acidity, firm minerality and buttered toast for [5]; chalky minerality, Meyer lemon and orange with a dry, spicy finish for [6]; brisk acidity, lime and lees weight for [2]. The Chablis comparison is an interpretation of the chalky profile, not an invented fact, and the $9 price gap is correct."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "For pan-seared salmon in dill butter, these two fit best:\n\n**Au Bon Climat 2008 Sanford & Benedict Vineyard Chardonnay (93 pts, $30) [5].** Its very bright acidity and firm minerality cut through the oily fish and butter. The light, well-judged oak gives buttered-toast notes that match the browned butter and the seared crust, and the lemon fruit freshens the dill.\n\n**Stephen Ross 2011 Bien Nacido Vineyard Chardonnay (92 pts, $30) [6].** This is the closest to a Chablis style: chalky minerality, Meyer lemon and orange fruit, and a dry, spicy finish. It has enough body for the butter sauce and stays lean enough to bring out the dill and the herbal side of the dish.\n\nIf you'd rather spend less, the Kendall-Jackson Grand Reserve (92 pts, $21) [2] works too. Its brisk acidity and lime fruit, plus some weight from lees aging, suit the dish well for $9 less.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

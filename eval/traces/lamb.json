@@ -1,0 +1,219 @@
+{
+ "dish": "lamb",
+ "meal": "braised lamb shank with rosemary and garlic",
+ "budget": 40,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 35068,
+ "cost_usd": 0.52498,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 5813,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.81,
+     "duration_ms": 4209,
+     "cost_usd": 0.1148546,
+     "input_tokens": 2,
+     "output_tokens": 114,
+     "cache_read": 13393,
+     "cache_write": 13736
+    }
+   ],
+   "input": {
+    "meal": "braised lamb shank with rosemary and garlic",
+    "budget": 40
+   },
+   "output": {
+    "main": "lamb shank",
+    "body": "rich",
+    "sauce": "braising liquid reduced from wine and stock, with rosemary and garlic",
+    "cuisine": "Mediterranean",
+    "key_flavors": [
+     "gamey lamb",
+     "rosemary",
+     "garlic",
+     "savory",
+     "herbal"
+    ],
+    "cooking_method": "braised"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 5813,
+   "ms": 7689,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.68,
+     "duration_ms": 5964,
+     "cost_usd": 0.1217384,
+     "input_tokens": 2,
+     "output_tokens": 295,
+     "cache_read": 13392,
+     "cache_write": 14144
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Medium- to full-bodied Southern Rhône or Provençal red blend (Grenache-Syrah-Mourvèdre), savory and earthy with herbal garrigue notes, firm but ripe tannins and enough acidity to cut the braise",
+    "search_query": "Grenache Syrah Mourvèdre blend Rhône Châteauneuf-du-Pape Gigondas Bandol savory garrigue herbs dark fruit earthy leather pepper",
+    "rationale": "Lamb and the wild-herb character of Rhône and Provençal reds come from the same part of the Mediterranean, and these wines have the body and ripe tannin for a rich, gamey braise, plus garrigue notes that pick up the rosemary and garlic, and good bottles sell for around $40."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 13502,
+   "ms": 1444,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "Grenache Syrah Mourvèdre blend Rhône Châteauneuf-du-Pape Gigondas Bandol savory garrigue herbs dark fruit earthy leather pepper",
+     "max_price": 40,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Chateau Les Amoureuses 2012 Terres des Amoureuses Voluptueuse Red (Ardèche)",
+     "variety": "Rhône-style Red Blend",
+     "price": 40.0,
+     "points": 93,
+     "country": "France",
+     "note": "Mainly Grenache, this is a full, rich, velvety Rhône blend. Toasty oak, vanilla and baking spices dominate the youthful aromas, backed by black cherry fruit on the palate. It's warm and plush on the finish. Drink..."
+    },
+    {
+     "title": "Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes  (Gigondas)",
+     "variety": "Rhône-style Red Blend",
+     "price": 40.0,
+     "points": 92,
+     "country": "France",
+     "note": "This is a top-notch effort—a blend of 80% Grenache, 15% Syrah and 5% Mourvèdre. It starts off with intriguing floral and herbal notes, then delivers deep black-cherry flavors on the palate, tinged with savory nuances..."
+    },
+    {
+     "title": "Domaine de Fontavin 2012 Cuvée Empire Grenache-Syrah (Châteauneuf-du-Pape)",
+     "variety": "Grenache-Syrah",
+     "price": 33.0,
+     "points": 92,
+     "country": "France",
+     "note": "This domaine, which sprawls across several appellations, is now being farmed organically. More importantly, this wine is a terrific value. Thyme and bay leaf notes add vibrance to the ripe raspberry flavors in this..."
+    },
+    {
+     "title": "Mas de Libian 2012 Khayyâm Red (Côtes du Rhône)",
+     "variety": "Rhône-style Red Blend",
+     "price": 20.0,
+     "points": 92,
+     "country": "France",
+     "note": "This superripe blend of Grenache (70%), Syrah (15%) and Mourvèdre (15%) is full-bodied, with a rich, creamy texture and a long, velvety finish. Spice and herb notes accent dusty black cherries, and a hint of cocoa..."
+    },
+    {
+     "title": "Domaine du Pegau 2012 Château Pêgau  Cuvée Maclura Red (Côtes du Rhône)",
+     "variety": "Rhône-style Red Blend",
+     "price": 22.0,
+     "points": 91,
+     "country": "France",
+     "note": "The aromas of cracked peppercorns, iodine, blackberries, crushed stone, dried spices and black olives are practically intoxicating on their own. Then, on the palate, you can taste the intensity, with firm tannins..."
+    },
+    {
+     "title": "Domaine de Nalys 2014 White (Châteauneuf-du-Pape)",
+     "variety": "Rhône-style White Blend",
+     "price": 40.0,
+     "points": 92,
+     "country": "France",
+     "note": "This blend—mainly Grenche Blanc and Roussanne—is fairly neutral on the nose, but weighty and rich on the palate, where it delivers succulent notes of pineapple, perked by a sprinkling of white pepper. That peppery..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 14946,
+   "ms": 10922,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.91,
+     "duration_ms": 9447,
+     "cost_usd": 0.14057039999999998,
+     "input_tokens": 2,
+     "output_tokens": 679,
+     "cache_read": 13392,
+     "cache_write": 15538
+    }
+   ],
+   "output": "For a rosemary-and-garlic lamb shank, I'd choose these two:\n\n**Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes, Gigondas (92 pts, $40) [2].** This is the closest match to the dish. It's 80% Grenache with Syrah and Mourvèdre, and its herbal notes, roasted meat and black olive mirror the gamey lamb and rosemary. It's full-bodied and finely textured, so it can stand up to a reduced braise without overpowering it.\n\n**Domaine du Pegau 2012 Château Pêgau Cuvée Maclura, Côtes du Rhône (91 pts, $22) [5].** This is the value pick, and the one with more structure. Its firm tannins from 50-year-old vines bind with the lamb's protein and fat. The cracked pepper, black olive and dried spice suit the garlic and savory braising liquid. Its suggested drinking window ended in 2025, so pour it soon.\n\nBoth wines are a little past the windows the reviewers gave, so serve them slightly cool, around 60–62°F, to keep the fruit fresh against the richness of the braise."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 25867,
+   "ms": 9200,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 9.19,
+     "duration_ms": 8027,
+     "cost_usd": 0.14781319999999998,
+     "input_tokens": 2,
+     "output_tokens": 693,
+     "cache_read": 13406,
+     "cache_write": 16408
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [2], [5]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Both picks are full-bodied Rhône reds. The Gigondas is described as full bodied and round, and the Pegau as intense with firm tannins. Either has the weight for a rich braised lamb shank with a reduced wine sauce."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "Firm tannin against the protein and fat of braised lamb is standard, sound reasoning. The dish has no heat, sweetness or delicacy that would argue against a structured red."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "The bridges are plausible. Gigondas brings herbal, roasted meat and black olive notes that match the rosemary and savory lamb. Pegau brings cracked pepper, black olive and dried spice that match the garlic and savory braising liquid."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "Everything said about the wines appears in their reviews. Gigondas: 80% Grenache with Syrah and Mourvèdre, herbal, roasted meat, black olive, full bodied, finely textured. Pegau: firm tannins from 50-year-old vines, cracked peppercorns, black olive, dried spices, a 2017–2025 window. The comments on drinking windows and serving temperature are out of scope, so they don't count against it."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "For a rosemary-and-garlic lamb shank, I'd choose these two:\n\n**Domaine du Grand Montmirail 2009 Cuvée Vieilles Vignes, Gigondas (92 pts, $40) [2].** This is the closest match to the dish. It's 80% Grenache with Syrah and Mourvèdre, and its herbal notes, roasted meat and black olive mirror the gamey lamb and rosemary. It's full-bodied and finely textured, so it can stand up to a reduced braise without overpowering it.\n\n**Domaine du Pegau 2012 Château Pêgau Cuvée Maclura, Côtes du Rhône (91 pts, $22) [5].** This is the value pick, and the one with more structure. Its firm tannins from 50-year-old vines bind with the lamb's protein and fat. The cracked pepper, black olive and dried spice suit the garlic and savory braising liquid. Its suggested drinking window ended in 2025, so pour it soon.\n\nBoth wines are a little past the windows the reviewers gave, so serve them slightly cool, around 60–62°F, to keep the fruit fresh against the richness of the braise.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

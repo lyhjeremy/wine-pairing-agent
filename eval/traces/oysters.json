@@ -1,0 +1,220 @@
+{
+ "dish": "oysters",
+ "meal": "raw oysters on the half shell with mignonette",
+ "budget": 30,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 38958,
+ "cost_usd": 0.48867,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 3563,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 3.56,
+     "duration_ms": 2631,
+     "cost_usd": 0.0983026,
+     "input_tokens": 2,
+     "output_tokens": 110,
+     "cache_read": 13393,
+     "cache_write": 11677
+    }
+   ],
+   "input": {
+    "meal": "raw oysters on the half shell with mignonette",
+    "budget": 30
+   },
+   "output": {
+    "main": "raw oysters",
+    "body": "light",
+    "sauce": "mignonette (shallots, vinegar, cracked black pepper)",
+    "cuisine": "French",
+    "key_flavors": [
+     "briny",
+     "saline",
+     "mineral",
+     "acidic",
+     "sharp shallot",
+     "black pepper"
+    ],
+    "cooking_method": "raw"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 3563,
+   "ms": 5772,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.77,
+     "duration_ms": 5053,
+     "cost_usd": 0.1035904,
+     "input_tokens": 2,
+     "output_tokens": 212,
+     "cache_read": 13392,
+     "cache_write": 12083
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Bone-dry, high-acid, unoaked white with saline mineral character, ideally Muscadet Sèvre-et-Maine sur lie or Chablis",
+    "search_query": "Muscadet sur lie Melon de Bourgogne bone dry crisp high acidity saline mineral oyster shell citrus unoaked Chablis",
+    "rationale": "Muscadet and Chablis are lean, unoaked, high-acid French whites with a briny, chalky mineral edge that matches the oysters' salinity and stands up to the vinegar in the mignonette, and good bottles of either are easy to find for under $30."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 9335,
+   "ms": 8204,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "Muscadet sur lie Melon de Bourgogne bone dry crisp high acidity saline mineral oyster shell citrus unoaked Chablis",
+     "max_price": 30,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Jardin 2012 Barrel Fermented Chardonnay (Stellenbosch)",
+     "variety": "Chardonnay",
+     "price": 24.0,
+     "points": 92,
+     "country": "South Africa",
+     "note": "Despite being barrel fermented, this attractive white manages to maintain a vivid vibrancy and freshness, with notes of fresh red apple, firm peach, pineapple core, green mango and clementine that are all infused..."
+    },
+    {
+     "title": "Romain Bouchard 2013 Vau de Vey Premier Cru  (Chablis)",
+     "variety": "Chardonnay",
+     "price": 21.0,
+     "points": 93,
+     "country": "France",
+     "note": "Perfumed and fruity, this shows touches of wood aging, although these are really just hints that lift the fruit. Acidity and a crisp, tangy texture are more important to this wine that bursts with concentrated citrus..."
+    },
+    {
+     "title": "Domaines Vinet 2012 Clos de la Houssaie  (Muscadet Sèvre et Maine)",
+     "variety": "Melon",
+     "price": 19.0,
+     "points": 92,
+     "country": "France",
+     "note": "With the extra years of aging, this wine has smoothed itself out. It has lost that instant freshness of a young Muscadet and gained riper yellow and spice flavors that give it a full, rich character. There's just the..."
+    },
+    {
+     "title": "Château de la Ragotiere 2009 M des Frères Couillard Sur Lie  (Muscadet Sèvre et Maine)",
+     "variety": "Melon",
+     "price": 14.0,
+     "points": 91,
+     "country": "France",
+     "note": "Left for 30 months on its lees before bottling, this is serious Muscadet. It has weight and richness, round and smooth with a creamy texture brightened by flashes of citrus acidity. Impressively rich wine, now ready..."
+    },
+    {
+     "title": "Domaine du Haut Bourg 2006 Origine du Haut Bourg  (Muscadet Côtes de Grandlieu)",
+     "variety": "Melon",
+     "price": 20.0,
+     "points": 92,
+     "country": "France",
+     "note": "Aged for 10 years in underground tanks on its lees, this wine has just been bottled. That aging process has preserved the wine's freshness, keeping the crisp acidity in place. So while the wine is beautifully mature,..."
+    },
+    {
+     "title": "Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands)",
+     "variety": "Chardonnay",
+     "price": 24.0,
+     "points": 93,
+     "country": "US",
+     "note": "The nose on this well-priced appellation blend by Brian Loring has it all: golden honey, caramel apple, supple peach flesh, pressed white flowers, fresh yellow flowers and even quinine. The apple-flesh flavors show..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 17539,
+   "ms": 10314,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 10.31,
+     "duration_ms": 9005,
+     "cost_usd": 0.13751439999999998,
+     "input_tokens": 2,
+     "output_tokens": 611,
+     "cache_read": 13392,
+     "cache_write": 15326
+    }
+   ],
+   "output": "Two picks for oysters with mignonette:\n\n**Romain Bouchard 2013 Vau de Vey Premier Cru Chablis (93 pts, $21) [2]**\nThis is the closest match to the target style. The review says acidity and a \"crisp, tangy texture\" come first, with citrus and green-plum fruit. That acidity can handle the vinegar in the mignonette, and the lean Chablis frame suits the oysters' brininess. The wood is described as only a hint, so it won't fight the raw shellfish.\n\n**Domaine du Haut Bourg 2006 Origine du Haut Bourg, Muscadet Côtes de Grandlieu (92 pts, $20) [5]**\nMuscadet is the classic oyster wine, and this one spent 10 years on its lees in underground tanks. The review says the crisp acidity is still there and the wine is \"still so bright.\" The lees aging adds some texture against the oyster's soft flesh, and the light body won't swamp a light dish.\n\nI passed over the other two Muscadets because their reviews describe them as round and rich: [4] as \"creamy,\" [3] as having \"lost that instant freshness.\" The two Chardonnays, [1] and [6], are too oaky for raw oysters.\n\nThese vintages are old. Check that the bottle you can actually buy is still fresh, or get a younger one from the same producer."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 27852,
+   "ms": 11105,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 11.09,
+     "duration_ms": 9949,
+     "cost_usd": 0.14926520000000001,
+     "input_tokens": 2,
+     "output_tokens": 812,
+     "cache_read": 13406,
+     "cache_write": 16292
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [2], [5], [4], [3], [1], [6]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Both picks are crisp, acid-driven whites, and neither review describes a heavy wine, so they suit light raw oysters. The fuller, creamier Muscadets [3] and [4] and the oaked Chardonnays were correctly left out."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "Both wines have high acidity to match the vinegar in the mignonette and cut the brine. Neither has tannin or sweetness, and the Chablis has only light wood, which suits delicate raw shellfish."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "The Chablis's citrus and tangy acidity work like a squeeze of lemon on the oysters and echo the sharp mignonette. Lees-aged Muscadet with briny shellfish is a standard pairing."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "The quotes match the reviews: crisp, tangy texture, citrus and green plum, and hints of wood for [2]; 10 years on lees with crisp acidity, still bright for [5]; creamy [4]; lost freshness [3]. Oak in [1] and [6] is in their reviews. The 'light body' and 'texture' remarks on [5] are inferences, but they don't contradict the review."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "Two picks for oysters with mignonette:\n\n**Romain Bouchard 2013 Vau de Vey Premier Cru Chablis (93 pts, $21) [2]**\nThis is the closest match to the target style. The review says acidity and a \"crisp, tangy texture\" come first, with citrus and green-plum fruit. That acidity can handle the vinegar in the mignonette, and the lean Chablis frame suits the oysters' brininess. The wood is described as only a hint, so it won't fight the raw shellfish.\n\n**Domaine du Haut Bourg 2006 Origine du Haut Bourg, Muscadet Côtes de Grandlieu (92 pts, $20) [5]**\nMuscadet is the classic oyster wine, and this one spent 10 years on its lees in underground tanks. The review says the crisp acidity is still there and the wine is \"still so bright.\" The lees aging adds some texture against the oyster's soft flesh, and the light body won't swamp a light dish.\n\nI passed over the other two Muscadets because their reviews describe them as round and rich: [4] as \"creamy,\" [3] as having \"lost that instant freshness.\" The two Chardonnays, [1] and [6], are too oaky for raw oysters.\n\nThese vintages are old. Check that the bottle you can actually buy is still fresh, or get a younger one from the same producer.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

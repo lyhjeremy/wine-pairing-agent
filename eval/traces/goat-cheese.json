@@ -1,0 +1,219 @@
+{
+ "dish": "goat-cheese",
+ "meal": "goat cheese and roasted beet salad",
+ "budget": 20,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 25530,
+ "cost_usd": 0.47929,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 5245,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.24,
+     "duration_ms": 3991,
+     "cost_usd": 0.11443060000000001,
+     "input_tokens": 2,
+     "output_tokens": 94,
+     "cache_read": 13393,
+     "cache_write": 13733
+    }
+   ],
+   "input": {
+    "meal": "goat cheese and roasted beet salad",
+    "budget": 20
+   },
+   "output": {
+    "main": "goat cheese and roasted beets",
+    "body": "light",
+    "sauce": "vinaigrette",
+    "cuisine": "American",
+    "key_flavors": [
+     "tangy",
+     "earthy",
+     "sweet",
+     "creamy",
+     "acidic"
+    ],
+    "cooking_method": "roasted"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 5245,
+   "ms": 4736,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 4.73,
+     "duration_ms": 3859,
+     "cost_usd": 0.1035544,
+     "input_tokens": 2,
+     "output_tokens": 217,
+     "cache_read": 13392,
+     "cache_write": 12066
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Crisp, unoaked Sauvignon Blanc (Sancerre-style or a dry Loire white) with high acidity and herbal, citrus notes",
+    "search_query": "crisp unoaked Sauvignon Blanc high acidity citrus grapefruit grassy herbal mineral goat cheese",
+    "rationale": "Sauvignon Blanc's high acidity holds up to the vinaigrette and tangy goat cheese (the classic Loire pairing of Sancerre with chèvre), its light body suits the dish, and its herbal, mineral notes go well with the earthy sweetness of roasted beets at around $20."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 9980,
+   "ms": 50,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "crisp unoaked Sauvignon Blanc high acidity citrus grapefruit grassy herbal mineral goat cheese",
+     "max_price": 20,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard Loiregon Sauvignon Blanc (Rogue Valley)",
+     "variety": "Sauvignon Blanc",
+     "price": 20.0,
+     "points": 92,
+     "country": "US",
+     "note": "This delightful and refreshing wine is atypical in all the right ways. Intensely aromatic, it conveys a lush mix of honeysuckle, sweet hay, smoke, lime and honeydew melon. And that's before you take the first sip...."
+    },
+    {
+     "title": "Guardian 2012 Angel Sauvignon Blanc (Red Mountain)",
+     "variety": "Sauvignon Blanc",
+     "price": 20.0,
+     "points": 94,
+     "country": "US",
+     "note": "This is as good as Sauvignon Blanc gets in Washington—a dense, pungent, intensely aromatic and gloriously flavorful wine sourced entirely from the Klipsun Vineyard. Inaugural scents suggest wet hay, new-mown grass,..."
+    },
+    {
+     "title": "Easton 2010 Monarch Mine Vineyard Sauvignon Blanc (Sierra Foothills)",
+     "variety": "Sauvignon Blanc",
+     "price": 18.0,
+     "points": 92,
+     "country": "US",
+     "note": "This crisp white is inviting and dry, with aromas of citrus, fig and fennel. Reminiscent of a fine Sancerre, it's finely structured, steely and still lushly textured and full enough in the mouth to enjoy with..."
+    },
+    {
+     "title": "Ruby Hill Winery 2016 Reserve Collection Sauvignon Blanc (Livermore Valley)",
+     "variety": "Sauvignon Blanc",
+     "price": 19.0,
+     "points": 92,
+     "country": "US",
+     "note": "This big wine has everything required of the variety and more. It starts with vivid citrus, herb and melon aromas, then lays on ripe white peach, honeydew and mineral notes that fill out the palate and lend..."
+    },
+    {
+     "title": "Ledger David 2014 Sauvignon Blanc (Rogue Valley)",
+     "variety": "Sauvignon Blanc",
+     "price": 20.0,
+     "points": 92,
+     "country": "US",
+     "note": "Fermented in stainless steel and one neutral barrel, this aromatic and compelling wine is clean, fresh and full of delicious fruit. Meyer lemon, satsuma orange and fresh pineapple are in the mix, with supporting..."
+    },
+    {
+     "title": "San Pedro 2015 1865 Single Vineyard Sauvignon Blanc (Leyda Valley)",
+     "variety": "Sauvignon Blanc",
+     "price": 18.0,
+     "points": 91,
+     "country": "Chile",
+     "note": "Fresh, angular aromas of jalapeño, bell pepper, beach breeze and citrus fruits are elegant, chiseled and potent. This tingles with acidity and tastes minerally, with orange, tangerine and lime flavors. A stony,..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 10030,
+   "ms": 7480,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.48,
+     "duration_ms": 6118,
+     "cost_usd": 0.1335824,
+     "input_tokens": 2,
+     "output_tokens": 390,
+     "cache_read": 13392,
+     "cache_write": 15387
+    }
+   ],
+   "output": "My top pick is the **Easton 2010 Monarch Mine Vineyard Sauvignon Blanc, Sierra Foothills (92 pts, $18) [3]**. It's the closest to the Sancerre style you're after: crisp, dry and steely, with enough acidity to stand up to the vinaigrette and cut through the creamy goat cheese. Its fennel and citrus notes work well against the earthy sweetness of the beets, and the review itself names a creamy goat cheese salad as a match.\n\nFor a second bottle, try the **Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard \"Loiregon\" Sauvignon Blanc, Rogue Valley (92 pts, $20) [1]**. It's a Loire-inspired Oregon wine with bright acidity and low alcohol, so it stays light enough for the dish. The lime cuts the tang of the chèvre, and the honeydew and sweet hay notes go well with the roasted beets. The reviewer calls anything with goat cheese \"sure-fire.\""
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 17510,
+   "ms": 8020,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 8.02,
+     "duration_ms": 7201,
+     "cost_usd": 0.1277212,
+     "input_tokens": 2,
+     "output_tokens": 576,
+     "cache_read": 13406,
+     "cache_write": 14189
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [3], [1]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Both picks are crisp, dry Sauvignon Blancs. [1] is low in alcohol and [3] is steely, and both are light enough for a light roasted beet and goat cheese dish."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "High acidity can stand up to the vinaigrette and cut through the creamy chèvre. Neither wine has tannin to clash with the dish, and the reasoning about acid against fat and acid against acid is sound."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "Sauvignon Blanc with goat cheese is a classic bridge. The fennel and citrus in [3] and the honeydew and sweet hay in [1] work against the earthy sweetness of the beets."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "All tasting terms come from the reviews: crisp, dry, steely, fennel, citrus, Sancerre and goat cheese salad for [3]; bright acidity, low alcohol, lime, honeydew, sweet hay and 'sure-fire' with goat cheese for [1]. Calling [1] 'Loire-inspired' is a fair reading of the 'Loiregon' name."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "My top pick is the **Easton 2010 Monarch Mine Vineyard Sauvignon Blanc, Sierra Foothills (92 pts, $18) [3]**. It's the closest to the Sancerre style you're after: crisp, dry and steely, with enough acidity to stand up to the vinaigrette and cut through the creamy goat cheese. Its fennel and citrus notes work well against the earthy sweetness of the beets, and the review itself names a creamy goat cheese salad as a match.\n\nFor a second bottle, try the **Leah Jørgensen Cellars 2014 Panner-Hanson Vineyard \"Loiregon\" Sauvignon Blanc, Rogue Valley (92 pts, $20) [1]**. It's a Loire-inspired Oregon wine with bright acidity and low alcohol, so it stays light enough for the dish. The lime cuts the tang of the chèvre, and the honeydew and sweet hay notes go well with the roasted beets. The reviewer calls anything with goat cheese \"sure-fire.\"",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}

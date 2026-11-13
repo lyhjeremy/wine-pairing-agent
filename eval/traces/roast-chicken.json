@@ -1,0 +1,219 @@
+{
+ "dish": "roast-chicken",
+ "meal": "roast chicken with lemon and herbs",
+ "budget": 25,
+ "date": "2026-11-13",
+ "machine": "Apple M4",
+ "system_model": "opus",
+ "critic": "rubric",
+ "total_ms": 34523,
+ "cost_usd": 0.52042,
+ "llm_calls": 4,
+ "steps": [
+  {
+   "step": 1,
+   "node": "parse",
+   "t_start_ms": 0,
+   "ms": 5936,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 5.93,
+     "duration_ms": 4079,
+     "cost_usd": 0.1146906,
+     "input_tokens": 2,
+     "output_tokens": 107,
+     "cache_read": 13393,
+     "cache_write": 13733
+    }
+   ],
+   "input": {
+    "meal": "roast chicken with lemon and herbs",
+    "budget": 25
+   },
+   "output": {
+    "main": "roast chicken",
+    "body": "medium",
+    "sauce": "pan juices with lemon and herbs",
+    "cuisine": "French/Mediterranean",
+    "key_flavors": [
+     "lemon",
+     "thyme",
+     "rosemary",
+     "garlic",
+     "roasted savory skin"
+    ],
+    "cooking_method": "roasting"
+   }
+  },
+  {
+   "step": 2,
+   "node": "strategize",
+   "t_start_ms": 5936,
+   "ms": 7315,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 7.31,
+     "duration_ms": 5839,
+     "cost_usd": 0.1215624,
+     "input_tokens": 2,
+     "output_tokens": 289,
+     "cache_read": 13392,
+     "cache_write": 14137
+    }
+   ],
+   "input": {
+    "feedback": null
+   },
+   "output": {
+    "target_style": "Medium-bodied, unoaked or lightly oaked white with bright acidity and herbal notes, such as a white Burgundy (Mâcon-Villages Chardonnay), Côtes du Rhône Blanc, or Provençal Vermentino/Rolle; a light, low-tannin red like a Beaujolais cru would be the red alternative",
+    "search_query": "Mâcon-Villages Chardonnay or Rhône white blend, medium-bodied, crisp acidity, citrus, lemon, herbal, garrigue, subtle oak, French",
+    "rationale": "Roast chicken is medium weight, so a medium-bodied French white fits it, and the wine's acidity picks up the lemon in the pan juices while its herbal, stone-fruit flavors go with the thyme, rosemary and browned skin, with good examples available around $25."
+   }
+  },
+  {
+   "step": 3,
+   "node": "retrieve",
+   "t_start_ms": 13251,
+   "ms": 896,
+   "llm_calls": [],
+   "tool_call": {
+    "name": "search_wines",
+    "args": {
+     "query": "Mâcon-Villages Chardonnay or Rhône white blend, medium-bodied, crisp acidity, citrus, lemon, herbal, garrigue, subtle oak, French",
+     "max_price": 25,
+     "k": 6
+    }
+   },
+   "output": [
+    {
+     "title": "Loring Wine Company 2013 Chardonnay (Santa Lucia Highlands)",
+     "variety": "Chardonnay",
+     "price": 24.0,
+     "points": 93,
+     "country": "US",
+     "note": "The nose on this well-priced appellation blend by Brian Loring has it all: golden honey, caramel apple, supple peach flesh, pressed white flowers, fresh yellow flowers and even quinine. The apple-flesh flavors show..."
+    },
+    {
+     "title": "Kendall-Jackson 2010 Grand Reserve Chardonnay (Santa Barbara-Monterey)",
+     "variety": "Chardonnay",
+     "price": 21.0,
+     "points": 92,
+     "country": "US",
+     "note": "A very rich Chardonnay that's creamy and smooth in the mouth. A touch of oak and lees gives weight and density to the lime and peach fruit, while brisk acidity contributes brightness. A great price for a wine of this..."
+    },
+    {
+     "title": "Januik 2006 Elerding Vineyard Chardonnay (Columbia Valley (WA))",
+     "variety": "Chardonnay",
+     "price": 25.0,
+     "points": 93,
+     "country": "US",
+     "note": "Sharp, dense, tight and oaky; this has a lot of plump pineapple, apple and sweet citrus fruit. There is a wonderful mix of spice, herb, fruit and acid. Deep and focused, this wine has serious guts and the flavors..."
+    },
+    {
+     "title": "Roblar 2013 Chardonnay (Sta. Rita Hills)",
+     "variety": "Chardonnay",
+     "price": 25.0,
+     "points": 92,
+     "country": "US",
+     "note": "This is a great example of what most would consider a straight-ahead and delicious California Chardonnay. The nose offers aromas of seared pineapple cake, vanilla soda and Meyer lemon, and the palate blends all of..."
+    },
+    {
+     "title": "Chateau Burgozone 2012 Collection Chardonnay (Danube River Plains)",
+     "variety": "Chardonnay",
+     "price": 23.0,
+     "points": 91,
+     "country": "Bulgaria",
+     "note": "Pale straw in the glass, this wine has a nose of pineapple and lemon blossom with a strong dose of vanilla. It is round and full in the mouth, with rich flavors of green apple, guava and tropical fruits with a slight..."
+    },
+    {
+     "title": "Center of Effort 2014 Effort Chardonnay (Edna Valley)",
+     "variety": "Chardonnay",
+     "price": 24.0,
+     "points": 93,
+     "country": "US",
+     "note": "Aged in oak, acacia and concrete, this is a tremendous example of a racy style done well. Aromas of crushed chalk, lightly braised apricot and slivers of cashew are seamlessly woven together, leading into a sip that..."
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "node": "recommend",
+   "t_start_ms": 14147,
+   "ms": 8698,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 8.69,
+     "duration_ms": 7222,
+     "cost_usd": 0.13599840000000002,
+     "input_tokens": 2,
+     "output_tokens": 536,
+     "cache_read": 13392,
+     "cache_write": 15324
+    }
+   ],
+   "output": "None of these six is the unoaked French white the target style calls for. All are Chardonnays and all show some oak. These two come closest because they have the most acidity and the least oak character.\n\n**Center of Effort 2014 Effort Chardonnay, Edna Valley (93 pts, $24) [6]**\nThis is my first choice. It's aged partly in concrete and acacia, so it has less oak flavor than the others. The review calls it racy, and its acidity and lime notes will pick up the lemon in the pan juices. Its chalky texture and medium weight suit the chicken without overpowering the thyme and rosemary.\n\n**Roblar 2013 Chardonnay, Sta. Rita Hills (92 pts, $25) [4]**\nThe review describes \"lemon juice acidity down the middle\" with a slate-like minerality, which suits a lemony, herby sauce. Its touch of brown spice and vanilla will go with the browned, garlicky skin. It's a little fuller than [6], so it's the better pick if the pan juices are buttery.\n\nI'd skip [2] and [5] here. The reviews call both rich or creamy, with lees and vanilla weight, and that would flatten the lemon and herbs."
+  },
+  {
+   "step": 5,
+   "node": "critique",
+   "t_start_ms": 22845,
+   "ms": 11678,
+   "llm_calls": [
+    {
+     "models": "claude-opus-5-5",
+     "wall_s": 11.67,
+     "duration_ms": 10182,
+     "cost_usd": 0.1481732,
+     "input_tokens": 2,
+     "output_tokens": 805,
+     "cache_read": 13406,
+     "cache_write": 16173
+    }
+   ],
+   "output": {
+    "ok": true,
+    "criteria": {
+     "grounded": {
+      "pass": true,
+      "reason": "cites [6], [4], [2], [5]"
+     },
+     "within_budget": {
+      "pass": true,
+      "reason": "all cited wines within budget"
+     },
+     "enough_candidates": {
+      "pass": true,
+      "reason": "6 candidates retrieved"
+     },
+     "body_match": {
+      "pass": true,
+      "reason": "Roast chicken with pan juices is a medium-weight dish. Both picks are the leaner, higher-acid Chardonnays in the set, and the recommender deliberately avoids the rich, creamy [2] and [5]. The weight is about right."
+     },
+     "structure_logic": {
+      "pass": true,
+      "reason": "Bright acidity matched to a lemony, herby pan sauce and moderately fatty roasted skin is sound reasoning. With no tannin or sweetness issues in play, preferring the higher-acid, lower-oak bottles is the right call."
+     },
+     "flavor_link": {
+      "pass": true,
+      "reason": "It names plausible bridges: the lime and lemon-juice acidity echo the lemon in the sauce, and Roblar's brown spice and vanilla go with the browned, garlicky skin."
+     },
+     "claims_supported": {
+      "pass": true,
+      "reason": "Each claim matches its review: [6] is aged in oak, acacia and concrete, called racy, with lime and chalk; [4] has lemon juice acidity, slate minerality, brown spice and vanilla; [2] is creamy with lees and [5] is round with vanilla. 'Medium weight' and 'less oak' are fair inferences, not invented facts."
+     }
+    },
+    "schema_valid": true,
+    "repaired": false
+   }
+  }
+ ],
+ "final": {
+  "recommendation": "None of these six is the unoaked French white the target style calls for. All are Chardonnays and all show some oak. These two come closest because they have the most acidity and the least oak character.\n\n**Center of Effort 2014 Effort Chardonnay, Edna Valley (93 pts, $24) [6]**\nThis is my first choice. It's aged partly in concrete and acacia, so it has less oak flavor than the others. The review calls it racy, and its acidity and lime notes will pick up the lemon in the pan juices. Its chalky texture and medium weight suit the chicken without overpowering the thyme and rosemary.\n\n**Roblar 2013 Chardonnay, Sta. Rita Hills (92 pts, $25) [4]**\nThe review describes \"lemon juice acidity down the middle\" with a slate-like minerality, which suits a lemony, herby sauce. Its touch of brown spice and vanilla will go with the browned, garlicky skin. It's a little fuller than [6], so it's the better pick if the pan juices are buttery.\n\nI'd skip [2] and [5] here. The reviews call both rich or creamy, with lees and vanilla weight, and that would flatten the lemon and herbs.",
+  "critique_ok": true,
+  "attempts": 0
+ },
+ "error": null
+}
