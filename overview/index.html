@@ -304,6 +304,42 @@
   .nav button:hover { background: var(--ink); color: var(--paper); }
   .nav button[disabled] { color: var(--muted); cursor: default; background: var(--paper); }
   .strip .nm { font-style: normal; }
+  /* Trace replay */
+  .tv-dishes { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 10px; }
+  .tv-dishes button { font: 600 13px/1 var(--sans); padding: 8px 10px; border: 1px solid var(--edge); background: var(--paper); color: var(--ink); cursor: pointer; }
+  .tv-dishes button:hover { background: color-mix(in srgb, var(--accent) 12%, var(--paper)); }
+  .tv-dishes button[aria-pressed="true"] { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+  .tv-head { font-family: var(--sans); font-size: 15px; color: var(--ink2); margin: 6px 0 0; max-width: none; }
+  .tv-head b { color: var(--ink); }
+  .panel .calls { font: 400 13px/1.5 var(--mono); color: var(--ink2); margin: 0 0 12px; }
+  .panel pre { font: 400 12.5px/1.5 var(--mono); background: var(--paper); border: 1px solid var(--rule); padding: 10px 12px; margin: 6px 0 10px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+  .panel .rec p { font-family: var(--serif); font-size: 15.5px; color: var(--ink); margin: 0 0 8px; }
+  .panel .crit { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-family: var(--sans); font-size: 14.5px; }
+  .panel .crit th, .panel .crit td { text-align: left; vertical-align: top; padding: 7px 8px 7px 0; border-bottom: 1px dotted var(--edge); }
+  .panel .crit th { font: 600 11.5px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--ink); }
+  .panel .crit td:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink); white-space: nowrap; }
+  .panel .crit .p { color: var(--accent2); font-weight: 600; } .panel .crit .f { color: var(--accent); font-weight: 600; }
+  .panel details summary { cursor: pointer; font: 600 13px/1.4 var(--sans); color: var(--accent); }
+  .panel dl.kv { margin: 0; display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 4px 14px; font-family: var(--sans); font-size: 15px; }
+  .panel dl.kv dt { color: var(--muted); font: 600 12px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+  .panel dl.kv dd { margin: 0; color: var(--ink); }
+  .skeleton { background: var(--rule); border-radius: 0; }
+  .sk-line { height: 14px; margin: 0 0 10px; } .sk-block { height: 120px; }
+  @media (prefers-reduced-motion: no-preference) { .skeleton { animation: sk 1.6s ease-in-out infinite; } @keyframes sk { 0%,100% { opacity: 1 } 50% { opacity: .55 } } }
+  @media (prefers-reduced-motion: reduce) { .tv-play { display: none; } }
+  /* comparison tables */
+  .cmp-wrap { margin: 24px 0 0; overflow-x: auto; border-top: 1px solid var(--edge); }
+  .cmp { width: 100%; min-width: 34rem; border-collapse: collapse; font-family: var(--sans); font-size: 15px; color: var(--ink2); }
+  .cmp th, .cmp td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px dotted var(--edge); }
+  .cmp thead th { font: 600 11.5px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--ink); }
+  .cmp tbody th { color: var(--ink); font-weight: 600; }
+  .cmp b { color: var(--accent); }
+  .cmp--num { min-width: 26rem; } .cmp--num td { font-family: var(--mono); font-size: 14px; }
+  .cap { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  h3.sub { font-family: var(--display); font-size: 26px; font-weight: 600; margin: 30px 0 8px; }
+  #next ul { padding-left: 1.2rem; } #next li { margin: 0 0 8px; font-family: var(--serif); font-size: 16.5px; color: var(--ink2); }
+  @media (max-width: 560px) { .panel dl.kv { grid-template-columns: 1fr; } .panel .crit td:first-child { white-space: normal; } }
+
   /* At a glance, set like a tasting card (same card as Cellar Scanner) */
   .glance { margin: 34px auto 0; max-width: 46rem; text-align: left; border: 1px solid var(--edge); background: var(--card); padding: 18px 24px 8px; }
   .glance h2 { padding: 0; text-align: left; max-width: none; font-family: var(--display); font-style: italic; font-weight: 500; font-size: 22px; margin: 0 0 6px; color: var(--ink2); }
@@ -342,10 +378,11 @@
     <h1>Name a dish. It works out the wine style, then finds bottles that fit it.</h1>
 
     <p class="hero-sub">
-      On a frozen set of dishes, the agent's first pick was a grape the dish calls for in
-      all 4 dishes it ran; searching the reviews with the dish text alone managed 3 of those
-      4, and 3 of all 10. Each pairing cost $1.25 at API prices and took 78 seconds, because
-      the critique node rejected all 12 drafts it saw and used up both retries every time.
+      With its critique rewritten as a seven-point rubric, the agent passed its own review on
+      all 10 frozen dishes (9 on the first draft) and its first pick was an accepted grape on
+      10 of 10. Searching the reviews with the dish text alone managed 3 of 10. A pairing now
+      costs $0.49 at API prices and takes 34 seconds, down from $1.25 and 78 seconds when the
+      old critique rejected every draft it saw.
     </p>
     <p class="hero-sub">
       The agent reasons from the dish to a wine style, searches the Wine Enthusiast review
@@ -360,20 +397,20 @@
 
     <div class="claims">
       <div class="claim">
-        <div class="n">5 nodes</div>
-        <p>Parse, strategize, retrieve, recommend, critique, with a conditional edge from critique back to strategize.</p>
+        <div class="n">10 of 10</div>
+        <p>Dishes whose pairing passed the rubric critique, 9 on the first draft. The old critique passed 0 of the same 10 first drafts.</p>
       </div>
       <div class="claim">
         <div class="n">6 of 6</div>
-        <p>Candidates inside the $45 budget in the recorded run, because the budget is a filter on retrieval.</p>
+        <p>Deliberately mismatched drafts (a Cabernet note handed to the oysters) that the rubric rejected, so it does not pass everything.</p>
       </div>
       <div class="claim">
-        <div class="n">0.3 s</div>
-        <p>For the local retrieval step in a traced run, against 1.2 to 3.0 seconds for each LLM node.</p>
+        <div class="n">6 of 10</div>
+        <p>Verdicts where a Sonnet judge agreed with the Opus critic (kappa 0.20). They split on whether claims match the review text.</p>
       </div>
       <div class="claim">
-        <div class="n">[n]</div>
-        <p>On every recommended bottle, pointing at a retrieved review. The full candidate list prints with the answer.</p>
+        <div class="n">4 calls</div>
+        <p>Per pairing when the first draft passes, against 10 before. Every run is saved as a trace and replays below.</p>
       </div>
     </div>
 
@@ -381,12 +418,13 @@
       <h2 id="glance-h">At a glance</h2>
       <dl>
         <div><dt>Task</dt><dd>Recommend a bottle from 30,000 Wine Enthusiast reviews for a dish and a budget</dd></div>
-        <div><dt>Eval set</dt><dd>10 dishes with budgets and the grapes each accepts, written from standard pairing rules and committed before the first run (<code>eval/dishes.json</code>). The agent ran on the first 4</dd></div>
-        <div><dt>Baseline</dt><dd>The same search tool on the raw dish text, top hit: <b>3 of 10</b> accepted, 3 of the 4 the agent ran</dd></div>
-        <div><dt>Result</dt><dd>Agent's first pick accepted on <b>4 of 4</b>; every cited bottle was a retrieved one and inside the budget</dd></div>
-        <div><dt>Cost per pairing</dt><dd><b>$1.25</b> median API-equivalent (n = 4, $1.23 to $1.31): 10 Claude CLI calls on Opus 5.5, about $0.11 to $0.14 each</dd></div>
-        <div><dt>Latency</dt><dd><b>77.9 s</b> median, 79.7 s p95 (n = 4, Apple M4, 2026-11-05)</dd></div>
-        <div><dt>Main failure</dt><dd>The critique never passes: 0 of 12 rounds. 7 rounds opened by calling the wine too old; the reviews predate 2018 and the critique judges them as of 2026</dd></div>
+        <div><dt>Eval set</dt><dd>10 dishes with budgets and the grapes each accepts, written from standard pairing rules and committed before the first run (<code>eval/dishes.json</code>, commit 6849b5c). The rubric and the run protocol were committed (69210a4) before the 2026-11-13 run</dd></div>
+        <div><dt>Baseline</dt><dd>Search tool on the raw dish text, top hit: <b>3 of 10</b> accepted. Old critique on the same 10 first drafts: <b>0 of 10</b> passed, 9 of them faulted for the wine's age</dd></div>
+        <div><dt>Result</dt><dd>Rubric critique passed <b>10 of 10</b> (9 first draft, 1.1 rounds on average); first pick accepted on <b>10 of 10</b>; no pick over budget, every citation a retrieved bottle</dd></div>
+        <div><dt>Judge check</dt><dd>Sonnet as a second judge agreed on 6 of 10 verdicts (kappa 0.20) and 33 of 36 criterion calls. Opus rerun on the same drafts: 10 of 10. Mismatched drafts rejected: 6 of 6</dd></div>
+        <div><dt>Cost per pairing</dt><dd><b>$0.49</b> median, $0.75 p95, API-equivalent cost reported by the Claude CLI (n = 10): 4 calls on Opus 5.5, 7 for the one retry</dd></div>
+        <div><dt>Latency</dt><dd><b>33.7 s</b> median, 54.9 s p95 (n = 10, Apple M4, 2026-11-13)</dd></div>
+        <div><dt>Main failure</dt><dd>The critic and the second judge disagree on whether a recommendation's claims match the review text; Sonnet failed 4 drafts on that which Opus passed. No person has checked either</dd></div>
       </dl>
     </section>
   </section>
@@ -394,6 +432,137 @@
 
 <div class="wrap">
 <div class="route">
+
+  <section class="stop stop--key" id="upgrade">
+    <p class="eyebrow">The upgrade, 2026-11-13</p>
+    <h2>A critic with a rubric, and a pass decided in code</h2>
+    <p>
+      On the same 10 first drafts, the old free-form critique passed none and the rubric passed 9.
+      The old prompt asked "is this a genuinely good pairing?" and passed a draft only if the
+      reply listed no issues. It judged 2017-era reviews as of 2026 and found every wine too old,
+      which no retry can fix. The rubric splits the judgment into seven named criteria:
+    </p>
+    <dl class="specs">
+      <div class="spec"><dt>Checked in code</dt><dd><code>grounded</code> (every [n] points at a retrieved bottle), <code>within_budget</code>, <code>enough_candidates</code></dd></div>
+      <div class="spec"><dt>Graded by the LLM</dt><dd><code>body_match</code>, <code>structure_logic</code> (acid, tannin and sweetness against fat, spice and salt), <code>flavor_link</code>, <code>claims_supported</code> (what the note says about a wine is in its review)</dd></div>
+      <div class="spec"><dt>Out of scope</dt><dd>Vintage age, drinking windows, current prices and availability (the index is a fixed snapshot), and preferring another grape when the chosen one already fits</dd></div>
+      <div class="spec"><dt>Validation</dt><dd>The reply must match a pydantic schema: one <code>{"pass", "reason"}</code> object per criterion, no extra keys. An invalid reply gets one repair attempt with the error attached; a second failure fails the critique. The overall pass is computed in <code>src/rubric.py</code>, never taken from the model</dd></div>
+    </dl>
+
+    <div class="cmp-wrap" role="region" aria-label="Old and new critique compared" tabindex="0">
+      <table class="cmp">
+        <thead><tr><th scope="col">Measure</th><th scope="col">Rubric critique</th><th scope="col">Old critique, 2026-11-05</th><th scope="col">Old prompt, same first drafts</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Drafts passed</th><td><b>9 of 10</b> first drafts, 10 of 10 after one retry</td><td>0 of 12 rounds</td><td>0 of 10</td></tr>
+          <tr><th scope="row">Faulted the wine's age</th><td>0 (no failed criterion names age)</td><td>7 of 12 first issues</td><td>9 of 10</td></tr>
+          <tr><th scope="row">Dishes run</th><td>10</td><td>4</td><td>10</td></tr>
+          <tr><th scope="row">LLM calls a pairing</th><td>4 (7 with the retry)</td><td>10</td><td></td></tr>
+          <tr><th scope="row">Cost, median</th><td><b>$0.49</b> ($0.75 p95)</td><td>$1.25</td><td>$0.11 a verdict</td></tr>
+          <tr><th scope="row">Latency, median</th><td><b>33.7 s</b> (54.9 s p95)</td><td>77.9 s</td><td></td></tr>
+          <tr><th scope="row">First pick accepted</th><td><b>10 of 10</b></td><td>4 of 4</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">
+      Opus 5.5 through the Claude CLI for every system call. "Old prompt, same first drafts"
+      reran the original critique prompt on each dish's round-one draft from the rubric run
+      (<code>eval/critic/judges.json</code>). Numbers from <code>eval/critic/summary.json</code>
+      and <code>eval/summary.json</code>.
+    </p>
+
+    <h3 class="sub">Does it pass everything now?</h3>
+    <p>
+      A critic that never fails is as useless as one that never passes, so I checked it three
+      ways. Six mismatched drafts, each one dish's recommendation handed in as the pairing for
+      a dish it clearly does not suit (the ribeye's Cabernets for the oysters, the chocolate's
+      fortified Maury for the green curry), were all rejected: <code>body_match</code>,
+      <code>structure_logic</code> and <code>flavor_link</code> failed in all 6. Rerunning the
+      Opus critic on the 10 first drafts gave the same verdict 10 of 10 times and the same call
+      on 40 of 40 criteria. Sonnet 5.5, a different model tier, graded the same 10 drafts with the
+      same rubric:
+    </p>
+    <div class="cmp-wrap" role="region" aria-label="Agreement between the Opus critic and a Sonnet judge" tabindex="0">
+      <table class="cmp cmp--num">
+        <thead><tr><th scope="col">Criterion</th><th scope="col">Agree</th><th scope="col">Percent</th><th scope="col">Cohen's kappa</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">body_match</th><td>9 of 9</td><td>100</td><td>n/a, all pass</td></tr>
+          <tr><th scope="row">structure_logic</th><td>9 of 9</td><td>100</td><td>n/a, all pass</td></tr>
+          <tr><th scope="row">flavor_link</th><td>9 of 9</td><td>100</td><td>n/a, all pass</td></tr>
+          <tr><th scope="row">claims_supported</th><td>6 of 9</td><td>66.7</td><td>0.27</td></tr>
+          <tr><th scope="row">Overall verdict</th><td>6 of 10</td><td>60.0</td><td>0.20</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">
+      n is 9 for the criteria because one Sonnet reply (lamb) still failed the schema after its
+      repair. Kappa is undefined when both judges pass every draft. From
+      <code>eval/critic/summary.json</code>, <code>agreement_second</code>.
+    </p>
+  </section>
+
+  <section class="stop stop--key" id="replay">
+    <p class="eyebrow">Trace replay</p>
+    <h2>One recorded run, node by node</h2>
+    <p>
+      Each scored run was saved as JSON in <code>eval/traces/</code>. Pick a dish and step
+      through what each node received and returned, the <code>search_wines</code> tool call
+      with its arguments and the six bottles it got back, the critique JSON, and what each LLM
+      call cost. Segment widths follow each step's wall time, with the shortest widened so they can be clicked. The chocolate torte
+      is the one run that retried.
+    </p>
+    <div class="tv" id="tv">
+      <div class="tv-dishes" role="group" aria-label="Choose a recorded run" id="tv-dishes"></div>
+      <p class="tv-head" id="tv-head" aria-live="polite"></p>
+      <div class="walk" role="group" aria-label="Recorded run, one node at a time">
+        <div class="strip" role="tablist" aria-label="Nodes in order, sized by time" id="tv-strip"></div>
+        <div class="scale" aria-hidden="true"><span>0 s</span><span id="tv-total"></span></div>
+        <div class="panel" role="tabpanel" id="tv-panel" aria-live="polite">
+          <div class="skeleton sk-line" style="width:40%"></div>
+          <div class="skeleton sk-line" style="width:70%"></div>
+          <div class="skeleton sk-block"></div>
+        </div>
+        <div class="nav">
+          <button type="button" id="tv-prev">Previous node</button>
+          <button type="button" id="tv-play" class="tv-play">Play</button>
+          <button type="button" id="tv-next">Next node</button>
+        </div>
+      </div>
+    </div>
+    <p class="cap">
+      Recorded 2026-11-13 on an Apple M4 by <code>python -m eval.run_critic_eval</code>, Opus 5.5
+      through the Claude CLI. Costs are API-equivalent as reported by the CLI. The first dish's
+      retrieve step includes loading the embedding model and Chroma.
+    </p>
+  </section>
+
+  <section class="stop" id="disagree">
+    <p class="eyebrow">Error analysis</p>
+    <h2>Where the critics disagree</h2>
+    <p>
+      All four disagreements with Sonnet are on one criterion, <code>claims_supported</code>, or
+      on the schema. Reading the drafts, Sonnet is right at least once that Opus missed:
+    </p>
+    <div class="issues" role="table" aria-label="Drafts the Sonnet judge failed and the Opus critic passed">
+      <div class="r h" role="row"><span role="columnheader">Draft and what Sonnet said</span><span role="columnheader">Opus</span><span role="columnheader">Sonnet</span></div>
+      <div class="r" role="row"><span class="g" role="cell">Goat cheese salad: an invented preference</span><span class="n" role="cell">pass</span><span class="n" role="cell">fail</span>
+        <span class="ex" role="cell">The draft says the Easton Sauvignon Blanc is "the closest to the Sancerre style you're after". Nobody asked for Sancerre: that was the agent's own target style from <code>strategize</code>, restated as the guest's wish. Sonnet: "the 'Sancerre style you're after' is an invented premise." The old prompt caught it too. This is a bug in the recommend prompt, which passes the target style without saying whose it is; the pizza draft does the same ("the closest match to what you're after").</span></div>
+      <div class="r" role="row"><span class="g" role="cell">Salmon: a style claim not in the review</span><span class="n" role="cell">pass</span><span class="n" role="cell">fail</span>
+        <span class="ex" role="cell">"The review for Stephen Ross never mentions Chablis, so calling it 'closest to a Chablis style' is invented."</span></div>
+      <div class="r" role="row"><span class="g" role="cell">Pizza: grape and tannin details</span><span class="n" role="cell">pass</span><span class="n" role="cell">fail</span>
+        <span class="ex" role="cell">"Sangiovese is not in the Chianti review, which says only Red Blend." True of the review, though Chianti Rufina is Sangiovese-based by law, so this one is a judgment call.</span></div>
+      <div class="r" role="row"><span class="g" role="cell">Lamb: no valid verdict</span><span class="n" role="cell">pass</span><span class="n" role="cell">invalid</span>
+        <span class="ex" role="cell">Sonnet's reply failed the schema twice, so the code counted the critique as failed. Sonnet needed the repair step on 6 of its 10 verdicts; Opus needed it on none of its 11.</span></div>
+    </div>
+    <p style="margin-top:18px">
+      The one draft the Opus critic itself failed shows the loop doing its job. For the
+      chocolate torte, round one recommended the Mas Amiel Maury and said ten years of aging
+      "has softened the tannins". The critic failed <code>claims_supported</code>: "The review
+      calls the Mas Amiel palate 'gripping', but the pick says aging has softened its tannins."
+      <code>strategize</code> took that as feedback, searched for Late Bottled Vintage Port, and
+      round two passed with the Taylor Fladgate 2007 LBV, $18. Opus on its rerun and Sonnet both
+      failed the same round-one draft.
+    </p>
+  </section>
 
   <section class="stop">
     <p class="eyebrow">The problem</p>
@@ -412,33 +581,8 @@
     </p>
   </section>
 
-  <section class="stop stop--key">
-    <p class="eyebrow">Course by course</p>
-    <h2>One run through the five nodes</h2>
-    <p>
-      Step through the recorded ribeye run from <code>examples/sample_run.md</code>. Each
-      node's width in the strip is its time in the traced ribeye run in the README (same
-      $45 budget, shorter wording of the dish): 9.0 seconds in all, of which the local search
-      took 0.3. The retrieve segment is drawn wider than its share so its label fits. On a phone the strip shows node numbers only.
-    </p>
-
-    <div class="walk" role="group" aria-label="Walkthrough of the recorded run, one node at a time">
-      <div class="strip" role="tablist" aria-label="Agent nodes, sized by time" id="pa-strip"></div>
-      <div class="scale" aria-hidden="true"><span>0 s</span><span>9.0 s</span></div>
-      <div class="panel" role="tabpanel" id="pa-panel" aria-live="polite"></div>
-      <div class="nav"><button type="button" id="pa-prev">Previous node</button><button type="button" id="pa-next">Next node</button></div>
-    </div>
-    <p style="margin-top:18px">
-      The retrieve step ranks 40 candidates by 0.8 &times; cosine similarity + 0.2 &times;
-      rating, with the rating scaled so 80 points is 0 and 100 is 1. On that blend a 95-point
-      wine beats a 92-point one only if its similarity is no more than
-      0.0375 lower, so the rating
-      breaks near-ties and does not override the match.
-    </p>
-  </section>
-
   <section class="stop">
-    <p class="eyebrow">The answer</p>
+    <p class="eyebrow">The answer, from the July run</p>
     <h2>Ribeye in, two Cabernets out</h2>
     <p>
       The agent printed the six candidates it chose from as well as its two picks, so the
@@ -476,30 +620,32 @@
       <code>python -m eval.run_eval</code> runs both.
     </p>
     <div class="score" role="table" aria-label="Baseline top hit and agent first pick for each dish">
-      <div class="r h" role="row"><span role="columnheader">Dish</span><span role="columnheader">Baseline top hit</span><span role="columnheader">Agent first pick</span></div>
-      <div class="r" role="row"><b role="cell">Ribeye, $45</b><span role="cell"><span class="ok">Cabernet Sauvignon</span>, Mattucci 2013</span><span role="cell"><span class="ok">Cabernet Sauvignon</span>, JD 2007</span></div>
-      <div class="r" role="row"><b role="cell">Oysters, $30</b><span role="cell"><span class="ok">Chardonnay</span>, Melville 2008</span><span role="cell"><span class="ok">Riesling</span>, Salomon-Undhof 2016</span></div>
+      <div class="r h" role="row"><span role="columnheader">Dish</span><span role="columnheader">Baseline top hit</span><span role="columnheader">Agent first pick, 2026-11-13</span></div>
+      <div class="r" role="row"><b role="cell">Ribeye, $45</b><span role="cell"><span class="ok">Cabernet Sauvignon</span>, Mattucci 2013</span><span role="cell"><span class="ok">Cabernet Sauvignon</span>, Vinifera 2006</span></div>
+      <div class="r" role="row"><b role="cell">Oysters, $30</b><span role="cell"><span class="ok">Chardonnay</span>, Melville 2008</span><span role="cell"><span class="ok">Chardonnay</span>, Romain Bouchard 2013 Chablis</span></div>
       <div class="r" role="row"><b role="cell">Green curry, $25</b><span role="cell"><span class="ok">Riesling</span>, Br&uuml;ndlmayer 2015</span><span role="cell"><span class="ok">Riesling</span>, Markus Molitor 2013 Kabinett</span></div>
-      <div class="r" role="row"><b role="cell">Mushroom risotto, $35</b><span role="cell"><span class="no">Riesling</span>, Matthias M&uuml;ller 2012</span><span role="cell"><span class="ok">Pinot Noir</span>, Weatherborne 2012</span></div>
-      <div class="r" role="row"><b role="cell">Roast chicken, $25</b><span role="cell"><span class="no">Riesling</span>, Eichinger 2014</span><span role="cell">not run</span></div>
-      <div class="r" role="row"><b role="cell">Lamb shank, $40</b><span role="cell"><span class="no">Lambrusco di Sorbara</span>, Paltrinieri 2016</span><span role="cell">not run</span></div>
-      <div class="r" role="row"><b role="cell">Salmon, $30</b><span role="cell"><span class="no">White Blend</span>, Waters 2015 Prelude</span><span role="cell">not run</span></div>
-      <div class="r" role="row"><b role="cell">Goat cheese salad, $20</b><span role="cell"><span class="no">Lambrusco di Sorbara</span>, Paltrinieri 2016</span><span role="cell">not run</span></div>
-      <div class="r" role="row"><b role="cell">Chocolate torte, $40</b><span role="cell"><span class="no">Vespaiolo</span>, Maculan 2008 Torcolato</span><span role="cell">not run</span></div>
-      <div class="r" role="row"><b role="cell">Pepperoni pizza, $20</b><span role="cell"><span class="no">Gr&uuml;ner Veltliner</span>, Jurtschitsch 2016</span><span role="cell">not run</span></div>
+      <div class="r" role="row"><b role="cell">Mushroom risotto, $35</b><span role="cell"><span class="no">Riesling</span>, Matthias M&uuml;ller 2012</span><span role="cell"><span class="ok">Nebbiolo</span>, Rizzi 2013 Langhe</span></div>
+      <div class="r" role="row"><b role="cell">Roast chicken, $25</b><span role="cell"><span class="no">Riesling</span>, Eichinger 2014</span><span role="cell"><span class="ok">Chardonnay</span>, Center of Effort 2014</span></div>
+      <div class="r" role="row"><b role="cell">Lamb shank, $40</b><span role="cell"><span class="no">Lambrusco di Sorbara</span>, Paltrinieri 2016</span><span role="cell"><span class="ok">Rh&ocirc;ne-style Red Blend</span>, Grand Montmirail 2009 Gigondas</span></div>
+      <div class="r" role="row"><b role="cell">Salmon, $30</b><span role="cell"><span class="no">White Blend</span>, Waters 2015 Prelude</span><span role="cell"><span class="ok">Chardonnay</span>, Au Bon Climat 2008</span></div>
+      <div class="r" role="row"><b role="cell">Goat cheese salad, $20</b><span role="cell"><span class="no">Lambrusco di Sorbara</span>, Paltrinieri 2016</span><span role="cell"><span class="ok">Sauvignon Blanc</span>, Easton 2010</span></div>
+      <div class="r" role="row"><b role="cell">Chocolate torte, $40</b><span role="cell"><span class="no">Vespaiolo</span>, Maculan 2008 Torcolato</span><span role="cell"><span class="ok">Port</span>, Taylor Fladgate 2007 LBV</span></div>
+      <div class="r" role="row"><b role="cell">Pepperoni pizza, $20</b><span role="cell"><span class="no">Gr&uuml;ner Veltliner</span>, Jurtschitsch 2016</span><span role="cell"><span class="ok">Red Blend</span>, Selvapiana 2013 Chianti Rufina</span></div>
     </div>
     <p style="margin-top:18px">
       Accepted grapes are in the accent color. The baseline goes wrong where the dish words
       sound like a wine: "lamb" pulls up Lambrusco, twice. The key is strict, and two of its
       misses are arguable: the Torcolato is a sweet wine, which suits chocolate, and Riesling
-      with roast chicken is a common choice. The agent ran on 4 dishes only, because each
-      pairing cost about $1.25 (below), so 4 of 4 against 3 of 4 is a small sample.
+      with roast chicken is a common choice. The 2026-11-05 run with the old critique covered
+      the first 4 dishes only (4 of 4 accepted) because each pairing cost about $1.25; the
+      rubric run covers all 10. A grape match is a floor: the answer key cannot tell a good
+      Chardonnay pick from a dull one.
     </p>
   </section>
 
   <section class="stop" id="errors">
-    <p class="eyebrow">Error analysis</p>
-    <h2>The critique rejected every draft, mostly for the wine's age</h2>
+    <p class="eyebrow">Diagnosis, 2026-11-05</p>
+    <h2>Why the old critique rejected every draft</h2>
     <p>
       The critique node passes a pairing only when its LLM review lists no issues. In the 4
       scored runs it listed issues in all 12 rounds, so every run went parse, then three rounds
@@ -524,74 +670,78 @@
       <code>strategize</code> starts asking for "a recent vintage", which sends the search after
       wines the index does not have. The critique prompt has no notion that the index is a
       snapshot, and no rule says which issues are worth a retry. The July recorded run above
-      passed on its first critique; on 2026-11-05 none did.
+      passed on its first critique; on 2026-11-05 none did. That finding is what the rubric above
+      was written to fix.
     </p>
   </section>
 
   <section class="stop" id="cost">
     <p class="eyebrow">Cost and latency</p>
-    <h2>$1.25 and 78 seconds a pairing, most of it CLI overhead</h2>
+    <h2>$0.49 and 34 seconds a pairing, from $1.25 and 78</h2>
     <p>
-      Measured on 2026-11-05 on an Apple M4 by running the agent through
-      <code>eval/run_eval.py</code>, which adds <code>--output-format json</code> to the
-      agent's own Claude CLI calls and keeps the reported cost and duration. The cost is the
-      API-equivalent figure the CLI reports; it runs on a Claude subscription, so nothing was
-      billed. The CLI's default model was Opus 5.5.
+      Measured on 2026-11-13 on an Apple M4 by <code>eval/run_critic_eval.py</code>, which adds
+      <code>--model opus --output-format json</code> to the agent's Claude CLI calls and keeps
+      the reported cost and duration (<code>eval/critic/calls.csv</code>). The cost is the
+      API-equivalent cost reported by the Claude CLI; it runs on a Claude subscription, so
+      nothing was billed.
     </p>
     <dl class="specs">
-      <div class="spec"><dt>Per pairing</dt><dd>$1.25 median, $1.23 to $1.31 (n = 4); 77.9 s median, 79.7 s p95; 10 LLM calls each</dd></div>
-      <div class="spec"><dt>Per call</dt><dd>$0.11 to $0.14 and 2.6 to 9.8 s (risotto run, <code>eval/calls.csv</code>). Each call read about 13,300 cached tokens and wrote 12,100 to 15,300 more: the CLI's own system prompt and context. The agent's prompt and the reply are a few hundred tokens</dd></div>
-      <div class="spec"><dt>Retrieval</dt><dd>The local search is not an LLM call; it took 0.3 s in the traced run</dd></div>
+      <div class="spec"><dt>Per pairing</dt><dd>$0.49 median, $0.75 p95 (n = 10); 33.7 s median, 54.9 s p95. 4 LLM calls for 9 dishes, 7 for the chocolate retry. Before: $1.25 and 77.9 s median, 10 calls every time (n = 4, 2026-11-05)</dd></div>
+      <div class="spec"><dt>Per call</dt><dd>$0.12 median and 7.6 s median wall time. Each call reads about 11,400 cached tokens and writes 15,000 to 18,000: the CLI's own system prompt and context. The agent's prompt and the reply are a few hundred tokens</dd></div>
+      <div class="spec"><dt>Second judge</dt><dd>Sonnet 5.5: $0.13 median and 9.7 s per verdict, including the repair calls it needed on 6 of 10 drafts</dd></div>
+      <div class="spec"><dt>Retrieval</dt><dd>Local, no LLM call: about 0.5 s warm, 7.9 s on the first dish while the embedding model and Chroma load</dd></div>
       <div class="spec"><dt>Not measured</dt><dd>The Anthropic API backend in <code>src/llm.py</code>, which sends only the agent's prompt; there is no API key here to measure it</dd></div>
     </dl>
     <p style="margin-top:18px">
-      Two things set the bill: the retry loop that never exits early (10 calls where 4 would
-      do), and the CLI's context on every call. A pairing that passed its first critique
-      would make 4 calls.
+      Most of the saving is the retry loop now exiting: 4 calls where 10 were made. The CLI's
+      context on every call is still most of each call's cost.
     </p>
   </section>
 
   <section class="stop">
     <p class="eyebrow">Observability</p>
-    <h2>Every run can be traced and timed</h2>
+    <h2>Every scored run is saved as a trace</h2>
     <p>
-      Because <code>retrieve</code> is a named LangChain tool, it shows up in a trace as a tool
-      call. <code>--trace</code> times each node, prints a trace tree, and saves the run as JSON
-      under <code>traces/</code>. The traced ribeye run behind the strip above, as recorded in
-      the README with its bullet glyphs dropped:
-    </p>
-    <div class="term">
-<pre>AGENT TRACE  (node · time · detail)
-  parse         1.2s   ribeye · rich body
-  strategize    2.3s   style → full-bodied tannic red
-  retrieve      0.3s   6 candidate wines (tool: search_wines)
-  recommend     3.0s   drafted pairing with citations
-  critique      2.2s   sound</pre>
-    </div>
-    <p style="margin-top:22px">
-      Nearly all the latency is the four LLM calls. When critique sends the agent back to
-      strategize, the second pass appears in the same trace.
+      <code>eval/run_critic_eval.py</code> streams the graph node by node and writes one JSON
+      file per dish to <code>eval/traces/</code>: each node's start and duration, every LLM
+      call's model, cost, duration and token counts, the <code>search_wines</code> tool call
+      with its arguments and the six bottles it returned, and the critique JSON. The replay
+      above reads those files directly. For ad hoc runs, <code>python -m src.cli "..." --trace</code>
+      still prints a timed tree and saves it under <code>traces/</code>.
     </p>
   </section>
 
   <section class="stop stop--warn">
     <p class="eyebrow">Limitations</p>
-    <h2>Scored on 4 dishes, with a key I wrote</h2>
+    <h2>Ten dishes, a key I wrote, and no human labels</h2>
     <p>
-      The scored run covers 4 dishes for the agent and 10 for the baseline, against an
-      answer key of accepted grapes that I wrote from standard pairing rules. Pairing has few
-      single right answers, so a grape match is a floor, not a judgment of the pairing; no
-      sommelier or blind tasting checked the picks. The walkthrough above is one recorded run
-      from July, and its timings come from a separate traced run of a similar ribeye request.
+      The set is 10 dishes, scored against an answer key of accepted grapes that I wrote from
+      standard pairing rules. Pairing has few single right answers, so a grape match is a floor;
+      no sommelier or blind tasting checked the picks. The critic is Opus grading Opus's own
+      drafts, which can favor its own reasoning, and the Sonnet judge that disagreed on 4 of 10
+      is itself only another model. No person has labeled any draft;
+      <code>eval/critic/labeling_sheet.csv</code> has the 40 criterion calls laid out for one.
     </p>
     <p>
-      <code>assets/make_trace_figure.py</code> can draw a saved trace as a timeline, but no
-      rendered timeline from a live run is in the repository. The pairing principles are a
-      short list, so fortified wines, very hot food and dessert courses get thinner treatment.
-      Retrieval filters on price only; a color preference reaches the agent through the query
-      and the critique, with no hard filter behind it. The index holds the 30,000
-      highest-scored reviews by default.
+      The six mismatched controls were added after the main run had passed 10 of 10, to test
+      whether the critic passes everything, so they were not part of the frozen protocol.
+      Sonnet's replies needed the repair step on 6 of 10 drafts and failed it once; the run did
+      not save those raw replies, so why they failed validation is not recorded (the script
+      saves them now). Retrieval filters on price only, and the index holds the 30,000
+      highest-scored reviews, all from 2017 or earlier.
     </p>
+  </section>
+
+  <section class="stop" id="next">
+    <p class="eyebrow">Next</p>
+    <h2>What I would do next</h2>
+    <ul>
+      <li>Have a person fill in <code>eval/critic/labeling_sheet.csv</code> and measure both judges against it, starting with <code>claims_supported</code>, the one criterion they split on.</li>
+      <li>Turn <code>claims_supported</code> into a code check where possible: match each quoted descriptor against the cited review text before asking a model.</li>
+      <li>Add a color and grape filter to the search tool, so a "red" target style cannot retrieve whites.</li>
+      <li>Grow the dish set past 10 with dishes the key handles badly (spicy and sweet, vegetarian, fortified wines), and freeze the controls as part of it.</li>
+      <li>Measure the API backend, which skips the CLI's context and should cut the $0.12 per call.</li>
+    </ul>
   </section>
 
   <section class="stop stop--end">
@@ -602,7 +752,8 @@
       <div class="spec"><dt>Tool</dt><dd><code>src/tools.py</code> wraps retrieval as a LangChain <code>StructuredTool</code> with a typed schema</dd></div>
       <div class="spec"><dt>Index</dt><dd>Wine Enthusiast reviews embedded with sentence-transformers and stored in Chroma; 30,000 by default, <code>--all</code> for the full 129,971</dd></div>
       <div class="spec"><dt>Generation</dt><dd>Claude through the Claude CLI by default; <code>ANTHROPIC_API_KEY</code> switches to the API</dd></div>
-      <div class="spec"><dt>Tracing</dt><dd><code>src/trace.py</code>: per-node timing, a tree view, JSON output</dd></div>
+      <div class="spec"><dt>Critique</dt><dd><code>src/rubric.py</code>: three code checks and four LLM criteria in a pydantic schema, one repair attempt, pass decided in code</dd></div>
+      <div class="spec"><dt>Tracing</dt><dd><code>src/trace.py</code> for the CLI; <code>eval/run_critic_eval.py</code> writes the replayable traces in <code>eval/traces/</code></dd></div>
       <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/wine-sommelier-rag/">Wine Sommelier RAG</a> supplies the retrieval; the <a href="https://lyhjeremy.github.io/marathon-training-agent/">Training Plan Agent</a> uses the same critique loop</dd></div>
     </dl>
   </section>
@@ -632,60 +783,145 @@
 
 <script>
 (function () {
-  // Node outputs from examples/sample_run.md; times from the traced run in README.md.
-  var N = [
-    { id: "parse", t: 1.2, llm: true,
-      does: "Turns the free-text meal into JSON features: main ingredient, body, sauce, cuisine, flavors, cooking method.",
-      got: "<span class=\"k\">Recorded output</span><p class=\"quote\">grilled ribeye steak (rich body)</p>" },
-    { id: "strategize", t: 2.3, llm: true,
-      does: "Reasons from the pairing principles to a target style and writes a search query for it.",
-      got: "<span class=\"k\">Target style</span><p class=\"quote\">full-bodied, tannic dry red, Cabernet Sauvignon or a Bordeaux-style blend</p>" +
-           "<span class=\"k\">Search query</span><p><code>full-bodied Cabernet Sauvignon bold ripe black currant firm tannins oak vanilla savory pairs with grilled steak</code></p>" },
-    { id: "retrieve", t: 0.3, llm: false,
-      does: "Calls the search_wines StructuredTool: dense search over the local Chroma index with the budget as a price filter, 40 candidates re-ordered by similarity and rating, top six kept. No LLM call.",
-      got: "<span class=\"k\">Six candidates, all at or under $45</span><ul>" +
-        [["[1] Stark-Condé 2011, Stellenbosch", "92 · $27"], ["[2] JD 2007, Diamond Mountain District", "94 · $40"], ["[3] Vinifera 2006, Napa Valley", "95 · $40"],
-         ["[4] Foley Johnson 2013, Rutherford", "92 · $45"], ["[5] Textbook 2005 Mise en Place, Oakville", "94 · $44"], ["[6] Las Vertientes 2014 Reserva, Mendoza", "92 · $40"]]
-        .map(function (w) { return "<li><span>" + w[0] + "</span><span class=\"lead\" aria-hidden=\"true\"></span><b>" + w[1] + "</b></li>"; }).join("") + "</ul>" },
-    { id: "recommend", t: 3.0, llm: true,
-      does: "Claude picks one or two of the retrieved wines, cites each as [n], and explains the pairing logic.",
-      got: "<span class=\"k\">Picks</span><ul><li class=\"pick\"><span>[3] Vinifera 2006 Cabernet Sauvignon</span><span class=\"lead\" aria-hidden=\"true\"></span><b>top pick</b></li>" +
-           "<li class=\"pick\"><span>[5] Textbook 2005 Mise en Place</span><span class=\"lead\" aria-hidden=\"true\"></span><b>second</b></li></ul>" +
-           "<span class=\"k\">Opening line</span><p class=\"quote\">For a rich, char-grilled ribeye with peppery cream sauce, you want bold tannin to cut the savory fat and dark fruit to echo the char.</p>" },
-    { id: "critique", t: 2.2, llm: true,
-      does: "Deterministic checks (at least two candidates, at least one within budget) plus an LLM coherence check. Any issue routes back to strategize with the feedback, up to --max-attempts (default 2).",
-      got: "<span class=\"k\">Verdict</span><p class=\"quote\">sound</p><p>The pairing passed on the first attempt, so the retry edge back to strategize was not taken.</p>" }
-  ];
-  var cur = 0, strip = document.getElementById("pa-strip"), panel = document.getElementById("pa-panel");
-  var total = N.reduce(function (s, n) { return s + n.t; }, 0);
-  N.forEach(function (n, i) {
+  // Replays a recorded run from eval/traces/<dish>.json (written by eval/run_critic_eval.py).
+  var DISHES = [["chocolate", "Chocolate torte"], ["ribeye", "Ribeye"], ["oysters", "Oysters"],
+    ["green-curry", "Green curry"], ["risotto", "Risotto"], ["roast-chicken", "Roast chicken"],
+    ["lamb", "Lamb shank"], ["salmon", "Salmon"], ["goat-cheese", "Goat cheese"], ["pizza", "Pizza"]];
+  var DOES = {
+    parse: "Turns the free-text meal into JSON features: main ingredient, body, sauce, cuisine, flavors, cooking method.",
+    strategize: "Reasons from the pairing principles to a target style and writes a search query. On a retry it also gets the failed criteria.",
+    retrieve: "Calls the search_wines StructuredTool: dense search over the local Chroma index with the budget as a price filter, top six kept. No LLM call.",
+    recommend: "Claude picks from the six retrieved wines only, cites each as [n], and explains the pairing logic.",
+    critique: "Three checks in code, then four criteria graded by the LLM as schema-validated JSON. The pass is computed in code: every criterion must pass.",
+    bump: "Counts the retry and routes back to strategize with the failed criteria as feedback (at most 2 retries)."
+  };
+  var ORDER = ["grounded", "within_budget", "enough_candidates", "body_match", "structure_logic", "flavor_link", "claims_supported"];
+  var CODE = { grounded: 1, within_budget: 1, enough_candidates: 1 };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function (id) { return document.getElementById(id); };
+  var dishes = $("tv-dishes"), strip = $("tv-strip"), panel = $("tv-panel"), head = $("tv-head");
+  var cache = {}, trace = null, cur = 0, timer = null;
+
+  function esc(x) {
+    return String(x == null ? "" : x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function sec(ms) { return (ms / 1000).toFixed(1) + " s"; }
+  function money(x) { return "$" + x.toFixed(3); }
+
+  DISHES.forEach(function (d) {
     var b = document.createElement("button");
-    b.type = "button"; b.setAttribute("role", "tab"); b.id = "pa-tab-" + i;
-    b.style.setProperty("--t", Math.max(n.t, 0.9));
-    if (!n.llm) b.className = "local";
-    b.innerHTML = (i + 1) + "<em class=\"nm\"> " + n.id + "</em><span>" + n.t.toFixed(1) + " s</span>";
-    b.setAttribute("aria-label", "Node " + (i + 1) + ", " + n.id + ", " + n.t.toFixed(1) + " seconds" + (n.llm ? "" : ", no LLM call"));
-    b.addEventListener("click", function () { show(i); });
-    b.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); show(Math.min(N.length - 1, cur + 1), true); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); show(Math.max(0, cur - 1), true); }
-    });
-    strip.appendChild(b);
+    b.type = "button"; b.textContent = d[1]; b.dataset.id = d[0];
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function () { open(d[0]); });
+    dishes.appendChild(b);
   });
+
+  function skeleton() {
+    panel.innerHTML = '<div class="skeleton sk-line" style="width:40%"></div><div class="skeleton sk-line" style="width:70%"></div><div class="skeleton sk-block"></div>';
+  }
+
+  function open(id) {
+    stop();
+    dishes.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.id === id)); });
+    if (cache[id]) return render(cache[id]);
+    skeleton(); strip.innerHTML = ""; head.textContent = "Loading the recorded run...";
+    fetch("../eval/traces/" + id + ".json").then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).then(function (t) { cache[id] = t; render(t); }).catch(function () {
+      head.textContent = "The trace file could not be loaded.";
+      panel.innerHTML = "<p>eval/traces/" + esc(id) + ".json did not load. It is in the repository on GitHub.</p>";
+    });
+  }
+
+  function render(t) {
+    trace = t; cur = 0;
+    var rounds = t.steps.filter(function (s) { return s.node === "critique"; }).length;
+    head.innerHTML = "<b>" + esc(t.meal) + "</b>, budget $" + t.budget + ". " + t.steps.length + " steps, " +
+      sec(t.total_ms) + ", " + t.llm_calls + " LLM calls, " + money(t.cost_usd) + " API-equivalent. " +
+      (t.final.critique_ok ? "Critique passed" : "Critique did not pass") + " after " + rounds + (rounds === 1 ? " round." : " rounds.");
+    $("tv-total").textContent = sec(t.total_ms);
+    strip.innerHTML = "";
+    t.steps.forEach(function (s, i) {
+      var b = document.createElement("button");
+      b.type = "button"; b.setAttribute("role", "tab"); b.id = "tv-tab-" + i;
+      b.style.setProperty("--t", Math.max(s.ms / 1000, 3.4));
+      if (!s.llm_calls.length) b.className = "local";
+      b.innerHTML = (i + 1) + '<em class="nm"> ' + esc(s.node) + "</em><span>" + sec(s.ms) + "</span>";
+      b.setAttribute("aria-label", "Step " + (i + 1) + ", " + s.node + ", " + sec(s.ms) + (s.llm_calls.length ? "" : ", no LLM call"));
+      b.addEventListener("click", function () { stop(); show(i); });
+      b.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { e.preventDefault(); stop(); show(Math.min(t.steps.length - 1, cur + 1), true); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); stop(); show(Math.max(0, cur - 1), true); }
+      });
+      strip.appendChild(b);
+    });
+    show(0);
+  }
+
+  function kv(o) {
+    return '<dl class="kv">' + Object.keys(o).map(function (k) {
+      var v = o[k]; if (Array.isArray(v)) v = v.join(", ");
+      return "<dt>" + esc(k.replace(/_/g, " ")) + "</dt><dd>" + esc(v) + "</dd>";
+    }).join("") + "</dl>";
+  }
+  function para(text) {
+    return '<div class="rec">' + String(text || "").split(/\n\s*\n/).map(function (p) {
+      return "<p>" + esc(p).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>") + "</p>";
+    }).join("") + "</div>";
+  }
+
+  function body(s) {
+    var o = s.output, h = "";
+    if (s.node === "parse") h = '<span class="k">Input</span><p class="quote">' + esc(s.input.meal) + "</p><span class=\"k\">Output</span>" + kv(o);
+    else if (s.node === "strategize") {
+      if (s.input && s.input.feedback) h += '<span class="k">Feedback from the critique</span><ul>' + s.input.feedback.map(function (f) { return "<li><span>" + esc(f) + "</span></li>"; }).join("") + "</ul>";
+      h += '<span class="k">Target style</span><p class="quote">' + esc(o.target_style) + '</p><span class="k">Search query</span><p><code>' + esc(o.search_query) + "</code></p>";
+    } else if (s.node === "retrieve") {
+      h = '<span class="k">Tool call</span><pre>' + esc(s.tool_call.name) + "(" + esc(JSON.stringify(s.tool_call.args, null, 1)) + ")</pre>" +
+        '<span class="k">Returned ' + o.length + " bottles</span><ul>" + o.map(function (w, i) {
+          return "<li><span>[" + (i + 1) + "] " + esc(w.title) + ", " + esc(w.variety) + "</span><span class=\"lead\" aria-hidden=\"true\"></span><b>" + w.points + " · $" + w.price + "</b></li>";
+        }).join("") + "</ul>";
+    } else if (s.node === "recommend") h = '<span class="k">Draft</span>' + para(o);
+    else if (s.node === "critique") {
+      h = '<span class="k">Verdict: ' + (o.ok ? "pass" : "fail") + (o.repaired ? ", after one schema repair" : "") + '</span><table class="crit"><thead><tr><th scope="col">Criterion</th><th scope="col">By</th><th scope="col">Result</th><th scope="col">Reason</th></tr></thead><tbody>' +
+        ORDER.map(function (k) {
+          var c = o.criteria[k]; if (!c) return "";
+          return "<tr><td>" + k + "</td><td>" + (CODE[k] ? "code" : "LLM") + '</td><td class="' + (c.pass ? "p\">pass" : "f\">fail") + "</td><td>" + esc(c.reason) + "</td></tr>";
+        }).join("") + "</tbody></table><details><summary>Critique JSON as saved</summary><pre>" + esc(JSON.stringify(o, null, 2)) + "</pre></details>";
+    } else if (s.node === "bump") h = '<p class="quote">attempts = ' + o.attempts + ", back to strategize</p>";
+    return h;
+  }
+
   function show(i, focus) {
     cur = i;
+    var s = trace.steps[i];
     strip.querySelectorAll("button").forEach(function (b, j) { b.setAttribute("aria-selected", String(j === i)); b.tabIndex = j === i ? 0 : -1; });
-    var n = N[i], share = Math.round(n.t / total * 100);
-    panel.setAttribute("aria-labelledby", "pa-tab-" + i);
-    panel.innerHTML = "<p class=\"num\">Node " + (i + 1) + " of 5 · " + n.t.toFixed(1) + " s, " + share + "% of the run" + (n.llm ? "" : " · no LLM call") + "</p>" +
-      "<h3>" + n.id + "</h3><p class=\"does\">" + n.does + "</p><div class=\"got\">" + n.got + "</div>";
-    document.getElementById("pa-prev").disabled = i === 0;
-    document.getElementById("pa-next").disabled = i === N.length - 1;
-    if (focus) document.getElementById("pa-tab-" + i).focus();
+    panel.setAttribute("aria-labelledby", "tv-tab-" + i);
+    var calls = s.llm_calls.map(function (c) {
+      return "LLM call: " + esc(c.models) + ", " + money(c.cost_usd) + ", " + c.wall_s.toFixed(1) + " s wall, " + c.output_tokens + " output tokens, " + c.cache_read + " cached tokens read";
+    }).join("<br>") || "No LLM call";
+    panel.innerHTML = '<p class="num">Step ' + (i + 1) + " of " + trace.steps.length + " · started at " + sec(s.t_start_ms) + ", took " + sec(s.ms) + "</p>" +
+      "<h3>" + esc(s.node) + '</h3><p class="does">' + DOES[s.node] + '</p><p class="calls">' + calls + '</p><div class="got">' + body(s) + "</div>";
+    $("tv-prev").disabled = i === 0;
+    $("tv-next").disabled = i === trace.steps.length - 1;
+    if (focus) $("tv-tab-" + i).focus();
   }
-  document.getElementById("pa-prev").addEventListener("click", function () { if (cur > 0) show(cur - 1); });
-  document.getElementById("pa-next").addEventListener("click", function () { if (cur < N.length - 1) show(cur + 1); });
-  show(0);
+
+  function stop() { if (timer) { clearInterval(timer); timer = null; $("tv-play").textContent = "Play"; } }
+  $("tv-prev").addEventListener("click", function () { stop(); if (trace && cur > 0) show(cur - 1); });
+  $("tv-next").addEventListener("click", function () { stop(); if (trace && cur < trace.steps.length - 1) show(cur + 1); });
+  $("tv-play").addEventListener("click", function () {
+    if (timer) return stop();
+    if (!trace || reduce) return;
+    if (cur >= trace.steps.length - 1) show(0);
+    $("tv-play").textContent = "Pause";
+    timer = setInterval(function () {
+      if (cur >= trace.steps.length - 1) return stop();
+      show(cur + 1);
+    }, 1600);
+  });
+  open("chocolate");
 })();
 </script>
 </body>

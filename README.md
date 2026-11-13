@@ -1,13 +1,34 @@
 # Wine Pairing Agent
 
-A dish is not a search query: this LangGraph agent reasons from the dish to a wine style, searches Wine Enthusiast reviews as a tool, recommends bottles with citations, and critiques its own pairing.
-On a frozen 10-dish set its first pick was an accepted grape for all 4 dishes it ran (searching with the dish text alone: 3 of those 4, 3 of 10), at $1.25 API-equivalent and 78 s per pairing, because its critique rejected all 12 drafts and spent every retry.
+![Trace replay on the write-up: choosing the chocolate torte run and stepping from parse through search_wines to a failed claims_supported critique, the retry, and the passing second round](assets/demo.gif)
+
+A dish is not a search query: this LangGraph agent reasons from the dish to a wine style, searches Wine Enthusiast reviews as a tool, recommends bottles with citations, and grades its own pairing against a seven-point rubric.
+With the rubric critic (2026-11-13), the agent passed its own review on all 10 frozen dishes (9 on the first draft) and its first pick was an accepted grape on 10 of 10, against 3 of 10 for searching with the dish text alone. A pairing costs $0.49 API-equivalent and takes 34 s median, down from $1.25 and 78 s when the old critique rejected every draft.
 
 [Live site](https://lyhjeremy.github.io/wine-pairing-agent/) · [Write-up](https://lyhjeremy.github.io/wine-pairing-agent/overview/) · [Technical notes](writeup.md) · [Sample run](examples/sample_run.md)
 
 Design and copy follow [these standards](https://github.com/lyhjeremy/lyhjeremy/blob/main/DESIGN_STANDARDS.md).
 
-## Results
+## Rubric critic (2026-11-13)
+
+The first critique asked an LLM whether the pairing was good and passed it only if the reply listed no issues. It rejected 12 of 12 drafts, mostly because it judged reviews from 2017 or earlier as of 2026 and called every wine too old. `src/rubric.py` replaces it with seven criteria: three checked in code (`grounded`, `within_budget`, `enough_candidates`) and four graded by the LLM (`body_match`, `structure_logic`, `flavor_link`, `claims_supported`), returned as JSON that must validate against a pydantic schema (one repair attempt, then the critique fails). Vintage age, drinking windows and current prices are out of scope. The pass is computed in code.
+
+`python -m eval.run_critic_eval` ran the agent on all 10 dishes in `eval/dishes.json` (frozen in 6849b5c; the rubric and protocol were committed in 69210a4 before the run), Opus 5.5 through the Claude CLI:
+
+| | Old critique (2026-11-05, n = 4) | Old prompt on the same 10 first drafts | Rubric critique (n = 10) |
+|---|---|---|---|
+| Drafts passed | 0 of 12 rounds | 0 of 10 | 9 of 10 first drafts, 10 of 10 after one retry |
+| Faulted the wine's age | 7 of 12 first issues | 9 of 10 | 0 |
+| First pick an accepted grape | 4 of 4 | | 10 of 10 (baseline: 3 of 10) |
+| LLM calls per pairing | 10 | | 4 (7 with the retry) |
+| Cost per pairing | $1.25 median | | $0.49 median, $0.75 p95 |
+| Latency per pairing | 77.9 s median | | 33.7 s median, 54.9 s p95 |
+
+Checks on the critic (`eval/critic/summary.json`): six deliberately mismatched drafts (one dish's recommendation judged against another dish) were all rejected; an Opus rerun on the 10 first drafts agreed on 10 of 10 verdicts; Sonnet 5.5 as a second judge agreed on 6 of 10 verdicts (Cohen's kappa 0.20) and 33 of 36 criterion calls, splitting only on `claims_supported`. One of those splits is a real miss by the Opus critic: the goat cheese draft told the guest the wine was "the Sancerre style you're after", a style nobody asked for (the recommend prompt passes the agent's own target style without saying whose it is). Sonnet needed the schema repair on 6 of 10 verdicts and failed it once. The mismatched controls were added after the main run. No person has labeled any draft; `eval/critic/labeling_sheet.csv` is ready for one.
+
+Every scored run is saved as a trace in `eval/traces/<dish>.json` (node timings, each LLM call's cost and tokens, the `search_wines` call and its results, the critique JSON), and the write-up replays them node by node. Cost is the API-equivalent cost reported by the Claude CLI (`total_cost_usd`); nothing was billed.
+
+## Results, 2026-11-05 (old critique)
 
 `eval/dishes.json` holds 10 dishes, each with a budget and the grapes classic pairing rules accept for it, committed before the first run. `python -m eval.run_eval` scores the agent and a baseline (the same search tool queried with the raw dish text, top hit taken) and records the cost and time of every Claude CLI call. Run on 2026-11-05 on an Apple M4:
 
