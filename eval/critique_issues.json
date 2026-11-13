@@ -1,5 +1,5 @@
 {
-  "note": "Hand-coded 2026-11-05 from eval/runs.json. 'final' covers every issue in each dish's last critique; 'first_issue_per_round' covers the first issue the critique listed in each of its three rounds (from the run log).",
+  "note": "Coded in a review session on 2026-11-05 by a model (Claude), not a person, from eval/runs.json. 'final' covers every issue in each dish's last critique; 'first_issue_per_round' covers the first issue the critique listed in each of its three rounds (from the run log).",
   "categories": {
     "vintage age": "the critique judges a 2005-2016 vintage from the review against the current date (drinking window passed, release price stale)",
     "pairing-logic quibble": "objects to one sentence of the explanation while accepting the wine",
