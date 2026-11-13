@@ -20,6 +20,7 @@ from langgraph.graph import END, StateGraph
 
 from .llm import LLM
 from .pairing import PAIRING_PRINCIPLES
+from . import rubric
 from .tools import wine_search_tool
 from .util import json_complete
 
@@ -130,7 +131,9 @@ def recommend(state: PairState) -> PairState:
     return {"recommendation": text, "log": log}
 
 
-def critique(state: PairState) -> PairState:
+def critique_legacy(state: PairState) -> PairState:
+    """The original critique (before 2026-11-13): free-form LLM review, passes only
+    when it lists no issues. Kept for comparison; see eval/run_critic_eval.py."""
     hits = state.get("candidates", [])
     req = state["request"]
     issues = []
@@ -159,6 +162,24 @@ def critique(state: PairState) -> PairState:
     return {"critique": {"issues": issues, "ok": ok}, "log": log}
 
 
+def candidates_text(hits) -> str:
+    return "\n".join(f"[{i}] ({h.citation()}) {h.doc}" for i, h in enumerate(hits, 1)) or "(none)"
+
+
+def critique(state: PairState) -> PairState:
+    """Rubric critique: code checks plus a schema-validated LLM verdict (src/rubric.py)."""
+    hits = state.get("candidates", [])
+    rec = state.get("recommendation", "")
+    code = rubric.code_checks(hits, rec, state["request"].get("budget"))
+    llm_result = rubric.judge(_llm(), state["dish"], candidates_text(hits), rec)
+    crit = rubric.decide(code, llm_result)
+    failed = [k for k, v in crit["criteria"].items() if not v["pass"]]
+    log = state.get("log", []) + [
+        "critique → " + ("all criteria pass" if crit["ok"] else "failed: " + ", ".join(failed or ["schema"]))
+    ]
+    return {"critique": crit, "log": log}
+
+
 def _route(state: PairState) -> str:
     if state["critique"]["ok"]:
         return "done"
@@ -171,13 +192,14 @@ def _bump_attempt(state: PairState) -> PairState:
     return {"attempts": state.get("attempts", 0) + 1}
 
 
-def build_agent():
+def build_agent(critic: str = "rubric"):
+    """``critic="rubric"`` (default) or ``"legacy"`` for the original critique."""
     g = StateGraph(PairState)
     g.add_node("parse", parse_dish)
     g.add_node("strategize", strategize)
     g.add_node("retrieve", retrieve)
     g.add_node("recommend", recommend)
-    g.add_node("critique", critique)
+    g.add_node("critique", critique if critic == "rubric" else critique_legacy)
     g.add_node("bump", _bump_attempt)   # counts a retry before re-strategizing
 
     g.set_entry_point("parse")
